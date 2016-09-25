@@ -1,0 +1,19 @@
+<div class="profile-update">
+  <span{{action "editAction" model}}> <h1>{{model.username}}'s Profile <a>{{fa-icon "fa-pencil-square-o"}}</a></h1></span>
+<label for="location">Location:</label>
+{{model.location}} <br>
+<label for="motivation">Motivation:</label>
+{{model.motivation}} <br>
+
+<h3>Public Exercises</h3>
+{{#each model.exercises as |exercise|}}
+  {{#if exercise.public}}
+    {{exercises-all/public exercise=exercise}}
+  {{/if}}
+{{/each}}
+
+{{outlet}}
+<hr>
+
+<span class="col-md-4 col-md-offset-4">{{#link-to "change-password"}}{{fa-icon "fa-unlock-alt fa-2x"}} <br>Change Password{{/link-to}}</span>
+</div>

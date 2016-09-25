@@ -16,6 +16,7 @@ Router.map(function () {
   this.route('profiles', function() {
     this.route('edit');
   });
+  this.route('profile');
 });
 
 export default Router;
