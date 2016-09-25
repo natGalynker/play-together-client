@@ -1,0 +1,36 @@
+<h1>Edit Profile</h1>
+
+<h4>Tell us About what brought you here</h4>
+
+  <form {{action "submit" on="submit"}}>
+  <label for="username">Name You Go By</label>
+  {{input placeholder="Put the name you prefer to go by"
+          type="text"
+          id="username"
+          value=profile.username}}
+
+  <label for="location">Location</label>
+  {{input placeholder="eg. New York, NY"
+          type="text"
+          id="location"
+          value=profile.location}}
+
+  <label for="motivation">Motivation</label>
+  {{input placeholder="Tell us about what drives you"
+          type="text"
+          id="motivation"
+          value=profile.motivation}}
+
+  <label for="favorite">Favorite Exercise Method</label>
+  {{input placeholder="Tell us what is your go-to Exercise"
+          type="text"
+          id="favorite"
+          value=profile.favorite}}
+
+
+<div class="row">
+<span class="col-md-3 col-md-offset-3" {{action "cancel"}}> {{fa-icon "fa-mail-reply fa-2x"}} <br>
+            Cancel</span>
+
+<span class="col-md-3" {{action "submit"}}> {{fa-icon "fa-share fa-2x"}} <br>Save</span>
+</div>
