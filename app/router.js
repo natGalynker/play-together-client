@@ -13,6 +13,9 @@ Router.map(function () {
   this.route('create-exercise');
   this.route('my-exercises');
   this.route('exercise');
+  this.route('profiles', function() {
+    this.route('edit');
+  });
 });
 
 export default Router;
