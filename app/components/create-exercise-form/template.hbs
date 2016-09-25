@@ -16,25 +16,7 @@
 {{description-input description=exercise.description}}
 {{duration-input duration=exercise.duration}}
 
-{{!-- <div class="form-group">
-  <label for="description">Workout Description</label>
-  {{input type="text"
-          class="form-control"
-          id="description"
-          placeholder="Workout Description"
-          value=workouts.description}}
-</div>
-
-<div class="form-group">
-  <label for="duration">Workout Duration</label>
-  {{input type="text"
-          class="form-control"
-          id="duration"
-          placeholder="Workout Duration"
-          value=workouts.duration}}
-</div> --}}
-
-<button type="submit" class="btn btn-primary" {{action "submit"}}>
+<button type="submit" class="btn btn-primary" {{action 'submit'}}>
   Create Exercise
 </button>
 

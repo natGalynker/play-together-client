@@ -11,6 +11,8 @@ Router.map(function () {
   this.route('change-password');
   this.route('users');
   this.route('create-exercise');
+  this.route('my-exercises');
+  this.route('exercise');
 });
 
 export default Router;

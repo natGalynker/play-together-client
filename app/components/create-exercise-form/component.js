@@ -1,19 +1,14 @@
 import Ember from 'ember';
 
 export default Ember.Component.extend({
-  tagName: 'form',
-classNames: ['form-horizontal'],
-
-workouts: {},
-
+listItemCompleted: Ember.computed.alias('workout.done'),
 actions: {
-  submit () {
-    this.sendAction('submit', this.get('workouts'));
+  toggleDone () {
+    this.sendAction('toggleDone', this.get('workout'));
   },
 
-  reset () {
-    this.set('workouts', {});
+  delete () {
+    this.sendAction('delete', this.get('workout'));
   },
 },
-});
 });

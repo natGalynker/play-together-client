@@ -1,0 +1,6 @@
+<h3 class='exercise-header' {{action 'toggleListDetail'}}>{{exercise.title}}</h3>
+<ul>
+  {{#each exercise.workouts as |workout|}}
+    {{my-log/workout workout=workout toggleDone='toggleWorkoutDone' delete='deleteWorkout'}}
+  {{/each}}
+</ul>
