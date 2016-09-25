@@ -2,8 +2,9 @@ import Ember from 'ember';
 
 export default Ember.Route.extend({
   actions: {
-    createExercise (passwords) {
-      this.get('auth').createExercise(passwords)
+    createExercise (workouts) {
+      this.get('auth').createExercise(workouts)
+      .then(() => this.transitionTo('application'))
       .then(() => {
         this.get('flashMessages')
         .success('You added an exercise!');

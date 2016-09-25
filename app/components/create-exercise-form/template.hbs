@@ -1,1 +1,43 @@
-{{yield}}
+
+
+<div class="form-group">
+  <label for="workouts">Workout Title</label>
+  <select name="workouts">
+    <option value= "--select a category"></option>
+    <option value="cardio">Cardio</option>
+    <option value="class" >Class</option>
+    <option value="warm-up">Warm Up Sequence</option>
+    <option value="cooldown">cooldown Sequence</option>
+    <option value="strength">Circuit Sequence</option>
+    <option value="routine">Sequence</option>
+  </select>
+</div>
+
+{{description-input description=exercise.description}}
+{{duration-input duration=exercise.duration}}
+
+{{!-- <div class="form-group">
+  <label for="description">Workout Description</label>
+  {{input type="text"
+          class="form-control"
+          id="description"
+          placeholder="Workout Description"
+          value=workouts.description}}
+</div>
+
+<div class="form-group">
+  <label for="duration">Workout Duration</label>
+  {{input type="text"
+          class="form-control"
+          id="duration"
+          placeholder="Workout Duration"
+          value=workouts.duration}}
+</div> --}}
+
+<button type="submit" class="btn btn-primary" {{action "submit"}}>
+  Create Exercise
+</button>
+
+<button class="btn btn-default" {{action "reset"}}>
+  Cancel
+</button>
