@@ -2,7 +2,7 @@ import Ember from 'ember';
 
 export default Ember.Route.extend({
  auth: Ember.inject.service(),
- username: Ember.computed.alias('auth.credentials.email'),
+ user: Ember.computed.alias('auth.credentials.email'),
 
   model () {
     // console.log(params.profile_id);
