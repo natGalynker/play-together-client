@@ -10,9 +10,6 @@ Router.map(function () {
   this.route('sign-in');
   this.route('change-password');
   this.route('users');
-  this.route('create-exercise');
-  this.route('my-exercises');
-  this.route('exercise');
   this.route('profile', { path: '/profiles/:profile_id' });
   this.route('profiles');
   this.route('profiles/edit');

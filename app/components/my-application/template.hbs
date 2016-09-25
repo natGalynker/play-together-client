@@ -5,8 +5,9 @@
     <div class="collapse navbar-collapse" id="navigation">
       <ul class="nav navbar-nav navbar-right">
         {{#if isAuthenticated}}
-        <li class="home col-sm-2"><a href="profiles" {{action "viewProfile"}}> <br> Profile </a></li>
-        <li class="home col-sm-2"><a href="#" {{action "signOut"}}> <br> Sign Out</a></li>
+        <li class="home col-md-4"><a href="profiles" {{action "viewProfile"}}> <br> Profile </a></li>
+        <li class="home col-md-4"><a href="#" {{action "signOut"}}> <br> Sign Out</a></li>
+        <li class="home col-md-4"><a href="exercises" {{action "createExercise"}}> <br> Add Exercise </a></li>
         {{else}}
         <li>{{#link-to "sign-up"}}Sign Up{{/link-to}}</li>
 -       <li>{{#link-to "sign-in"}}Sign In{{/link-to}}</li>
