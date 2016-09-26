@@ -10,9 +10,12 @@ Router.map(function () {
   this.route('sign-in');
   this.route('change-password');
   this.route('users');
-  this.route('profile', { path: '/profiles/:profile_id' });
+  this.route('profile', { path: 'profiles/:profile_id' });
   this.route('profiles');
   this.route('profiles/edit');
+  this.route('exercise', { path: 'exercises/:id' });
+  this.route('exercises');
+  this.route('exercises/new');
 });
 
 export default Router;
