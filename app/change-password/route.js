@@ -7,8 +7,10 @@ export default Ember.Route.extend({
   actions: {
     changePassword (passwords) {
       this.get('auth').changePassword(passwords)
-      .then(() => this.get('auth').signOut())
-      .then(() => this.transitionTo('sign-in'))
+
+      .then(() => this.transitionTo('profiles', this.get('auth.credentials.id'))
+      // .then(() => this.get('auth').signOut())
+      // .then(() => this.transitionTo('sign-in'))
       .then(() => {
         this.get('flashMessages')
         .success('Successfully changed your password!');
@@ -19,7 +21,11 @@ export default Ember.Route.extend({
       .catch(() => {
         this.get('flashMessages')
         .danger('There was a problem. Please try again.');
-      });
+      }));
     },
+      submitProfile (){
+        let profile = this.get('profile');
+        this.sendAction('submit', profile);
+      },
   },
 });

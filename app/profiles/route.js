@@ -5,7 +5,6 @@ export default Ember.Route.extend({
  user: Ember.computed.alias('auth.credentials.email'),
 
   model () {
-    // console.log(params.profile_id);
     return this.get('store').findAll('profile');
   },
 });

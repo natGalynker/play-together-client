@@ -1,5 +1,5 @@
 <div class="profile-update">
-  <span{{action "editAction" model}}> <h1>{{model.username}}'s Profile </h1></span>
+<span><h1>{{model.username}}'s Profile </h1></span>
 <label for="location">Location:</label>
 {{model.location}} <br>
 <label for="motivation">Motivation:</label>
@@ -13,3 +13,4 @@
 
 <span class="col-md-4 col-md-offset-4">{{#link-to "change-password"}}<br>Change Password{{/link-to}}</span>
 </div>
+{{!-- {action "editAction" model}}> --}}

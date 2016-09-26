@@ -1,38 +1,53 @@
 <nav class="navbar navbar-default">
   <div class="container-fluid">
     {{navbar-header}}
-    {{#link-to "application" class="navbar-brand"}}Home Page{{/link-to}}
+    {{#link-to "application" class="navbar-brand" }}Home Page{{/link-to}}
     <div class="collapse navbar-collapse" id="navigation">
       <ul class="nav navbar-nav navbar-right">
         {{#if isAuthenticated}}
-        <li class="home col-md-4"><a href="profiles" {{action "viewProfile"}}> <br> Profile </a></li>
-        <li class="home col-md-4"><a href="#" {{action "signOut"}}> <br> Sign Out</a></li>
-        <li class="home col-md-4"><a href="exercises" {{action "createExercise"}}> <br> Add Exercise </a></li>
+          <li class="home col-md-4">
+            <a href="profiles" {{action "viewProfile"}}> <br> Profile </a>
+          </li>
+          <li class="home col-md-4">
+            <a href="#" {{action "signOut"}}> <br> Sign Out</a>
+          </li>
+          <li class="home col-md-4">
+            <a href="profiles/edit" {{action "editAction"}}> <br> Profile Edit</a>
+          </li>
+          <li class="home col-md-3 col-md-offset-3">{{#link-to "profiles/edit"}} <br> Register Form{{/link-to}}</li>
+          {{!-- <li class="home col-md-4"><a href="exercises" {{action "createExercise"}}
+          > <br> Add Exercise </a>
+            </li> --}}
+            <li class="home col-sm-2">
+              {{#link-to 'exercises/new'}}<br> New Exercise{{/link-to}}
+            </li>
         {{else}}
-        <li>{{#link-to "sign-up"}}Sign Up{{/link-to}}</li>
--       <li>{{#link-to "sign-in"}}Sign In{{/link-to}}</li>
+          <li>
+            {{#link-to "sign-up"}}Sign Up{{/link-to}}
+          </li>
+          <li>
+            {{#link-to "sign-in"}}Sign In{{/link-to}}
+          </li>
         {{/if}}
       </ul>
     </div>
   </div>
 </nav>
-
 {{#if isAuthenticated}}
-<div class="container-fluid outlet col-lg-12 col-centered">
-  <div class="centered">
-    <div class="landing">
-    <h1>Play Together</h1>
+  <div class="container-fluid outlet col-lg-12 col-centered">
+    <div class="centered">
+      <div class="landing">
+        <h1>Play Together</h1>
+      </div>
+      {{outlet}}
+    </div>
   </div>
-  {{outlet}}
-  </div>
-</div>
 {{else}}
-<div class="container-fluid outlet col-lg-12 col-centered">
-  <div class="centered">
-  <h1>Play Together</h1>
-  <h4>Welcome to Encore, a place where you can log your exercises, your way. No
-  restrictions, no expectations</h4>
-  {{outlet}}
+  <div class="container-fluid outlet col-lg-12 col-centered">
+    <div class="centered">
+      <h1>Play Together</h1>
+      <h4>Welcome to Encore, a place where you can log your exercises, your way. No
+  restrictions, no expectations</h4> {{outlet}}
+    </div>
   </div>
-</div>
 {{/if}}

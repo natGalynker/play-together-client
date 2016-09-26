@@ -1,16 +1,17 @@
-<h1>Edit Profile</h1>
+<h1>Tweak Your Profile</h1>
 
 <h4>Tell us About what brought you here</h4>
 
+{{!-- <div class="profile-create-form">
   <form {{action "submit" on="submit"}}>
   <label for="username">Name You Go By</label>
-  {{input placeholder="Put the name you prefer to go by"
+  {{input placeholder="Put the name you prefer to be called"
           type="text"
           id="username"
           value=profile.username}}
 
   <label for="location">Location</label>
-  {{input placeholder="eg. New York, NY"
+  {{input placeholder="Boston, MA etc"
           type="text"
           id="location"
           value=profile.location}}
@@ -26,12 +27,53 @@
           type="text"
           id="favorite"
           value=profile.favorite}}
-
+</div>
 
 <div class="row">
-<span class="col-md-3 col-md-offset-3" {{action "cancel"}}> <br>
-            Cancel</span>
+<span{{action "reset"}} class="col-md-3 col-md-offset-3">{{#link-to "application"}}<a><br>
+    Cancel</a>{{/link-to}}</span>
 
-<span class="col-md-3" {{action "submit"}}> {{fa-icon "fa-share fa-2x"}} <br>Save</span>
+<button class= 'btn btn-info col-md-4'{{action "save"}}><a><br>
+  Sign In </a></span>
 </div>
-</form>
+</form
+
+ --}}
+
+<div class="form-group">
+  <label for="username">Name You Go By</label>
+  {{input placeholder="Put the name you prefer to be called"
+          type="text"
+          id="username"
+          value=profile.username}}
+</div>
+
+<div class="form-group">
+  <label for="location">Location</label>
+  {{input placeholder="Boston, MA etc"
+          type="text"
+          id="location"
+          value=profile.location}}
+</div>
+
+<div class="form-group">
+  <label for="motivation">Motivation</label>
+  {{input placeholder="Tell us about what drives you"
+          type="text"
+          id="motivation"
+          value=profile.motivation}}
+</div>
+<div class="form-group">
+  <label for="favorite">Favorite Exercise Method</label>
+  {{input placeholder="Tell us what is your go-to Exercise"
+          type="text"
+          id="favorite"
+          value=profile.favorite}}
+</div>
+<button type="submit" class="btn btn-primary" {{action "submit"}}>
+Update Profile
+</button>
+
+<button class="btn btn-default" {{action "cancel"}}>
+  Cancel
+</button>

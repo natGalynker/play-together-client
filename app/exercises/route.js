@@ -1,8 +1,8 @@
 import Ember from 'ember';
-
+import { storageFor } from 'ember-local-storage';
 export default Ember.Route.extend({
   auth: Ember.inject.service(),
-  credentials: ('auth'),
+  credentials: storageFor('auth'),
 
   model () {
     let id = this.get('credentials.id');
