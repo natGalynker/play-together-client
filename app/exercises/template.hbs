@@ -1,10 +1,8 @@
 <h1>My Workouts</h1>
-
-
 <ul>
   {{#each model.exercises as |exercise|}}
   {{exercises-all exercise=exercise
                       display="display"}}
-                      {{/each}}
+  {{/each}}
 </ul>
 {{outlet}}
