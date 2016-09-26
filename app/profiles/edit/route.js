@@ -10,7 +10,7 @@ export default Ember.Route.extend({
   },
 
   actions: {
-    save (profile) {
+    submit (profile) {
       profile.save();
       this.transitionTo('profile', profile);
     },

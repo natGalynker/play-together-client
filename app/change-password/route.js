@@ -23,9 +23,9 @@ export default Ember.Route.extend({
         .danger('There was a problem. Please try again.');
       }));
     },
-      submitProfile (){
-        let profile = this.get('profile');
-        this.sendAction('submit', profile);
+      submitProfile (profile) {
+        profile.save();
+        this.transitionTo('profile', profile);
       },
   },
 });

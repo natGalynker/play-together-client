@@ -7,12 +7,12 @@ export default Ember.Component.extend({
   actions: {
     cancel () {
       let profile = this.get('profile');
-      this.sendAction('cancel', profile);
+      this.sendAction('reset', profile);
     },
 
-    submit () {
+    submitProfile () {
       let profile = this.get('profile');
-      this.sendAction('submit', profile);
+      this.sendAction('submitProfile', profile);
     },
   }
 });
