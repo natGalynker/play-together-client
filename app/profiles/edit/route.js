@@ -1,16 +1,16 @@
 import Ember from 'ember';
-import { storageFor } from 'ember-local-storage';
+// import { storageFor } from 'ember-local-storage';
 export default Ember.Route.extend({
   auth: Ember.inject.service(),
-  credentials: storageFor('auth'),
+  // credentials: storageFor('auth'),
 
-  model () {
-    let id = this.get('credentials.id');
-    return this.get('store').findRecord('profile', id);
-  },
+  // model () {
+  //   // let id = this.get('auth.credentials.id');
+  //   return this.get('store').findRecord('profile');
+  // },
 
   actions: {
-    submit (profile) {
+    submitProfile (profile) {
       profile.save();
       this.transitionTo('profile', profile);
     },

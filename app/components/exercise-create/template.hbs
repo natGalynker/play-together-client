@@ -1,0 +1,45 @@
+<h1>Your Workouts, Your Way!</h1>
+
+<h4>How Do You like to Keep active?</h4>
+
+<div class="form-group">
+  <label for="category">Type of Workouts</label>
+  {{#power-select
+      selected=exercise
+      options=category
+      onchange=(action 'chooseCategory')
+      as |name|
+    }}
+      {{name}}
+    {{/power-select}}
+</div>
+
+<div class="form-group">
+  <label for="name">Workout Name</label>
+  {{input placeholder="yoga am sequence, lyra routine, leg circuit etc"
+          type="text"
+          id="name"
+          value=exercise.name}}
+</div>
+
+<div class="form-group">
+  <label for="description">Description</label>
+  {{input placeholder=" eg 20 crunches, 3 mile run, a list of sequencial movements etc"
+          type="text"
+          id="description"
+          value=exercise.description}}
+</div>
+<div class="form-group">
+  <label for="duration">Length of workout</label>
+  {{input placeholder="Amount of time or distance a workout takes"
+          type="text"
+          id="duration"
+          value=exercise.duration}}
+</div>
+<button type="submit" class="btn btn-primary" {{action "submitExercise"}}>
+Update Profile
+</button>
+
+<button class="btn btn-default" {{action "cancel"}}>
+  Cancel
+</button>

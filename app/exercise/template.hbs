@@ -1,0 +1,25 @@
+<span{{action "edit" model }}><h1>Exercise</h1></span>
+<br>
+<div class="exercise-container">
+<label for="category">Type of Exercise:</label>
+{{model.category}} <br>
+<label for="name">Name of Exercise:</label>
+{{model.name}} <br>
+<label for="description">Discription of exercise</label>
+{{model.description}} <br>
+<label for="duration">Length of Time or Distance of Exercise:</label>
+{{model.duration}} <br>
+
+
+{{!-- <label for="target">Number of days in a week you would like to do exercise</label>
+{{model.target}} <br> --}}
+
+ {{!-- create a conditional and a way to track a exercise each delay
+ add these to another table url called log which will hold all of a persons
+ exercises --}}
+
+{{outlet}}
+<hr>
+
+<span class="col-md-4 col-md-offset-4">{{#link-to "exercises/new"}}<br>New Exercise{{/link-to}}</span>
+</div>
