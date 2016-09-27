@@ -1,15 +1,4 @@
-[![General Assembly Logo](https://camo.githubusercontent.com/1a91b05b8f4d44b5bbfb83abac2b0996d8e26c92/687474703a2f2f692e696d6775722e636f6d2f6b6538555354712e706e67)](https://generalassemb.ly/education/web-development-immersive)
 
-# Authentication in Ember
-
-This training will involve a lot of following code and and exploring the
-Chrome Inspector and utilizing Ember Inspector.  It is recommended that you
-comment code or take notes.
-
-## Prerequisites
-
--   [ga-wdi-boston/ember-resources](https://github.com/ga-wdi-boston/ember-resources)
--   [ga-wdi-boston/ember-resources-one-to-many](https://github.com/ga-wdi-boston/ember-resources-one-to-many)
 
 ## Objectives
 
@@ -20,37 +9,19 @@ By the end of this, developers should be able to:
 
 ## Preparation
 
-1.  [Fork and clone](https://github.com/ga-wdi-boston/meta/wiki/ForkAndClone)
-    this repository.
+1.  Fork and Clone this repository this repository.
+2.  Follow the instructions here for how to work with an ember application:
+[ember install guide](https://ember-cli.com/user-guide/)
 1.  Install dependencies with `npm install` and `bower install`.
-1.  Follow the instructions to setup the [lister-api](https://github.com/ga-wdi-boston/listr-api).
 1.  Start the font-end server with `ember server --proxy http://localhost:3000`.
 
 ## From end to end
 
-Watch as I sign up for a new account on our demo app.
 
-*Aside from flashy messages on the page did anything change in the Chrome Dev*
-*Tools?*
-
-Take some time and sign in on your own, and check to see if anything in the
-Chrome Dev Tools has changed.
-
-Now that we have added a key tool to our personal developer toolkit lets look
-at how it is implimented and the rest of the code.
 
 ## Follow Along
 
-As a class let's walk through file by file what is happening. I will ask
-developers to guide me through the files while correcting any misunderstandings.
 
-First let's start down the template and component trail, then we'll work our way
-up with actions.
-
-*Remember: Data down, actions up.*
-
-While going up the Ember hierarchy we may need to stop a some point to discuss
-services.
 
 ## Additional Resources
 
