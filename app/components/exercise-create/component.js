@@ -2,6 +2,8 @@ import Ember from 'ember';
 export default Ember.Component.extend({
   tagName: 'div',
   classNames: ['form-group'],
+
+  exercise: {},
   category: ['Routine', 'Cardio', 'Class', 'Strength, Cool-down', 'Warm-up'],
 
 
@@ -19,8 +21,7 @@ export default Ember.Component.extend({
     },
 
     submitExercise () {
-      let exercise = this.get('exercise');
-      this.sendAction('submitExercise', exercise);
+      this.sendAction('submitExercise', this.get('newExercise'));
     },
   }
 });

@@ -9,11 +9,14 @@ export default Ember.Route.extend({
   //   return this.get('store').findRecord('profile');
   // },
 
-  actions: {
-    submitExercise (exercise) {
-      exercise.save();
-      this.transitionTo('exercise', exercise);
-    },
+    actions: {
+      submitExercise(data) {
+        console.log(data);
+
+    // submitExercise (exercise) {
+    //   exercise.save();
+    //   this.transitionTo('exercise', exercise);
+   },
 
     cancel (exercise) {
       this.get('store').unloadAll('exercise');
