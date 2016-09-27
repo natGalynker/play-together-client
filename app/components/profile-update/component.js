@@ -4,23 +4,29 @@ import Ember from 'ember';
     tagName: 'div',
     classNames: ['form-group'],
 
-    profile: {
-      location: null,
-      motivation: null,
-      favorite: null,
-      username: null,
+    newProfile: {},
 
-  },
+
+
 
   actions: {
     cancel () {
       let profile = this.get('profile');
       this.sendAction('reset', profile);
     },
-
-    submitProfile () {
-      let profile = this.get('profile');
-      this.sendAction('submitProfile', profile);
-    },
-  }
+      submitProfile () {
+        this.sendAction('submitProfile', this.get('newProfile'));
+    // submitProfile () {
+    // let data = this.get('newProfile');
+    // data.profiles = this.get('profiles');
+    // this.sendAction('submitProfile', this.get('newProfile'));
+    // this.sendAction('submitProfile', data);
+    // this.get('newProfile', location);
+    // this.set('newProfile', motivation);
+    // this.set('newProfile', favorite);
+    // this.set('newProfile');
+    // this.set('newProfile');
+    // },
+  },
+}
 });
