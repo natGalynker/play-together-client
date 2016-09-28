@@ -17,10 +17,10 @@ import Ember from 'ember';
       let profile = this.get('profile');
       this.sendAction('reset', profile);
     },
-      submitProfile (params) {
+      submitProfile () {
         console.log('form sbmitted');
-          this.sendAction('profile', params);
-        // this.sendAction('submitProfile', this.get('profile'));
+          // this.sendAction('profile', params);
+        this.sendAction('submitProfile', this.get('profile'));
     // submitProfile () {
     // let data = this.get('newProfile');
     // data.profiles = this.get('profiles');
