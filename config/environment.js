@@ -2,7 +2,7 @@
 
 module.exports = function(environment) {
   var ENV = {
-    modulePrefix: 'ember-auth',
+    modulePrefix: 'play-together-client',
     environment: environment,
     baseURL: '/',
     locationType: 'auto',
