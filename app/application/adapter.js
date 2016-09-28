@@ -1,8 +1,10 @@
 import Ember from 'ember';
 import ActiveModelAdapter from 'active-model-adapter';
+import ENV from 'ember-auth name/config/environment';
 
 export default ActiveModelAdapter.extend({
   auth: Ember.inject.service(),
+  host: ENV.apiHost,
 
   headers: Ember.computed('auth.credentials.token', {
     get () {
