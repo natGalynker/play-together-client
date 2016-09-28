@@ -2,22 +2,12 @@ import Ember from 'ember';
 // import { storageFor } from 'ember-local-storage';
 export default Ember.Route.extend({
       auth: Ember.inject.service(),
-      // credentials: storageFor('auth'),
-
-      // model () {
-      //   return this.get('store').findRecord('profile');
-      // },
       actions: {
         submitProfile(data) {
           let profile = this.get('store').createRecord('profile', data);
+          console.log(data);
            profile.save();
-          // this.set('profiles').submitProfile(data)
-          //   .then(() => this.transitionTo('profile')
-          //     .then(() => {
-          //         this.get('flashMessages')
-          //           .success('Exercise Created!');
-          //       })
-          //     );
+
             },
 
         cancel(profile) {

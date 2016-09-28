@@ -3,7 +3,13 @@ export default Ember.Component.extend({
   tagName: 'form',
   classNames: ['form-group'],
 
-  exercise: {},
+  exercise: {
+    category: 'routine',
+    name: 'lyra performance',
+    duration: '30 minutes',
+    description: 'Song: seven nations army, 20 sequences',
+
+  },
   category: ['Routine', 'Cardio', 'Class', 'Strength, Cool-down', 'Warm-up'],
 
 
@@ -22,7 +28,7 @@ export default Ember.Component.extend({
 
     submitExercise () {
       console.log('exercise submitted');
-      this.sendAction('submitExercise', this.get('newExercise'));
+      this.sendAction('submitExercise', this.get('exercise'));
     },
   },
 });

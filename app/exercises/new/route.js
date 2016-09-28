@@ -14,16 +14,13 @@ export default Ember.Route.extend({
   //   return this.get('store').findRecord('profile');
   // },
 
+
     actions: {
-      submitExercise(exercise) {
-        exercise.submit()
+      submitExercise(data) {
+        let exercise = this.get('store').createRecord('exercise', data);
+        exercise.save()
         .then(() => this.transitionTo('exercises'));
       },
-      saveList(list) {
-  list.save()
-  //uses promise to transition to the name of the route
-  .then(() =>this.transitionTo('lists'));
-},
     cancel (exercise) {
       this.get('store').unloadAll('exercise');
       this.get('store').findRecord('exercise', exercise.id)

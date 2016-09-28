@@ -37,21 +37,9 @@
           value=exercise.duration}}
 </div>
 <button type="submit" class="btn btn-primary" {{action "submitExercise"}}>
-Update Profile
+Exercise Created
 </button>
 
 <button class="btn btn-default" {{action "cancel"}}>
   Cancel
 </button>
-
-
-<form {{action 'createItem' on='submit'}}>
-  {{input placeholder='New Item' value=newItem.content}}
-</form>
-
-<form {{action 'save' on='submit'}}>
-  {{input placeholder='List Title'
-  class='input-group form-control'
-  value=list.title
-}}
-</form>

@@ -4,7 +4,7 @@ import Ember from 'ember';
     tagName: 'form',
     classNames: ['form-group'],
 
-    newProfile: {
+    profile: {
       location: 'enter location',
       motivation: 'getting strong',
       favorite: 'yoga all day every day',
@@ -19,17 +19,17 @@ import Ember from 'ember';
     },
       submitProfile () {
         console.log('form sbmitted');
-        this.sendAction('submitProfile', this.get('newProfile'));
+        this.sendAction('submitProfile', this.get('profile'));
     // submitProfile () {
     // let data = this.get('newProfile');
     // data.profiles = this.get('profiles');
     // this.sendAction('submitProfile', this.get('newProfile'));
     // this.sendAction('submitProfile', data);
-    // this.get('newProfile', location);
-    // this.set('newProfile', motivation);
-    // this.set('newProfile', favorite);
-    // this.set('newProfile');
-    // this.set('newProfile');
+    // this.get('profile', location);
+    // this.set('profile', motivation);
+    // this.set('profile', favorite);
+    // this.set('profile');
+    // this.set('profile');
     // },
   },
 }
