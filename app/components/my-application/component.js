@@ -16,5 +16,9 @@ export default Ember.Component.extend({
       let params = this.get('id');
       this.sendAction('viewProfile', params);
     },
+    viewMyExercises() {
+      let params = this.get('id');
+      this.sendAction('viewMyExercises', params);
+    },
   },
 });
