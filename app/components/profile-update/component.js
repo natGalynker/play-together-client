@@ -4,9 +4,12 @@ import Ember from 'ember';
     tagName: 'form',
     classNames: ['form-group'],
 
-    newProfile: {},
-
-
+    newProfile: {
+      location: 'enter location',
+      motivation: 'getting strong',
+      favorite: 'yoga all day every day',
+      username: 'thisExample',
+    },
 
 
   actions: {

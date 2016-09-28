@@ -3,26 +3,24 @@ import { storageFor } from 'ember-local-storage';
 export default Ember.Route.extend({
   auth: Ember.inject.service(),
   credentials: storageFor('auth'),
+
+
+
   model () {
-    let id = this.get('credentials.id')
-    return this.get('store').findAll('exercise', id);
+    let id = this.get('credentials.id');
+    return this.get('store').findRecord('profile', id);
   },
-// });
-//
-//
-//   model () {
-//     let id = this.get('credentials.id');
-//     return this.get('store').findRecord('profile', id);
-//   },
 
   actions: {
     display (id) {
       this.transitionTo('exercise', id);
     },
 
+    // viewMyExercises()
+
     createExercise (data) {
       let exercise = this.get('store').createRecord('exercise', data);
-      exercise.submit();
+      exercise.save();
         // this.transitionTo('exercises/new');
     },
   }

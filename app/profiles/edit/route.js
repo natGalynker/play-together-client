@@ -9,8 +9,9 @@ export default Ember.Route.extend({
       // },
       actions: {
         submitProfile(data) {
-          console.log(data);
-          // this.get('profiles/edit').submitProfile(data)
+          let profile = this.get('store').createRecord('profile', data);
+           profile.save();
+          // this.set('profiles').submitProfile(data)
           //   .then(() => this.transitionTo('profile')
           //     .then(() => {
           //         this.get('flashMessages')
