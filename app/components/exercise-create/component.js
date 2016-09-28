@@ -21,9 +21,10 @@ export default Ember.Component.extend({
     },
 
     submitExercise () {
+      console.log('exercise submitted');
       this.sendAction('submitExercise', this.get('newExercise'));
     },
-  }
+  },
 });
 
 

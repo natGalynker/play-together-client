@@ -10,6 +10,10 @@ export default Ember.Route.extend({
       this.transitionTo('profile', params);
     },
 
+    viewMyExercises(params){
+      this.transitionTo('exercises', params);
+    },
+
     signOut () {
       this.get('auth').signOut()
       .then(() => this.transitionTo('sign-in'))
