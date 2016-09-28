@@ -13,7 +13,7 @@ export default Ember.Route.extend({
       submitExercise(data) {
         console.log(data);
 
-    // submitExercise (exercise) {
+    // submitExercise (exercise)
     //   exercise.save();
     //   this.transitionTo('exercise', exercise);
    },
