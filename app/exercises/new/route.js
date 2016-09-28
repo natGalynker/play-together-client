@@ -4,20 +4,26 @@ export default Ember.Route.extend({
   auth: Ember.inject.service(),
   credentials: ('auth'),
 
+  model (params) {
+  return this.get('store').findRecord('exercise', params.exercise_id);
+
+},
+
   // model () {
   //   let id = this.get('credentials.id');
   //   return this.get('store').findRecord('profile');
   // },
 
     actions: {
-      submitExercise(data) {
-        console.log(data);
-
-    // submitExercise (exercise)
-    //   exercise.save();
-    //   this.transitionTo('exercise', exercise);
-   },
-
+      submitExercise(exercise) {
+        exercise.submit()
+        .then(() => this.transitionTo('exercises'));
+      },
+      saveList(list) {
+  list.save()
+  //uses promise to transition to the name of the route
+  .then(() =>this.transitionTo('lists'));
+},
     cancel (exercise) {
       this.get('store').unloadAll('exercise');
       this.get('store').findRecord('exercise', exercise.id)
@@ -27,5 +33,5 @@ export default Ember.Route.extend({
         console.log(test.id);
       });
     }
-  }
-});
+  },
+  });
