@@ -13,7 +13,9 @@ export default Ember.Route.extend({
 
   actions: {
     display (id) {
-      this.transitionTo('exercise', id);
+        this.transitionTo('exercise', id);
+      return this.get('store').findRecord('exercise', id);
+      // this.transitionTo('exercise', id);
     },
 
     // viewMyExercises()

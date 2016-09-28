@@ -22,4 +22,24 @@
 <hr>
 
 <span class="col-md-4 col-md-offset-4">{{#link-to "exercises/new"}}<br>New Exercise{{/link-to}}</span>
+<span class="col-md-4 col-md-offset-4">{{#link-to "exercises/new"}}<br>New Exercise{{/link-to}}</span>
 </div>
+
+
+<div class="exercise-create">
+
+<span><h1>{{profile.model.name}}'s Exercise </h1></span>
+<label for="name">Location:</label>
+{{model.name}} <br>
+<label for="description">Motivation:</label>
+{{model.description}} <br>
+<label for="duration">Favorite Exercise Method:</label>
+{{model.duration}} <br>
+
+
+{{outlet}}
+<hr>
+<span class="col-md-4 col-md-offset-4">{{#link-to "exercise"}}<br>My Exercises{{/link-to}}</span>
+<span class="col-md-4 col-md-offset-4">{{#link-to "change-password"}}<br>Change Password{{/link-to}}</span>
+</div>
+{{!-- {action "editAction" model}}> --}}
