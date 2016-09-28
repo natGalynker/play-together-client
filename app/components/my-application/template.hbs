@@ -7,12 +7,15 @@
         {{#if isAuthenticated}}
           <li class="home col-md-4">
             <a href="profiles" {{action "viewProfile"}}> <br> Profile </a>
+
           </li>
           <li class="home col-md-4">
             <a href="#" {{action "signOut"}}> <br> Sign Out</a>
           </li>
           <li class="home col-md-3 col-md-offset-3">
             {{#link-to "profiles/edit"}} <br> Register Form{{/link-to}}</li>
+            <li class="home col-md-3 col-md-offset-3">
+            {{#link-to "exercises"}} <br> My Exercise Log{{/link-to}}</li>
             <li class="home col-md-3 col-md-offset-3">
               {{#link-to 'exercises/new'}}<br> New Exercise{{/link-to}}
             </li>

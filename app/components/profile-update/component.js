@@ -1,7 +1,7 @@
 import Ember from 'ember';
 
   export default Ember.Component.extend({
-    tagName: 'div',
+    tagName: 'form',
     classNames: ['form-group'],
 
     newProfile: {},
@@ -15,6 +15,7 @@ import Ember from 'ember';
       this.sendAction('reset', profile);
     },
       submitProfile () {
+        console.log('form sbmitted');
         this.sendAction('submitProfile', this.get('newProfile'));
     // submitProfile () {
     // let data = this.get('newProfile');
