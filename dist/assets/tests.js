@@ -169,51 +169,6 @@ define('play-together-client/tests/components/sign-up-form/component.jshint', ['
     assert.ok(true, 'components/sign-up-form/component.js should pass jshint.');
   });
 });
-define('play-together-client/tests/exercise/model.jshint', ['exports'], function (exports) {
-  'use strict';
-
-  QUnit.module('JSHint - exercise/model.js');
-  QUnit.test('should pass jshint', function (assert) {
-    assert.expect(1);
-    assert.ok(true, 'exercise/model.js should pass jshint.');
-  });
-});
-define('play-together-client/tests/exercise/route.jshint', ['exports'], function (exports) {
-  'use strict';
-
-  QUnit.module('JSHint - exercise/route.js');
-  QUnit.test('should pass jshint', function (assert) {
-    assert.expect(1);
-    assert.ok(true, 'exercise/route.js should pass jshint.');
-  });
-});
-define('play-together-client/tests/exercises/edit/route.jshint', ['exports'], function (exports) {
-  'use strict';
-
-  QUnit.module('JSHint - exercises/edit/route.js');
-  QUnit.test('should pass jshint', function (assert) {
-    assert.expect(1);
-    assert.ok(true, 'exercises/edit/route.js should pass jshint.');
-  });
-});
-define('play-together-client/tests/exercises/new/route.jshint', ['exports'], function (exports) {
-  'use strict';
-
-  QUnit.module('JSHint - exercises/new/route.js');
-  QUnit.test('should pass jshint', function (assert) {
-    assert.expect(1);
-    assert.ok(true, 'exercises/new/route.js should pass jshint.');
-  });
-});
-define('play-together-client/tests/exercises/route.jshint', ['exports'], function (exports) {
-  'use strict';
-
-  QUnit.module('JSHint - exercises/route.js');
-  QUnit.test('should pass jshint', function (assert) {
-    assert.expect(1);
-    assert.ok(true, 'exercises/route.js should pass jshint.');
-  });
-});
 define('play-together-client/tests/helpers/destroy-app', ['exports', 'ember'], function (exports, _ember) {
   exports['default'] = destroyApp;
 
