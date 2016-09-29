@@ -4,6 +4,8 @@ export default Ember.Route.extend({
       auth: Ember.inject.service(),
       actions: {
         submitProfile(data) {
+          console.log('test');
+          console.log(data);
           let profile = this.get('store').createRecord('profile', data);
           console.log(data);
            profile.save();
