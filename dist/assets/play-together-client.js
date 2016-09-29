@@ -72,10 +72,6 @@ define('play-together-client/application/route', ['exports', 'ember'], function 
         this.transitionTo('profile', params);
       },
 
-      viewMyExercises: function viewMyExercises(params) {
-        this.transitionTo('exercises', params);
-      },
-
       signOut: function signOut() {
         var _this = this;
 
@@ -125,7 +121,7 @@ define("play-together-client/application/template", ["exports"], function (expor
             "column": 0
           },
           "end": {
-            "line": 5,
+            "line": 4,
             "column": 0
           }
         },
@@ -149,7 +145,7 @@ define("play-together-client/application/template", ["exports"], function (expor
         dom.insertBoundary(fragment, 0);
         return morphs;
       },
-      statements: [["inline", "my-application", [], ["model", ["subexpr", "@mut", [["get", "model", ["loc", [null, [1, 23], [1, 28]]]]], [], []], "signOut", "signOut", "viewProfile", "viewProfile", "viewMyExercises", "viewMyExercises"], ["loc", [null, [1, 0], [4, 51]]]]],
+      statements: [["inline", "my-application", [], ["model", ["subexpr", "@mut", [["get", "model", ["loc", [null, [1, 23], [1, 28]]]]], [], []], "signOut", "signOut", "viewProfile", "viewProfile"], ["loc", [null, [1, 0], [3, 43]]]]],
       locals: [],
       templates: []
     };
@@ -605,10 +601,6 @@ define('play-together-client/components/my-application/component', ['exports', '
       viewProfile: function viewProfile() {
         var params = this.get('id');
         this.sendAction('viewProfile', params);
-      },
-      viewMyExercises: function viewMyExercises() {
-        var params = this.get('id');
-        this.sendAction('viewMyExercises', params);
       }
     }
   });
@@ -1501,12 +1493,7 @@ define('play-together-client/components/profile-create/component', ['exports', '
     tagName: 'form',
     classNames: ['form-group'],
 
-    profile: {
-      location: 'enter location',
-      motivation: 'getting strong',
-      favorite: 'yoga all day every day',
-      username: 'thisExample'
-    },
+    profile: {},
 
     // createItem () {
     //     let data = this.get('newItem');
@@ -1528,18 +1515,6 @@ define('play-together-client/components/profile-create/component', ['exports', '
     }
   });
 });
-// submitProfile () {
-// let data = this.get('profile');
-// data.profile = this.get('profile');
-// this.sendAction('submitProfile', data);
-// this.sendAction('submitProfile', this.get('newProfile'));
-// this.sendAction('submitProfile', data);
-// this.get('profile', location);
-// this.set('profile', motivation);
-// this.set('profile', favorite);
-// this.set('profile');
-// this.set('profile');
-// },
 define("play-together-client/components/profile-create/template", ["exports"], function (exports) {
   exports["default"] = Ember.HTMLBars.template((function () {
     return {
@@ -1556,7 +1531,7 @@ define("play-together-client/components/profile-create/template", ["exports"], f
             "column": 0
           },
           "end": {
-            "line": 39,
+            "line": 34,
             "column": 0
           }
         },
@@ -1579,8 +1554,6 @@ define("play-together-client/components/profile-create/template", ["exports"], f
         dom.appendChild(el1, el2);
         dom.appendChild(el0, el1);
         var el1 = dom.createTextNode("\n\n");
-        dom.appendChild(el0, el1);
-        var el1 = dom.createTextNode("\n");
         dom.appendChild(el0, el1);
         var el1 = dom.createElement("form");
         var el2 = dom.createTextNode("\n  ");
@@ -1650,7 +1623,7 @@ define("play-together-client/components/profile-create/template", ["exports"], f
         return el0;
       },
       buildRenderNodes: function buildRenderNodes(dom, fragment, contextualElement) {
-        var element0 = dom.childAt(fragment, [5]);
+        var element0 = dom.childAt(fragment, [4]);
         var element1 = dom.childAt(element0, [19]);
         var morphs = new Array(6);
         morphs[0] = dom.createElementMorph(element0);
@@ -1661,7 +1634,7 @@ define("play-together-client/components/profile-create/template", ["exports"], f
         morphs[5] = dom.createElementMorph(element1);
         return morphs;
       },
-      statements: [["element", "action", ["submitProfile"], ["on", "submit"], ["loc", [null, [10, 6], [10, 44]]]], ["inline", "input", [], ["placeholder", "Put the name you prefer to be called", "type", "text", "id", "username", "value", ["subexpr", "@mut", [["get", "profile.username", ["loc", [null, [15, 16], [15, 32]]]]], [], []]], ["loc", [null, [12, 2], [15, 34]]]], ["inline", "input", [], ["placeholder", "Boston, MA etc", "type", "text", "id", "location", "value", ["subexpr", "@mut", [["get", "profile.location", ["loc", [null, [20, 16], [20, 32]]]]], [], []]], ["loc", [null, [17, 2], [20, 34]]]], ["inline", "input", [], ["placeholder", "Tell us about what drives you", "type", "text", "id", "motivation", "value", ["subexpr", "@mut", [["get", "profile.motivation", ["loc", [null, [25, 16], [25, 34]]]]], [], []]], ["loc", [null, [22, 2], [25, 36]]]], ["inline", "input", [], ["placeholder", "Tell us what is your go-to Exercise", "type", "text", "id", "favorite", "value", ["subexpr", "@mut", [["get", "profile.favorite", ["loc", [null, [30, 16], [30, 32]]]]], [], []]], ["loc", [null, [27, 2], [30, 34]]]], ["element", "action", ["reset"], [], ["loc", [null, [35, 32], [35, 50]]]]],
+      statements: [["element", "action", ["submitProfile"], ["on", "submit"], ["loc", [null, [5, 6], [5, 44]]]], ["inline", "input", [], ["placeholder", "Put the name you prefer to be called", "type", "text", "id", "username", "value", ["subexpr", "@mut", [["get", "profile.username", ["loc", [null, [10, 16], [10, 32]]]]], [], []]], ["loc", [null, [7, 2], [10, 34]]]], ["inline", "input", [], ["placeholder", "Boston, MA etc", "type", "text", "id", "location", "value", ["subexpr", "@mut", [["get", "profile.location", ["loc", [null, [15, 16], [15, 32]]]]], [], []]], ["loc", [null, [12, 2], [15, 34]]]], ["inline", "input", [], ["placeholder", "Tell us about what drives you", "type", "text", "id", "motivation", "value", ["subexpr", "@mut", [["get", "profile.motivation", ["loc", [null, [20, 16], [20, 34]]]]], [], []]], ["loc", [null, [17, 2], [20, 36]]]], ["inline", "input", [], ["placeholder", "Tell us what is your go-to Exercise", "type", "text", "id", "favorite", "value", ["subexpr", "@mut", [["get", "profile.favorite", ["loc", [null, [25, 16], [25, 32]]]]], [], []]], ["loc", [null, [22, 2], [25, 34]]]], ["element", "action", ["reset"], [], ["loc", [null, [30, 32], [30, 50]]]]],
       locals: [],
       templates: []
     };
@@ -2614,10 +2587,9 @@ define('play-together-client/profile/model', ['exports', 'ember-data'], function
     location: _emberData['default'].attr('string'),
     motivation: _emberData['default'].attr('string'),
     favorite_exercise: _emberData['default'].attr('string'),
-    //user: DS.belongsTo('user'),
+    user: _emberData['default'].belongsTo('user'),
     user_id: _emberData['default'].attr(),
-    username: _emberData['default'].attr('string'),
-    exercises: _emberData['default'].hasMany('exercise')
+    username: _emberData['default'].attr('string')
   });
 });
 define('play-together-client/profile/route', ['exports', 'ember'], function (exports, _ember) {
@@ -2646,44 +2618,6 @@ define("play-together-client/profile/template", ["exports"], function (exports) 
             },
             "end": {
               "line": 13,
-              "column": 78
-            }
-          },
-          "moduleName": "play-together-client/profile/template.hbs"
-        },
-        isEmpty: false,
-        arity: 0,
-        cachedFragment: null,
-        hasRendered: false,
-        buildFragment: function buildFragment(dom) {
-          var el0 = dom.createDocumentFragment();
-          var el1 = dom.createElement("br");
-          dom.appendChild(el0, el1);
-          var el1 = dom.createTextNode("My Exercises");
-          dom.appendChild(el0, el1);
-          return el0;
-        },
-        buildRenderNodes: function buildRenderNodes() {
-          return [];
-        },
-        statements: [],
-        locals: [],
-        templates: []
-      };
-    })();
-    var child1 = (function () {
-      return {
-        meta: {
-          "fragmentReason": false,
-          "revision": "Ember@2.5.1",
-          "loc": {
-            "source": null,
-            "start": {
-              "line": 14,
-              "column": 39
-            },
-            "end": {
-              "line": 14,
               "column": 88
             }
           },
@@ -2709,7 +2643,7 @@ define("play-together-client/profile/template", ["exports"], function (exports) 
         templates: []
       };
     })();
-    var child2 = (function () {
+    var child1 = (function () {
       return {
         meta: {
           "fragmentReason": false,
@@ -2717,11 +2651,11 @@ define("play-together-client/profile/template", ["exports"], function (exports) 
           "loc": {
             "source": null,
             "start": {
-              "line": 15,
+              "line": 14,
               "column": 39
             },
             "end": {
-              "line": 15,
+              "line": 14,
               "column": 80
             }
           },
@@ -2760,7 +2694,7 @@ define("play-together-client/profile/template", ["exports"], function (exports) 
             "column": 0
           },
           "end": {
-            "line": 18,
+            "line": 17,
             "column": 0
           }
         },
@@ -2817,7 +2751,7 @@ define("play-together-client/profile/template", ["exports"], function (exports) 
         var el2 = dom.createTextNode("\n");
         dom.appendChild(el1, el2);
         var el2 = dom.createElement("label");
-        dom.setAttribute(el2, "for", "favorite_exercise");
+        dom.setAttribute(el2, "for", "favorite");
         var el3 = dom.createTextNode("Favorite Exercise Method:");
         dom.appendChild(el2, el3);
         dom.appendChild(el1, el2);
@@ -2853,13 +2787,6 @@ define("play-together-client/profile/template", ["exports"], function (exports) 
         dom.appendChild(el1, el2);
         var el2 = dom.createTextNode("\n");
         dom.appendChild(el1, el2);
-        var el2 = dom.createElement("span");
-        dom.setAttribute(el2, "class", "col-md-4 col-md-offset-4");
-        var el3 = dom.createComment("");
-        dom.appendChild(el2, el3);
-        dom.appendChild(el1, el2);
-        var el2 = dom.createTextNode("\n");
-        dom.appendChild(el1, el2);
         dom.appendChild(el0, el1);
         var el1 = dom.createTextNode("\n");
         dom.appendChild(el0, el1);
@@ -2867,7 +2794,7 @@ define("play-together-client/profile/template", ["exports"], function (exports) 
       },
       buildRenderNodes: function buildRenderNodes(dom, fragment, contextualElement) {
         var element0 = dom.childAt(fragment, [0]);
-        var morphs = new Array(8);
+        var morphs = new Array(7);
         morphs[0] = dom.createMorphAt(dom.childAt(element0, [1, 0]), 0, 0);
         morphs[1] = dom.createMorphAt(element0, 5, 5);
         morphs[2] = dom.createMorphAt(element0, 11, 11);
@@ -2875,12 +2802,11 @@ define("play-together-client/profile/template", ["exports"], function (exports) 
         morphs[4] = dom.createMorphAt(element0, 21, 21);
         morphs[5] = dom.createMorphAt(dom.childAt(element0, [25]), 0, 0);
         morphs[6] = dom.createMorphAt(dom.childAt(element0, [27]), 0, 0);
-        morphs[7] = dom.createMorphAt(dom.childAt(element0, [29]), 0, 0);
         return morphs;
       },
-      statements: [["content", "model.username", ["loc", [null, [2, 10], [2, 28]]]], ["content", "model.location", ["loc", [null, [4, 0], [4, 18]]]], ["content", "model.motivation", ["loc", [null, [6, 0], [6, 20]]]], ["content", "model.favorite", ["loc", [null, [8, 0], [8, 18]]]], ["content", "outlet", ["loc", [null, [11, 0], [11, 10]]]], ["block", "link-to", ["exercise"], [], 0, null, ["loc", [null, [13, 39], [13, 90]]]], ["block", "link-to", ["change-password"], [], 1, null, ["loc", [null, [14, 39], [14, 100]]]], ["block", "link-to", ["profile"], [], 2, null, ["loc", [null, [15, 39], [15, 92]]]]],
+      statements: [["content", "model.username", ["loc", [null, [2, 10], [2, 28]]]], ["content", "model.location", ["loc", [null, [4, 0], [4, 18]]]], ["content", "model.motivation", ["loc", [null, [6, 0], [6, 20]]]], ["content", "model.favorite", ["loc", [null, [8, 0], [8, 18]]]], ["content", "outlet", ["loc", [null, [11, 0], [11, 10]]]], ["block", "link-to", ["change-password"], [], 0, null, ["loc", [null, [13, 39], [13, 100]]]], ["block", "link-to", ["profile"], [], 1, null, ["loc", [null, [14, 39], [14, 92]]]]],
       locals: [],
-      templates: [child0, child1, child2]
+      templates: [child0, child1]
     };
   })());
 });
@@ -3032,10 +2958,10 @@ define('play-together-client/profiles/model', ['exports', 'ember-data'], functio
     favorite_exercise: _emberData['default'].attr('string'),
     user: _emberData['default'].belongsTo('user'),
     user_id: _emberData['default'].attr(),
-    username: _emberData['default'].attr('string'),
-    exercises: _emberData['default'].hasMany('exercise')
+    username: _emberData['default'].attr('string')
   });
 });
+// exercises: DS.hasMany('exercise')
 define('play-together-client/profiles/route', ['exports', 'ember'], function (exports, _ember) {
   exports['default'] = _ember['default'].Route.extend({
     auth: _ember['default'].inject.service(),

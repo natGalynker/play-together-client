@@ -7,5 +7,5 @@ export default DS.Model.extend({
   user: DS.belongsTo('user'),
   user_id: DS.attr(),
   username: DS.attr('string'),
-  exercises: DS.hasMany('exercise')
+  // exercises: DS.hasMany('exercise')
 });
