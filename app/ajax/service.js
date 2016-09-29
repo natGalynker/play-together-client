@@ -1,6 +1,6 @@
 import Ember from 'ember';
 import AjaxService from 'ember-ajax/services/ajax';
-import ENV from 'play-together-client name/config/environment';
+import ENV from 'play-together-client/config/environment';
 
 export default AjaxService.extend({
   auth: Ember.inject.service(),
