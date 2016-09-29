@@ -1,0 +1,38 @@
+<h1>Tweak Your Profile</h1>
+
+<h4>Tell us About what brought you here</h4>
+
+{{!-- {{create-location profile=model submitProfile="submitProfile" reset="reset"}}
+{{create-motivation profile=model submitProfile="submitProfile" reset="reset"}}
+{{create-username profile=model submitProfile="submitProfile" reset="reset"}}
+{{create-location profile=model submitProfile="submitProfile" reset="reset"}} --}}
+
+<form {{action 'submitProfile' on='submit'}}>
+  <label for="username">Name You Go By</label>
+  {{input placeholder="Put the name you prefer to be called"
+          type="text"
+          id="username"
+          value=profile.username}}
+  <label for="location">Location</label>
+  {{input placeholder="Boston, MA etc"
+          type="text"
+          id="location"
+          value=profile.location}}
+  <label for="motivation">Motivation</label>
+  {{input placeholder="Tell us about what drives you"
+          type="text"
+          id="motivation"
+          value=profile.motivation}}
+  <label for="favorite">Favorite Exercise Method</label>
+  {{input placeholder="Tell us what is your go-to Exercise"
+          type="text"
+          id="favorite"
+          value=profile.favorite}}
+<button type="button" class="btn btn-primary">
+Update Profile
+</button>
+
+<button class="btn btn-default" {{action "reset"}}>
+  Cancel
+</button>
+</form>

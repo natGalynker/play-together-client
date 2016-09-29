@@ -1,10 +1,10 @@
 import Ember from 'ember';
 import ActiveModelAdapter from 'active-model-adapter';
-// import ENV from 'play-together-client name/config/environment';
+import ENV from 'play-together-client name/config/environment';
 
 export default ActiveModelAdapter.extend({
   auth: Ember.inject.service(),
-  // host: ENV.apiHost,
+  host: ENV.apiHost,
 
   headers: Ember.computed('auth.credentials.token', {
     get () {
