@@ -7,7 +7,6 @@
         {{#if isAuthenticated}}
           <li class="home col-md-4">
             <a href="profiles" {{action "viewProfile"}}> <br> Profile </a>
-
           </li>
           <li class="home col-md-4">
             <a href="#" {{action "signOut"}}> <br> Sign Out</a>
@@ -15,10 +14,6 @@
           <li class="home col-md-3 col-md-offset-3">
             {{#link-to "profiles/edit"}} <br> Register Form{{/link-to}}</li>
             <li class="home col-md-3 col-md-offset-3">
-            {{#link-to "exercises"}} <br> My Exercise Log{{/link-to}}</li>
-            <li class="home col-md-3 col-md-offset-3">
-              {{#link-to "exercises/new"}}<br> New Exercise{{/link-to}}</li>
-        {{else}}
           <li>
             {{#link-to "sign-up"}}Sign Up{{/link-to}}
           </li>
@@ -34,7 +29,7 @@
   <div class="container-fluid outlet col-lg-12 col-centered">
     <div class="centered">
       <div class="landing">
-        <h1>Play Together</h1>
+        <h1>Play Log</h1>
       </div>
       {{outlet}}
     </div>
@@ -43,8 +38,9 @@
   <div class="container-fluid outlet col-lg-12 col-centered">
     <div class="centered">
       <h1>Play Together</h1>
-      <h4>Welcome to Encore, a place where you can log your exercises, your way. No
-  restrictions, no expectations</h4> {{outlet}}
+      <h4>Welcome to Play Log, a place where you can log your exercises, your way. No
+  restrictions, no expectations. You can create multiple profiles or just have
+a single one. Sometimes its nice gettin lost in an alias</h4> {{outlet}}
     </div>
   </div>
 {{/if}}
