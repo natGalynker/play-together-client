@@ -9,6 +9,8 @@ export default Ember.Route.extend({
       // },
       actions: {
         submitProfile(data) {
+          console.log('test');
+          console.log(data);
           let profile = this.get('store').createRecord('profile', data);
            profile.save();
           // this.set('profiles').submitProfile(data)
