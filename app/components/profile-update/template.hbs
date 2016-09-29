@@ -27,16 +27,16 @@
           value=profile.motivation}}
 </div>
 <div class="form-group">
-  <label for="favorite">Favorite Exercise Method</label>
+  <label for="favorite_exercises">favorite_exercises Exercise Method</label>
   {{input placeholder="Tell us what is your go-to Exercise"
           type="text"
-          id="favorite"
-          value=profile.favorite}}
+          id="favorite_exercises"
+          value=profile.favorite_exercises}}
 </div>
 <button type="submit" class="btn btn-primary" {{action "submitProfile"}}>
 Update Profile
 </button>
 
-<button class="btn btn-default" {{action "cancel"}}>
+<button class="btn btn-default" {{action "reset"}}>
   Cancel
 </button>

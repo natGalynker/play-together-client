@@ -7,13 +7,13 @@ import Ember from 'ember';
     profile: {
       location: 'enter location',
       motivation: 'getting strong',
-      favorite: 'yoga all day every day',
+      favorite_exercises: 'yoga all day every day',
       username: 'thisExample',
     },
 
 
   actions: {
-    cancel () {
+    reset () {
       let profile = this.get('profile');
       this.sendAction('reset', profile);
     },
@@ -28,7 +28,7 @@ import Ember from 'ember';
     // this.sendAction('submitProfile', data);
     // this.get('profile', location);
     // this.set('profile', motivation);
-    // this.set('profile', favorite);
+    // this.set('profile', favorite_exercises);
     // this.set('profile');
     // this.set('profile');
     // },
