@@ -6,19 +6,10 @@
 
 /* jshint ignore:end */
 
-<<<<<<< HEAD
-define('play-together-client/ajax/service', ['exports', 'ember', 'ember-ajax/services/ajax'], function (exports, _ember, _emberAjaxServicesAjax) {
-  // import ENV from 'play-together-client/config/environment';
-
-  exports['default'] = _emberAjaxServicesAjax['default'].extend({
-    auth: _ember['default'].inject.service(),
-    // host: ENV.apiHost,
-=======
 define('play-together-client/ajax/service', ['exports', 'ember', 'ember-ajax/services/ajax', 'play-together-client/config/environment'], function (exports, _ember, _emberAjaxServicesAjax, _playTogetherClientConfigEnvironment) {
   exports['default'] = _emberAjaxServicesAjax['default'].extend({
     auth: _ember['default'].inject.service(),
     host: _playTogetherClientConfigEnvironment['default'].apiHost,
->>>>>>> capstone-branch
     headers: _ember['default'].computed('auth.credentials.token', {
       get: function get() {
         var headers = {};
@@ -48,20 +39,10 @@ define('play-together-client/app', ['exports', 'ember', 'play-together-client/re
 
   exports['default'] = App;
 });
-<<<<<<< HEAD
-define('play-together-client/application/adapter', ['exports', 'ember', 'active-model-adapter'], function (exports, _ember, _activeModelAdapter) {
-  // import ENV from 'play-together-client/config/environment';
-
-  exports['default'] = _activeModelAdapter['default'].extend({
-    auth: _ember['default'].inject.service(),
-    // host: ENV.apiHost,
-=======
 define('play-together-client/application/adapter', ['exports', 'ember', 'active-model-adapter', 'play-together-client/config/environment'], function (exports, _ember, _activeModelAdapter, _playTogetherClientConfigEnvironment) {
   exports['default'] = _activeModelAdapter['default'].extend({
     auth: _ember['default'].inject.service(),
     host: _playTogetherClientConfigEnvironment['default'].apiHost,
->>>>>>> capstone-branch
-
     headers: _ember['default'].computed('auth.credentials.token', {
       get: function get() {
         var headers = {};
@@ -86,13 +67,9 @@ define('play-together-client/application/route', ['exports', 'ember'], function 
         this.transitionTo('profile', params);
       },
 
-<<<<<<< HEAD
-=======
       viewMyExercises: function viewMyExercises(params) {
         this.transitionTo('exercises', params);
       },
-
->>>>>>> capstone-branch
       signOut: function signOut() {
         var _this = this;
 
@@ -459,15 +436,6 @@ define("play-together-client/components/change-password-form/template", ["export
     };
   })());
 });
-<<<<<<< HEAD
-define('play-together-client/components/email-input/component', ['exports', 'ember'], function (exports, _ember) {
-  exports['default'] = _ember['default'].Component.extend({
-    tagName: 'div',
-    classNames: ['form-group']
-  });
-});
-define("play-together-client/components/email-input/template", ["exports"], function (exports) {
-=======
 define('play-together-client/components/delete-profile/component', ['exports', 'ember'], function (exports, _ember) {
   exports['default'] = _ember['default'].Component.extend({
     actions: {
@@ -482,7 +450,6 @@ define('play-together-client/components/delete-profile/component', ['exports', '
   });
 });
 define("play-together-client/components/delete-profile/template", ["exports"], function (exports) {
->>>>>>> capstone-branch
   exports["default"] = Ember.HTMLBars.template((function () {
     return {
       meta: {
@@ -492,7 +459,6 @@ define("play-together-client/components/delete-profile/template", ["exports"], f
           "problems": ["multiple-nodes", "wrong-type"]
 =======
           "name": "triple-curlies"
->>>>>>> capstone-branch
         },
         "revision": "Ember@2.5.1",
         "loc": {
@@ -502,19 +468,11 @@ define("play-together-client/components/delete-profile/template", ["exports"], f
             "column": 0
           },
           "end": {
-<<<<<<< HEAD
-            "line": 6,
-            "column": 0
-          }
-        },
-        "moduleName": "play-together-client/components/email-input/template.hbs"
-=======
             "line": 8,
             "column": 0
           }
         },
         "moduleName": "play-together-client/components/delete-profile/template.hbs"
->>>>>>> capstone-branch
       },
       isEmpty: false,
       arity: 0,
@@ -522,16 +480,6 @@ define("play-together-client/components/delete-profile/template", ["exports"], f
       hasRendered: false,
       buildFragment: function buildFragment(dom) {
         var el0 = dom.createDocumentFragment();
-<<<<<<< HEAD
-        var el1 = dom.createElement("label");
-        dom.setAttribute(el1, "for", "email");
-        var el2 = dom.createTextNode("Email");
-        dom.appendChild(el1, el2);
-        dom.appendChild(el0, el1);
-        var el1 = dom.createTextNode("\n");
-        dom.appendChild(el0, el1);
-        var el1 = dom.createComment("");
-=======
         var el1 = dom.createElement("div");
         dom.setAttribute(el1, "class", "change-actions");
         var el2 = dom.createTextNode("\n");
@@ -556,20 +504,12 @@ define("play-together-client/components/delete-profile/template", ["exports"], f
         dom.appendChild(el1, el2);
         var el2 = dom.createTextNode("\n");
         dom.appendChild(el1, el2);
->>>>>>> capstone-branch
         dom.appendChild(el0, el1);
         var el1 = dom.createTextNode("\n");
         dom.appendChild(el0, el1);
         return el0;
       },
       buildRenderNodes: function buildRenderNodes(dom, fragment, contextualElement) {
-<<<<<<< HEAD
-        var morphs = new Array(1);
-        morphs[0] = dom.createMorphAt(fragment, 2, 2, contextualElement);
-        return morphs;
-      },
-      statements: [["inline", "input", [], ["type", "email", "id", "email", "placeholder", "Email", "value", ["subexpr", "@mut", [["get", "email", ["loc", [null, [5, 14], [5, 19]]]]], [], []]], ["loc", [null, [2, 0], [5, 21]]]]],
-=======
         var element0 = dom.childAt(fragment, [0]);
         var element1 = dom.childAt(element0, [1]);
         var element2 = dom.childAt(element0, [5]);
@@ -580,41 +520,11 @@ define("play-together-client/components/delete-profile/template", ["exports"], f
         return morphs;
       },
       statements: [["element", "action", ["changeAction"], ["on", "submit"], ["loc", [null, [2, 6], [2, 43]]]], ["inline", "input", [], ["value", ["subexpr", "@mut", [["get", "profile.location", ["loc", [null, [3, 16], [3, 32]]]]], [], []], "placeholder", "Update Where you reside", "type", "text", "cols", 25, "rows", 10], ["loc", [null, [3, 2], [3, 100]]]], ["element", "action", ["delete"], [], ["loc", [null, [6, 8], [6, 27]]]]],
->>>>>>> capstone-branch
       locals: [],
       templates: []
     };
   })());
 });
-<<<<<<< HEAD
-define('play-together-client/components/ember-wormhole', ['exports', 'ember-wormhole/components/ember-wormhole'], function (exports, _emberWormholeComponentsEmberWormhole) {
-  Object.defineProperty(exports, 'default', {
-    enumerable: true,
-    get: function get() {
-      return _emberWormholeComponentsEmberWormhole['default'];
-    }
-  });
-});
-define('play-together-client/components/flash-message', ['exports', 'ember-cli-flash/components/flash-message'], function (exports, _emberCliFlashComponentsFlashMessage) {
-  Object.defineProperty(exports, 'default', {
-    enumerable: true,
-    get: function get() {
-      return _emberCliFlashComponentsFlashMessage['default'];
-    }
-  });
-});
-define('play-together-client/components/hamburger-menu/component', ['exports', 'ember'], function (exports, _ember) {
-  exports['default'] = _ember['default'].Component.extend({
-    tagName: 'button',
-    classNames: ['navbar-toggle', 'collapsed'],
-    attributeBindings: ['toggle:data-toggle', 'target:data-target', 'expanded:aria-expanded'],
-    toggle: 'collapse',
-    target: '#navigation',
-    expanded: false
-  });
-});
-define("play-together-client/components/hamburger-menu/template", ["exports"], function (exports) {
-=======
 define('play-together-client/components/email-input/component', ['exports', 'ember'], function (exports, _ember) {
   exports['default'] = _ember['default'].Component.extend({
     tagName: 'div',
@@ -622,17 +532,13 @@ define('play-together-client/components/email-input/component', ['exports', 'emb
   });
 });
 define("play-together-client/components/email-input/template", ["exports"], function (exports) {
->>>>>>> capstone-branch
   exports["default"] = Ember.HTMLBars.template((function () {
     return {
       meta: {
         "fragmentReason": {
           "name": "missing-wrapper",
-<<<<<<< HEAD
-          "problems": ["multiple-nodes"]
-=======
           "problems": ["multiple-nodes", "wrong-type"]
->>>>>>> capstone-branch
+
         },
         "revision": "Ember@2.5.1",
         "loc": {
@@ -642,19 +548,11 @@ define("play-together-client/components/email-input/template", ["exports"], func
             "column": 0
           },
           "end": {
-<<<<<<< HEAD
-            "line": 5,
-            "column": 0
-          }
-        },
-        "moduleName": "play-together-client/components/hamburger-menu/template.hbs"
-=======
             "line": 6,
             "column": 0
           }
         },
         "moduleName": "play-together-client/components/email-input/template.hbs"
->>>>>>> capstone-branch
       },
       isEmpty: false,
       arity: 0,
@@ -662,29 +560,7 @@ define("play-together-client/components/email-input/template", ["exports"], func
       hasRendered: false,
       buildFragment: function buildFragment(dom) {
         var el0 = dom.createDocumentFragment();
-<<<<<<< HEAD
-        var el1 = dom.createTextNode("  ");
-        dom.appendChild(el0, el1);
-        var el1 = dom.createElement("span");
-        dom.setAttribute(el1, "class", "sr-only");
-        var el2 = dom.createTextNode("Toggle navigation");
-        dom.appendChild(el1, el2);
-        dom.appendChild(el0, el1);
-        var el1 = dom.createTextNode("\n  ");
-        dom.appendChild(el0, el1);
-        var el1 = dom.createElement("span");
-        dom.setAttribute(el1, "class", "icon-bar");
-        dom.appendChild(el0, el1);
-        var el1 = dom.createTextNode("\n  ");
-        dom.appendChild(el0, el1);
-        var el1 = dom.createElement("span");
-        dom.setAttribute(el1, "class", "icon-bar");
-        dom.appendChild(el0, el1);
-        var el1 = dom.createTextNode("\n  ");
-        dom.appendChild(el0, el1);
-        var el1 = dom.createElement("span");
-        dom.setAttribute(el1, "class", "icon-bar");
-=======
+
         var el1 = dom.createElement("label");
         dom.setAttribute(el1, "for", "email");
         var el2 = dom.createTextNode("Email");
@@ -693,53 +569,22 @@ define("play-together-client/components/email-input/template", ["exports"], func
         var el1 = dom.createTextNode("\n");
         dom.appendChild(el0, el1);
         var el1 = dom.createComment("");
->>>>>>> capstone-branch
         dom.appendChild(el0, el1);
         var el1 = dom.createTextNode("\n");
         dom.appendChild(el0, el1);
         return el0;
       },
-<<<<<<< HEAD
-      buildRenderNodes: function buildRenderNodes() {
-        return [];
-      },
-      statements: [],
-=======
       buildRenderNodes: function buildRenderNodes(dom, fragment, contextualElement) {
         var morphs = new Array(1);
         morphs[0] = dom.createMorphAt(fragment, 2, 2, contextualElement);
         return morphs;
       },
       statements: [["inline", "input", [], ["type", "email", "id", "email", "placeholder", "Email", "value", ["subexpr", "@mut", [["get", "email", ["loc", [null, [5, 14], [5, 19]]]]], [], []]], ["loc", [null, [2, 0], [5, 21]]]]],
->>>>>>> capstone-branch
       locals: [],
       templates: []
     };
   })());
 });
-<<<<<<< HEAD
-define('play-together-client/components/my-application/component', ['exports', 'ember'], function (exports, _ember) {
-  exports['default'] = _ember['default'].Component.extend({
-    auth: _ember['default'].inject.service(),
-
-    user: _ember['default'].computed.alias('auth.credentials.email'),
-    id: _ember['default'].computed.alias('auth.credentials.id'),
-    isAuthenticated: _ember['default'].computed.alias('auth.isAuthenticated'),
-
-    actions: {
-      signOut: function signOut() {
-        this.sendAction('signOut');
-      },
-
-      viewProfile: function viewProfile() {
-        var params = this.get('id');
-        this.sendAction('viewProfile', params);
-      }
-    }
-  });
-});
-define("play-together-client/components/my-application/template", ["exports"], function (exports) {
-=======
 define('play-together-client/components/ember-wormhole', ['exports', 'ember-wormhole/components/ember-wormhole'], function (exports, _emberWormholeComponentsEmberWormhole) {
   Object.defineProperty(exports, 'default', {
     enumerable: true,
@@ -792,7 +637,6 @@ define('play-together-client/components/exercise-create/component', ['exports', 
   //   },
 });
 define("play-together-client/components/exercise-create/template", ["exports"], function (exports) {
->>>>>>> capstone-branch
   exports["default"] = Ember.HTMLBars.template((function () {
     var child0 = (function () {
       return {
@@ -802,20 +646,6 @@ define("play-together-client/components/exercise-create/template", ["exports"], 
           "loc": {
             "source": null,
             "start": {
-<<<<<<< HEAD
-              "line": 4,
-              "column": 4
-            },
-            "end": {
-              "line": 4,
-              "column": 61
-            }
-          },
-          "moduleName": "play-together-client/components/my-application/template.hbs"
-        },
-        isEmpty: false,
-        arity: 0,
-=======
               "line": 7,
               "column": 2
             },
@@ -828,117 +658,10 @@ define("play-together-client/components/exercise-create/template", ["exports"], 
         },
         isEmpty: false,
         arity: 1,
->>>>>>> capstone-branch
         cachedFragment: null,
         hasRendered: false,
         buildFragment: function buildFragment(dom) {
           var el0 = dom.createDocumentFragment();
-<<<<<<< HEAD
-          var el1 = dom.createTextNode("Home Page");
-          dom.appendChild(el0, el1);
-          return el0;
-        },
-        buildRenderNodes: function buildRenderNodes() {
-          return [];
-        },
-        statements: [],
-        locals: [],
-        templates: []
-      };
-    })();
-    var child1 = (function () {
-      var child0 = (function () {
-        return {
-          meta: {
-            "fragmentReason": false,
-            "revision": "Ember@2.5.1",
-            "loc": {
-              "source": null,
-              "start": {
-                "line": 15,
-                "column": 12
-              },
-              "end": {
-                "line": 15,
-                "column": 59
-              }
-            },
-            "moduleName": "play-together-client/components/my-application/template.hbs"
-          },
-          isEmpty: false,
-          arity: 0,
-          cachedFragment: null,
-          hasRendered: false,
-          buildFragment: function buildFragment(dom) {
-            var el0 = dom.createDocumentFragment();
-            var el1 = dom.createTextNode(" ");
-            dom.appendChild(el0, el1);
-            var el1 = dom.createElement("br");
-            dom.appendChild(el0, el1);
-            var el1 = dom.createTextNode(" Register Form");
-            dom.appendChild(el0, el1);
-            return el0;
-          },
-          buildRenderNodes: function buildRenderNodes() {
-            return [];
-          },
-          statements: [],
-          locals: [],
-          templates: []
-        };
-      })();
-      var child1 = (function () {
-        return {
-          meta: {
-            "fragmentReason": false,
-            "revision": "Ember@2.5.1",
-            "loc": {
-              "source": null,
-              "start": {
-                "line": 16,
-                "column": 63
-              },
-              "end": {
-                "line": 16,
-                "column": 92
-              }
-            },
-            "moduleName": "play-together-client/components/my-application/template.hbs"
-          },
-          isEmpty: false,
-          arity: 0,
-          cachedFragment: null,
-          hasRendered: false,
-          buildFragment: function buildFragment(dom) {
-            var el0 = dom.createDocumentFragment();
-            var el1 = dom.createTextNode("Sign Up");
-            dom.appendChild(el0, el1);
-            return el0;
-          },
-          buildRenderNodes: function buildRenderNodes() {
-            return [];
-          },
-          statements: [],
-          locals: [],
-          templates: []
-        };
-      })();
-      var child2 = (function () {
-        return {
-          meta: {
-            "fragmentReason": false,
-            "revision": "Ember@2.5.1",
-            "loc": {
-              "source": null,
-              "start": {
-                "line": 18,
-                "column": 12
-              },
-              "end": {
-                "line": 18,
-                "column": 41
-              }
-=======
           var el1 = dom.createTextNode("      ");
           dom.appendChild(el0, el1);
           var el1 = dom.createComment("");
@@ -1546,7 +1269,6 @@ define("play-together-client/components/my-application/template", ["exports"], f
                 "line": 26,
                 "column": 41
               }
->>>>>>> capstone-branch
             },
             "moduleName": "play-together-client/components/my-application/template.hbs"
           },
@@ -1575,19 +1297,11 @@ define("play-together-client/components/my-application/template", ["exports"], f
           "loc": {
             "source": null,
             "start": {
-<<<<<<< HEAD
-              "line": 7,
-              "column": 8
-            },
-            "end": {
-              "line": 20,
-=======
               "line": 21,
               "column": 8
             },
             "end": {
               "line": 28,
->>>>>>> capstone-branch
               "column": 8
             }
           },
@@ -1602,65 +1316,6 @@ define("play-together-client/components/my-application/template", ["exports"], f
           var el1 = dom.createTextNode("          ");
           dom.appendChild(el0, el1);
           var el1 = dom.createElement("li");
-<<<<<<< HEAD
-          dom.setAttribute(el1, "class", "home col-md-4");
-          var el2 = dom.createTextNode("\n            ");
-          dom.appendChild(el1, el2);
-          var el2 = dom.createElement("a");
-          dom.setAttribute(el2, "href", "profiles");
-          var el3 = dom.createTextNode(" ");
-          dom.appendChild(el2, el3);
-          var el3 = dom.createElement("br");
-          dom.appendChild(el2, el3);
-          var el3 = dom.createTextNode(" Profile ");
-          dom.appendChild(el2, el3);
-          dom.appendChild(el1, el2);
-          var el2 = dom.createTextNode("\n          ");
-          dom.appendChild(el1, el2);
-          dom.appendChild(el0, el1);
-          var el1 = dom.createTextNode("\n          ");
-          dom.appendChild(el0, el1);
-          var el1 = dom.createElement("li");
-          dom.setAttribute(el1, "class", "home col-md-4");
-          var el2 = dom.createTextNode("\n            ");
-          dom.appendChild(el1, el2);
-          var el2 = dom.createElement("a");
-          dom.setAttribute(el2, "href", "#");
-          var el3 = dom.createTextNode(" ");
-          dom.appendChild(el2, el3);
-          var el3 = dom.createElement("br");
-          dom.appendChild(el2, el3);
-          var el3 = dom.createTextNode(" Sign Out");
-          dom.appendChild(el2, el3);
-          dom.appendChild(el1, el2);
-          var el2 = dom.createTextNode("\n          ");
-          dom.appendChild(el1, el2);
-          dom.appendChild(el0, el1);
-          var el1 = dom.createTextNode("\n          ");
-          dom.appendChild(el0, el1);
-          var el1 = dom.createElement("li");
-          dom.setAttribute(el1, "class", "home col-md-3 col-md-offset-3");
-          var el2 = dom.createTextNode("\n            ");
-          dom.appendChild(el1, el2);
-          var el2 = dom.createComment("");
-          dom.appendChild(el1, el2);
-          dom.appendChild(el0, el1);
-          var el1 = dom.createTextNode("\n              ");
-          dom.appendChild(el0, el1);
-          var el1 = dom.createElement("li");
-          dom.setAttribute(el1, "class", "application col-md-3 col-md-offset-3");
-          var el2 = dom.createComment("");
-          dom.appendChild(el1, el2);
-          dom.appendChild(el0, el1);
-          var el1 = dom.createTextNode("\n          ");
-          dom.appendChild(el0, el1);
-          var el1 = dom.createElement("li");
-          var el2 = dom.createTextNode("\n            ");
-          dom.appendChild(el1, el2);
-          var el2 = dom.createComment("");
-          dom.appendChild(el1, el2);
-          var el2 = dom.createTextNode("\n          ");
-=======
           var el2 = dom.createTextNode("\n            ");
           dom.appendChild(el1, el2);
           var el2 = dom.createComment("");
@@ -1746,7 +1401,6 @@ define("play-together-client/components/my-application/template", ["exports"], f
           dom.appendChild(el2, el3);
           dom.appendChild(el1, el2);
           var el2 = dom.createTextNode("\n  ");
->>>>>>> capstone-branch
           dom.appendChild(el1, el2);
           dom.appendChild(el0, el1);
           var el1 = dom.createTextNode("\n");
@@ -1754,24 +1408,6 @@ define("play-together-client/components/my-application/template", ["exports"], f
           return el0;
         },
         buildRenderNodes: function buildRenderNodes(dom, fragment, contextualElement) {
-<<<<<<< HEAD
-          var element0 = dom.childAt(fragment, [1, 1]);
-          var element1 = dom.childAt(fragment, [3, 1]);
-          var morphs = new Array(5);
-          morphs[0] = dom.createElementMorph(element0);
-          morphs[1] = dom.createElementMorph(element1);
-          morphs[2] = dom.createMorphAt(dom.childAt(fragment, [5]), 1, 1);
-          morphs[3] = dom.createMorphAt(dom.childAt(fragment, [7]), 0, 0);
-          morphs[4] = dom.createMorphAt(dom.childAt(fragment, [9]), 1, 1);
-          return morphs;
-        },
-        statements: [["element", "action", ["viewProfile"], [], ["loc", [null, [9, 31], [9, 55]]]], ["element", "action", ["signOut"], [], ["loc", [null, [12, 24], [12, 44]]]], ["block", "link-to", ["profiles/edit"], [], 0, null, ["loc", [null, [15, 12], [15, 71]]]], ["block", "link-to", ["sign-up"], [], 1, null, ["loc", [null, [16, 63], [16, 104]]]], ["block", "link-to", ["sign-in"], [], 2, null, ["loc", [null, [18, 12], [18, 53]]]]],
-        locals: [],
-        templates: [child0, child1, child2]
-      };
-    })();
-    var child2 = (function () {
-=======
           var morphs = new Array(1);
           morphs[0] = dom.createMorphAt(dom.childAt(fragment, [1, 1]), 3, 3);
           return morphs;
@@ -1782,7 +1418,6 @@ define("play-together-client/components/my-application/template", ["exports"], f
       };
     })();
     var child4 = (function () {
->>>>>>> capstone-branch
       return {
         meta: {
           "fragmentReason": false,
@@ -1790,19 +1425,11 @@ define("play-together-client/components/my-application/template", ["exports"], f
           "loc": {
             "source": null,
             "start": {
-<<<<<<< HEAD
-              "line": 25,
-              "column": 0
-            },
-            "end": {
-              "line": 34,
-=======
               "line": 42,
               "column": 0
             },
             "end": {
               "line": 51,
->>>>>>> capstone-branch
               "column": 0
             }
           },
@@ -1824,33 +1451,18 @@ define("play-together-client/components/my-application/template", ["exports"], f
           dom.setAttribute(el2, "class", "centered");
           var el3 = dom.createTextNode("\n      ");
           dom.appendChild(el2, el3);
-<<<<<<< HEAD
-          var el3 = dom.createElement("div");
-          dom.setAttribute(el3, "class", "landing");
-          var el4 = dom.createTextNode("\n        ");
-          dom.appendChild(el3, el4);
-          var el4 = dom.createElement("h1");
-          var el5 = dom.createTextNode("Play Log");
-          dom.appendChild(el4, el5);
-          dom.appendChild(el3, el4);
-          var el4 = dom.createTextNode("\n      ");
-=======
           var el3 = dom.createElement("h1");
           var el4 = dom.createTextNode("Play Together");
->>>>>>> capstone-branch
           dom.appendChild(el3, el4);
           dom.appendChild(el2, el3);
           var el3 = dom.createTextNode("\n      ");
           dom.appendChild(el2, el3);
-<<<<<<< HEAD
-=======
           var el3 = dom.createElement("h4");
           var el4 = dom.createTextNode("Welcome to Play-Log, a place where you can log your exercises, your way. No\n  restrictions, no expectations. You can have, one two or multiple profiles depending\non how you like to organise your activitites!");
           dom.appendChild(el3, el4);
           dom.appendChild(el2, el3);
           var el3 = dom.createTextNode(" ");
           dom.appendChild(el2, el3);
->>>>>>> capstone-branch
           var el3 = dom.createComment("");
           dom.appendChild(el2, el3);
           var el3 = dom.createTextNode("\n    ");
@@ -1922,27 +1534,6 @@ define("play-together-client/components/my-application/template", ["exports"], f
           dom.appendChild(el2, el3);
           var el3 = dom.createComment("");
           dom.appendChild(el2, el3);
-          var el3 = dom.createTextNode("\n    ");
-          dom.appendChild(el2, el3);
-          dom.appendChild(el1, el2);
-          var el2 = dom.createTextNode("\n  ");
-          dom.appendChild(el1, el2);
-          dom.appendChild(el0, el1);
-          var el1 = dom.createTextNode("\n");
-          dom.appendChild(el0, el1);
-          return el0;
-        },
-        buildRenderNodes: function buildRenderNodes(dom, fragment, contextualElement) {
-          var morphs = new Array(1);
-          morphs[0] = dom.createMorphAt(dom.childAt(fragment, [1, 1]), 5, 5);
-          return morphs;
-        },
-        statements: [["content", "outlet", ["loc", [null, [40, 62], [40, 72]]]]],
-        locals: [],
-        templates: []
-      };
-    })();
-=======
         buildRenderNodes: function buildRenderNodes(dom, fragment, contextualElement) {
           var morphs = new Array(1);
           morphs[0] = dom.createMorphAt(dom.childAt(fragment, [1, 1]), 5, 5);
@@ -2364,16 +1955,11 @@ define('play-together-client/components/profile-update/component', ['exports', '
 });
 define("play-together-client/components/profile-update/template", ["exports"], function (exports) {
   exports["default"] = Ember.HTMLBars.template((function () {
->>>>>>> capstone-branch
     return {
       meta: {
         "fragmentReason": {
           "name": "missing-wrapper",
-<<<<<<< HEAD
-          "problems": ["multiple-nodes", "wrong-type"]
-=======
           "problems": ["multiple-nodes"]
->>>>>>> capstone-branch
         },
         "revision": "Ember@2.5.1",
         "loc": {
@@ -2387,11 +1973,7 @@ define("play-together-client/components/profile-update/template", ["exports"], f
             "column": 0
           }
         },
-<<<<<<< HEAD
-        "moduleName": "play-together-client/components/my-application/template.hbs"
-=======
         "moduleName": "play-together-client/components/profile-update/template.hbs"
->>>>>>> capstone-branch
       },
       isEmpty: false,
       arity: 0,
@@ -2399,44 +1981,6 @@ define("play-together-client/components/profile-update/template", ["exports"], f
       hasRendered: false,
       buildFragment: function buildFragment(dom) {
         var el0 = dom.createDocumentFragment();
-<<<<<<< HEAD
-        var el1 = dom.createElement("nav");
-        dom.setAttribute(el1, "class", "navbar navbar-default");
-        var el2 = dom.createTextNode("\n  ");
-        dom.appendChild(el1, el2);
-        var el2 = dom.createElement("div");
-        dom.setAttribute(el2, "class", "container-fluid");
-        var el3 = dom.createTextNode("\n    ");
-        dom.appendChild(el2, el3);
-        var el3 = dom.createComment("");
-        dom.appendChild(el2, el3);
-        var el3 = dom.createTextNode("\n    ");
-        dom.appendChild(el2, el3);
-        var el3 = dom.createComment("");
-        dom.appendChild(el2, el3);
-        var el3 = dom.createTextNode("\n    ");
-        dom.appendChild(el2, el3);
-        var el3 = dom.createElement("div");
-        dom.setAttribute(el3, "class", "collapse navbar-collapse");
-        dom.setAttribute(el3, "id", "navigation");
-        var el4 = dom.createTextNode("\n      ");
-        dom.appendChild(el3, el4);
-        var el4 = dom.createElement("ul");
-        dom.setAttribute(el4, "class", "nav navbar-nav navbar-right");
-        var el5 = dom.createTextNode("\n");
-        dom.appendChild(el4, el5);
-        var el5 = dom.createComment("");
-        dom.appendChild(el4, el5);
-        var el5 = dom.createTextNode("      ");
-        dom.appendChild(el4, el5);
-        dom.appendChild(el3, el4);
-        var el4 = dom.createTextNode("\n    ");
-        dom.appendChild(el3, el4);
-        dom.appendChild(el2, el3);
-        var el3 = dom.createTextNode("\n  ");
-        dom.appendChild(el2, el3);
-        dom.appendChild(el1, el2);
-=======
         var el1 = dom.createElement("h1");
         var el2 = dom.createTextNode("Tweak Your Profile");
         dom.appendChild(el1, el2);
@@ -2516,15 +2060,11 @@ define("play-together-client/components/profile-update/template", ["exports"], f
         dom.appendChild(el1, el2);
         var el2 = dom.createComment("");
         dom.appendChild(el1, el2);
->>>>>>> capstone-branch
         var el2 = dom.createTextNode("\n");
         dom.appendChild(el1, el2);
         dom.appendChild(el0, el1);
         var el1 = dom.createTextNode("\n");
         dom.appendChild(el0, el1);
-<<<<<<< HEAD
-        var el1 = dom.createComment("");
-=======
         var el1 = dom.createElement("button");
         dom.setAttribute(el1, "type", "submit");
         dom.setAttribute(el1, "class", "btn btn-primary");
@@ -2539,35 +2079,10 @@ define("play-together-client/components/profile-update/template", ["exports"], f
         dom.appendChild(el1, el2);
         dom.appendChild(el0, el1);
         var el1 = dom.createTextNode("\n");
->>>>>>> capstone-branch
         dom.appendChild(el0, el1);
         return el0;
       },
       buildRenderNodes: function buildRenderNodes(dom, fragment, contextualElement) {
-<<<<<<< HEAD
-        var element2 = dom.childAt(fragment, [0, 1]);
-        var morphs = new Array(4);
-        morphs[0] = dom.createMorphAt(element2, 1, 1);
-        morphs[1] = dom.createMorphAt(element2, 3, 3);
-        morphs[2] = dom.createMorphAt(dom.childAt(element2, [5, 1]), 1, 1);
-        morphs[3] = dom.createMorphAt(fragment, 2, 2, contextualElement);
-        dom.insertBoundary(fragment, null);
-        return morphs;
-      },
-      statements: [["content", "navbar-header", ["loc", [null, [3, 4], [3, 21]]]], ["block", "link-to", ["application"], ["class", "navbar-brand"], 0, null, ["loc", [null, [4, 4], [4, 73]]]], ["block", "if", [["get", "isAuthenticated", ["loc", [null, [7, 14], [7, 29]]]]], [], 1, null, ["loc", [null, [7, 8], [20, 15]]]], ["block", "if", [["get", "isAuthenticated", ["loc", [null, [25, 6], [25, 21]]]]], [], 2, 3, ["loc", [null, [25, 0], [43, 7]]]]],
-      locals: [],
-      templates: [child0, child1, child2, child3]
-    };
-  })());
-});
-define('play-together-client/components/navbar-header/component', ['exports', 'ember'], function (exports, _ember) {
-  exports['default'] = _ember['default'].Component.extend({
-    tagName: 'div',
-    classNames: ['navbar-header']
-  });
-});
-define("play-together-client/components/navbar-header/template", ["exports"], function (exports) {
-=======
         var element0 = dom.childAt(fragment, [12]);
         var element1 = dom.childAt(fragment, [14]);
         var morphs = new Array(6);
@@ -2604,7 +2119,6 @@ define('play-together-client/components/sign-in-form/component', ['exports', 'em
   });
 });
 define("play-together-client/components/sign-in-form/template", ["exports"], function (exports) {
->>>>>>> capstone-branch
   exports["default"] = Ember.HTMLBars.template((function () {
     var child0 = (function () {
       return {
@@ -2614,17 +2128,6 @@ define("play-together-client/components/sign-in-form/template", ["exports"], fun
           "loc": {
             "source": null,
             "start": {
-<<<<<<< HEAD
-              "line": 2,
-              "column": 0
-            },
-            "end": {
-              "line": 2,
-              "column": 51
-            }
-          },
-          "moduleName": "play-together-client/components/navbar-header/template.hbs"
-=======
               "line": 7,
               "column": 57
             },
@@ -2634,7 +2137,6 @@ define("play-together-client/components/sign-in-form/template", ["exports"], fun
             }
           },
           "moduleName": "play-together-client/components/sign-in-form/template.hbs"
->>>>>>> capstone-branch
         },
         isEmpty: false,
         arity: 0,
@@ -2642,77 +2144,6 @@ define("play-together-client/components/sign-in-form/template", ["exports"], fun
         hasRendered: false,
         buildFragment: function buildFragment(dom) {
           var el0 = dom.createDocumentFragment();
-<<<<<<< HEAD
-          var el1 = dom.createTextNode("Home");
-          dom.appendChild(el0, el1);
-          return el0;
-        },
-        buildRenderNodes: function buildRenderNodes() {
-          return [];
-        },
-        statements: [],
-        locals: [],
-        templates: []
-      };
-    })();
-    return {
-      meta: {
-        "fragmentReason": {
-          "name": "missing-wrapper",
-          "problems": ["wrong-type", "multiple-nodes"]
-        },
-        "revision": "Ember@2.5.1",
-        "loc": {
-          "source": null,
-          "start": {
-            "line": 1,
-            "column": 0
-          },
-          "end": {
-            "line": 3,
-            "column": 0
-          }
-        },
-        "moduleName": "play-together-client/components/navbar-header/template.hbs"
-      },
-      isEmpty: false,
-      arity: 0,
-      cachedFragment: null,
-      hasRendered: false,
-      buildFragment: function buildFragment(dom) {
-        var el0 = dom.createDocumentFragment();
-        var el1 = dom.createComment("");
-        dom.appendChild(el0, el1);
-        var el1 = dom.createTextNode("\n");
-        dom.appendChild(el0, el1);
-        var el1 = dom.createComment("");
-        dom.appendChild(el0, el1);
-        var el1 = dom.createTextNode("\n");
-        dom.appendChild(el0, el1);
-        return el0;
-      },
-      buildRenderNodes: function buildRenderNodes(dom, fragment, contextualElement) {
-        var morphs = new Array(2);
-        morphs[0] = dom.createMorphAt(fragment, 0, 0, contextualElement);
-        morphs[1] = dom.createMorphAt(fragment, 2, 2, contextualElement);
-        dom.insertBoundary(fragment, 0);
-        return morphs;
-      },
-      statements: [["content", "hamburger-menu", ["loc", [null, [1, 0], [1, 18]]]], ["block", "link-to", ["application"], ["class", "navbar-brand"], 0, null, ["loc", [null, [2, 0], [2, 63]]]]],
-      locals: [],
-      templates: [child0]
-    };
-  })());
-});
-define('play-together-client/components/password-confirmation-input/component', ['exports', 'ember'], function (exports, _ember) {
-  exports['default'] = _ember['default'].Component.extend({
-    tagName: 'div',
-    classNames: ['form-group']
-  });
-});
-define("play-together-client/components/password-confirmation-input/template", ["exports"], function (exports) {
-  exports["default"] = Ember.HTMLBars.template((function () {
-=======
           var el1 = dom.createElement("a");
           var el2 = dom.createElement("br");
           dom.appendChild(el1, el2);
@@ -2729,16 +2160,11 @@ define("play-together-client/components/password-confirmation-input/template", [
         templates: []
       };
     })();
->>>>>>> capstone-branch
     return {
       meta: {
         "fragmentReason": {
           "name": "missing-wrapper",
-<<<<<<< HEAD
-          "problems": ["multiple-nodes", "wrong-type"]
-=======
           "problems": ["multiple-nodes"]
->>>>>>> capstone-branch
         },
         "revision": "Ember@2.5.1",
         "loc": {
@@ -2748,19 +2174,11 @@ define("play-together-client/components/password-confirmation-input/template", [
             "column": 0
           },
           "end": {
-<<<<<<< HEAD
-            "line": 6,
-            "column": 0
-          }
-        },
-        "moduleName": "play-together-client/components/password-confirmation-input/template.hbs"
-=======
             "line": 13,
             "column": 0
           }
         },
         "moduleName": "play-together-client/components/sign-in-form/template.hbs"
->>>>>>> capstone-branch
       },
       isEmpty: false,
       arity: 0,
@@ -2768,16 +2186,6 @@ define("play-together-client/components/password-confirmation-input/template", [
       hasRendered: false,
       buildFragment: function buildFragment(dom) {
         var el0 = dom.createDocumentFragment();
-<<<<<<< HEAD
-        var el1 = dom.createElement("label");
-        dom.setAttribute(el1, "for", "password-confirmation");
-        var el2 = dom.createTextNode("Password Confirmation");
-        dom.appendChild(el1, el2);
-        dom.appendChild(el0, el1);
-        var el1 = dom.createTextNode("\n");
-        dom.appendChild(el0, el1);
-        var el1 = dom.createComment("");
-=======
         var el1 = dom.createElement("div");
         dom.setAttribute(el1, "class", "auth-user");
         var el2 = dom.createTextNode("\n");
@@ -2815,33 +2223,12 @@ define("play-together-client/components/password-confirmation-input/template", [
         dom.appendChild(el1, el2);
         var el2 = dom.createTextNode("\n");
         dom.appendChild(el1, el2);
->>>>>>> capstone-branch
         dom.appendChild(el0, el1);
         var el1 = dom.createTextNode("\n");
         dom.appendChild(el0, el1);
         return el0;
       },
       buildRenderNodes: function buildRenderNodes(dom, fragment, contextualElement) {
-<<<<<<< HEAD
-        var morphs = new Array(1);
-        morphs[0] = dom.createMorphAt(fragment, 2, 2, contextualElement);
-        return morphs;
-      },
-      statements: [["inline", "input", [], ["type", "password", "id", "password-confirmation", "placeholder", "Password Confirmation", "value", ["subexpr", "@mut", [["get", "password", ["loc", [null, [5, 14], [5, 22]]]]], [], []]], ["loc", [null, [2, 0], [5, 24]]]]],
-      locals: [],
-      templates: []
-    };
-  })());
-});
-define('play-together-client/components/password-input/component', ['exports', 'ember'], function (exports, _ember) {
-  exports['default'] = _ember['default'].Component.extend({
-    tagName: 'div',
-    classNames: ['form-group']
-  });
-});
-define("play-together-client/components/password-input/template", ["exports"], function (exports) {
-  exports["default"] = Ember.HTMLBars.template((function () {
-=======
         var element0 = dom.childAt(fragment, [0]);
         var element1 = dom.childAt(fragment, [2]);
         var element2 = dom.childAt(element1, [1]);
@@ -2922,16 +2309,11 @@ define("play-together-client/components/sign-up-form/template", ["exports"], fun
         templates: []
       };
     })();
->>>>>>> capstone-branch
     return {
       meta: {
         "fragmentReason": {
           "name": "missing-wrapper",
-<<<<<<< HEAD
-          "problems": ["multiple-nodes", "wrong-type"]
-=======
           "problems": ["multiple-nodes"]
->>>>>>> capstone-branch
         },
         "revision": "Ember@2.5.1",
         "loc": {
@@ -2941,19 +2323,11 @@ define("play-together-client/components/sign-up-form/template", ["exports"], fun
             "column": 0
           },
           "end": {
-<<<<<<< HEAD
-            "line": 6,
-            "column": 0
-          }
-        },
-        "moduleName": "play-together-client/components/password-input/template.hbs"
-=======
             "line": 13,
             "column": 0
           }
         },
         "moduleName": "play-together-client/components/sign-up-form/template.hbs"
->>>>>>> capstone-branch
       },
       isEmpty: false,
       arity: 0,
@@ -2961,11 +2335,6 @@ define("play-together-client/components/sign-up-form/template", ["exports"], fun
       hasRendered: false,
       buildFragment: function buildFragment(dom) {
         var el0 = dom.createDocumentFragment();
-<<<<<<< HEAD
-        var el1 = dom.createElement("label");
-        dom.setAttribute(el1, "for", "kind");
-        var el2 = dom.createTextNode("Password");
-=======
         var el1 = dom.createElement("div");
         dom.setAttribute(el1, "class", "user-auth");
         var el2 = dom.createTextNode("\n  ");
@@ -2981,14 +2350,10 @@ define("play-together-client/components/sign-up-form/template", ["exports"], fun
         var el2 = dom.createComment("");
         dom.appendChild(el1, el2);
         var el2 = dom.createTextNode("\n");
->>>>>>> capstone-branch
         dom.appendChild(el1, el2);
         dom.appendChild(el0, el1);
         var el1 = dom.createTextNode("\n");
         dom.appendChild(el0, el1);
-<<<<<<< HEAD
-        var el1 = dom.createComment("");
-=======
         var el1 = dom.createElement("div");
         dom.setAttribute(el1, "class", "row");
         var el2 = dom.createTextNode("\n  ");
@@ -3011,104 +2376,12 @@ define("play-together-client/components/sign-up-form/template", ["exports"], fun
         dom.appendChild(el1, el2);
         var el2 = dom.createTextNode("\n");
         dom.appendChild(el1, el2);
->>>>>>> capstone-branch
         dom.appendChild(el0, el1);
         var el1 = dom.createTextNode("\n");
         dom.appendChild(el0, el1);
         return el0;
       },
       buildRenderNodes: function buildRenderNodes(dom, fragment, contextualElement) {
-<<<<<<< HEAD
-        var morphs = new Array(1);
-        morphs[0] = dom.createMorphAt(fragment, 2, 2, contextualElement);
-        return morphs;
-      },
-      statements: [["inline", "input", [], ["type", "password", "id", "password", "placeholder", "Password", "value", ["subexpr", "@mut", [["get", "password", ["loc", [null, [5, 14], [5, 22]]]]], [], []]], ["loc", [null, [2, 0], [5, 24]]]]],
-      locals: [],
-      templates: []
-    };
-  })());
-});
-define('play-together-client/components/power-select-multiple', ['exports', 'ember-power-select/components/power-select-multiple'], function (exports, _emberPowerSelectComponentsPowerSelectMultiple) {
-  Object.defineProperty(exports, 'default', {
-    enumerable: true,
-    get: function get() {
-      return _emberPowerSelectComponentsPowerSelectMultiple['default'];
-    }
-  });
-});
-define('play-together-client/components/power-select-multiple/trigger', ['exports', 'ember-power-select/components/power-select-multiple/trigger'], function (exports, _emberPowerSelectComponentsPowerSelectMultipleTrigger) {
-  Object.defineProperty(exports, 'default', {
-    enumerable: true,
-    get: function get() {
-      return _emberPowerSelectComponentsPowerSelectMultipleTrigger['default'];
-    }
-  });
-});
-define('play-together-client/components/power-select', ['exports', 'ember-power-select/components/power-select'], function (exports, _emberPowerSelectComponentsPowerSelect) {
-  Object.defineProperty(exports, 'default', {
-    enumerable: true,
-    get: function get() {
-      return _emberPowerSelectComponentsPowerSelect['default'];
-    }
-  });
-});
-define('play-together-client/components/power-select/before-options', ['exports', 'ember-power-select/components/power-select/before-options'], function (exports, _emberPowerSelectComponentsPowerSelectBeforeOptions) {
-  Object.defineProperty(exports, 'default', {
-    enumerable: true,
-    get: function get() {
-      return _emberPowerSelectComponentsPowerSelectBeforeOptions['default'];
-    }
-  });
-});
-define('play-together-client/components/power-select/options', ['exports', 'ember-power-select/components/power-select/options'], function (exports, _emberPowerSelectComponentsPowerSelectOptions) {
-  Object.defineProperty(exports, 'default', {
-    enumerable: true,
-    get: function get() {
-      return _emberPowerSelectComponentsPowerSelectOptions['default'];
-    }
-  });
-});
-define('play-together-client/components/power-select/search-message', ['exports', 'ember-power-select/components/power-select/search-message'], function (exports, _emberPowerSelectComponentsPowerSelectSearchMessage) {
-  Object.defineProperty(exports, 'default', {
-    enumerable: true,
-    get: function get() {
-      return _emberPowerSelectComponentsPowerSelectSearchMessage['default'];
-    }
-  });
-});
-define('play-together-client/components/power-select/trigger', ['exports', 'ember-power-select/components/power-select/trigger'], function (exports, _emberPowerSelectComponentsPowerSelectTrigger) {
-  Object.defineProperty(exports, 'default', {
-    enumerable: true,
-    get: function get() {
-      return _emberPowerSelectComponentsPowerSelectTrigger['default'];
-    }
-  });
-});
-define('play-together-client/components/profile-create/component', ['exports', 'ember'], function (exports, _ember) {
-  exports['default'] = _ember['default'].Component.extend({
-    tagName: 'form',
-    classNames: ['form-group'],
-
-    profile: {},
-
-    // createItem () {
-    //     let data = this.get('newItem');
-    //     data.list = this.get('list');
-    //     this.sendAction('createItem', data);
-    //     this.set('newItem.content', null);
-    //   },
-    actions: {
-      cancel: function cancel() {
-        var profile = this.get('profile');
-        this.sendAction('reset', profile);
-      },
-      submitProfile: function submitProfile() {
-        console.log('form sbmitted');
-        // console.log(profile);
-        // this.sendAction('profile', params);
-        this.sendAction('submitProfile', this.get('profile'));
-=======
         var element0 = dom.childAt(fragment, [0]);
         var element1 = dom.childAt(fragment, [2]);
         var element2 = dom.childAt(element1, [1]);
@@ -3158,15 +2431,10 @@ define('play-together-client/exercise/route', ['exports', 'ember'], function (ex
     actions: {
       createAction: function createAction() {
         this.transitionTo('exercises/new');
->>>>>>> capstone-branch
       }
     }
   });
 });
-<<<<<<< HEAD
-define("play-together-client/components/profile-create/template", ["exports"], function (exports) {
-  exports["default"] = Ember.HTMLBars.template((function () {
-=======
 define("play-together-client/exercise/template", ["exports"], function (exports) {
   exports["default"] = Ember.HTMLBars.template((function () {
     var child0 = (function () {
@@ -3321,7 +2589,6 @@ define("play-together-client/exercise/template", ["exports"], function (exports)
         templates: []
       };
     })();
->>>>>>> capstone-branch
     return {
       meta: {
         "fragmentReason": {
@@ -3336,19 +2603,11 @@ define("play-together-client/exercise/template", ["exports"], function (exports)
             "column": 0
           },
           "end": {
-<<<<<<< HEAD
-            "line": 34,
-            "column": 0
-          }
-        },
-        "moduleName": "play-together-client/components/profile-create/template.hbs"
-=======
             "line": 46,
             "column": 0
           }
         },
         "moduleName": "play-together-client/exercise/template.hbs"
->>>>>>> capstone-branch
       },
       isEmpty: false,
       arity: 0,
@@ -3356,62 +2615,6 @@ define("play-together-client/exercise/template", ["exports"], function (exports)
       hasRendered: false,
       buildFragment: function buildFragment(dom) {
         var el0 = dom.createDocumentFragment();
-<<<<<<< HEAD
-        var el1 = dom.createElement("h1");
-        var el2 = dom.createTextNode("Tweak Your Profile");
-        dom.appendChild(el1, el2);
-        dom.appendChild(el0, el1);
-        var el1 = dom.createTextNode("\n\n");
-        dom.appendChild(el0, el1);
-        var el1 = dom.createElement("h4");
-        var el2 = dom.createTextNode("Tell us About what brought you here");
-        dom.appendChild(el1, el2);
-        dom.appendChild(el0, el1);
-        var el1 = dom.createTextNode("\n\n");
-        dom.appendChild(el0, el1);
-        var el1 = dom.createElement("form");
-        var el2 = dom.createTextNode("\n  ");
-        dom.appendChild(el1, el2);
-        var el2 = dom.createElement("label");
-        dom.setAttribute(el2, "for", "username");
-        var el3 = dom.createTextNode("Name You Go By");
-        dom.appendChild(el2, el3);
-        dom.appendChild(el1, el2);
-        var el2 = dom.createTextNode("\n  ");
-        dom.appendChild(el1, el2);
-        var el2 = dom.createComment("");
-        dom.appendChild(el1, el2);
-        var el2 = dom.createTextNode("\n  ");
-        dom.appendChild(el1, el2);
-        var el2 = dom.createElement("label");
-        dom.setAttribute(el2, "for", "location");
-        var el3 = dom.createTextNode("Location");
-        dom.appendChild(el2, el3);
-        dom.appendChild(el1, el2);
-        var el2 = dom.createTextNode("\n  ");
-        dom.appendChild(el1, el2);
-        var el2 = dom.createComment("");
-        dom.appendChild(el1, el2);
-        var el2 = dom.createTextNode("\n  ");
-        dom.appendChild(el1, el2);
-        var el2 = dom.createElement("label");
-        dom.setAttribute(el2, "for", "motivation");
-        var el3 = dom.createTextNode("Motivation");
-        dom.appendChild(el2, el3);
-        dom.appendChild(el1, el2);
-        var el2 = dom.createTextNode("\n  ");
-        dom.appendChild(el1, el2);
-        var el2 = dom.createComment("");
-        dom.appendChild(el1, el2);
-        var el2 = dom.createTextNode("\n  ");
-        dom.appendChild(el1, el2);
-        var el2 = dom.createElement("label");
-        dom.setAttribute(el2, "for", "favorite");
-        var el3 = dom.createTextNode("Favorite Exercise Method");
-        dom.appendChild(el2, el3);
-        dom.appendChild(el1, el2);
-        var el2 = dom.createTextNode("\n  ");
-=======
         var el1 = dom.createElement("span");
         var el2 = dom.createElement("h1");
         var el3 = dom.createTextNode("Exercise");
@@ -3575,25 +2778,11 @@ define("play-together-client/exercise/template", ["exports"], function (exports)
         var el2 = dom.createElement("br");
         dom.appendChild(el1, el2);
         var el2 = dom.createTextNode("\n\n\n");
->>>>>>> capstone-branch
         dom.appendChild(el1, el2);
         var el2 = dom.createComment("");
         dom.appendChild(el1, el2);
         var el2 = dom.createTextNode("\n");
         dom.appendChild(el1, el2);
-<<<<<<< HEAD
-        var el2 = dom.createElement("button");
-        dom.setAttribute(el2, "type", "button");
-        dom.setAttribute(el2, "class", "btn btn-primary");
-        var el3 = dom.createTextNode("\nUpdate Profile\n");
-        dom.appendChild(el2, el3);
-        dom.appendChild(el1, el2);
-        var el2 = dom.createTextNode("\n\n");
-        dom.appendChild(el1, el2);
-        var el2 = dom.createElement("button");
-        dom.setAttribute(el2, "class", "btn btn-default");
-        var el3 = dom.createTextNode("\n  Cancel\n");
-=======
         var el2 = dom.createElement("hr");
         dom.appendChild(el1, el2);
         var el2 = dom.createTextNode("\n");
@@ -3608,7 +2797,6 @@ define("play-together-client/exercise/template", ["exports"], function (exports)
         var el2 = dom.createElement("span");
         dom.setAttribute(el2, "class", "col-md-4 col-md-offset-4");
         var el3 = dom.createComment("");
->>>>>>> capstone-branch
         dom.appendChild(el2, el3);
         dom.appendChild(el1, el2);
         var el2 = dom.createTextNode("\n");
@@ -3619,39 +2807,6 @@ define("play-together-client/exercise/template", ["exports"], function (exports)
         return el0;
       },
       buildRenderNodes: function buildRenderNodes(dom, fragment, contextualElement) {
-<<<<<<< HEAD
-        var element0 = dom.childAt(fragment, [4]);
-        var element1 = dom.childAt(element0, [19]);
-        var morphs = new Array(6);
-        morphs[0] = dom.createElementMorph(element0);
-        morphs[1] = dom.createMorphAt(element0, 3, 3);
-        morphs[2] = dom.createMorphAt(element0, 7, 7);
-        morphs[3] = dom.createMorphAt(element0, 11, 11);
-        morphs[4] = dom.createMorphAt(element0, 15, 15);
-        morphs[5] = dom.createElementMorph(element1);
-        return morphs;
-      },
-      statements: [["element", "action", ["submitProfile"], ["on", "submit"], ["loc", [null, [5, 6], [5, 44]]]], ["inline", "input", [], ["placeholder", "Put the name you prefer to be called", "type", "text", "id", "username", "value", ["subexpr", "@mut", [["get", "profile.username", ["loc", [null, [10, 16], [10, 32]]]]], [], []]], ["loc", [null, [7, 2], [10, 34]]]], ["inline", "input", [], ["placeholder", "Boston, MA etc", "type", "text", "id", "location", "value", ["subexpr", "@mut", [["get", "profile.location", ["loc", [null, [15, 16], [15, 32]]]]], [], []]], ["loc", [null, [12, 2], [15, 34]]]], ["inline", "input", [], ["placeholder", "Tell us about what drives you", "type", "text", "id", "motivation", "value", ["subexpr", "@mut", [["get", "profile.motivation", ["loc", [null, [20, 16], [20, 34]]]]], [], []]], ["loc", [null, [17, 2], [20, 36]]]], ["inline", "input", [], ["placeholder", "Tell us what is your go-to Exercise", "type", "text", "id", "favorite", "value", ["subexpr", "@mut", [["get", "profile.favorite", ["loc", [null, [25, 16], [25, 32]]]]], [], []]], ["loc", [null, [22, 2], [25, 34]]]], ["element", "action", ["reset"], [], ["loc", [null, [30, 32], [30, 50]]]]],
-      locals: [],
-      templates: []
-    };
-  })());
-});
-define('play-together-client/components/profile-update/component', ['exports', 'ember'], function (exports, _ember) {
-  exports['default'] = _ember['default'].Component.extend({
-    tagName: 'form',
-    classNames: ['form-group'],
-
-    profile: {},
-    actions: {
-      reset: function reset() {
-        var profile = this.get('profile');
-        this.sendAction('reset', profile);
-      },
-      submitProfile: function submitProfile() {
-        console.log('form submitted', this.get('profile'));
-        this.sendAction('submitProfile', this.get('profile'));
-=======
         var element0 = dom.childAt(fragment, [0]);
         var element1 = dom.childAt(fragment, [4]);
         var element2 = dom.childAt(fragment, [6]);
@@ -3711,7 +2866,6 @@ define('play-together-client/exercises/edit/route', ['exports', 'ember'], functi
           _this2.transitionTo('exercise', test);
           console.log(test.id);
         });
->>>>>>> capstone-branch
       }
     }
   });
@@ -3720,7 +2874,6 @@ define('play-together-client/exercises/edit/route', ['exports', 'ember'], functi
 define("play-together-client/components/profile-update/template", ["exports"], function (exports) {
 =======
 define("play-together-client/exercises/edit/template", ["exports"], function (exports) {
->>>>>>> capstone-branch
   exports["default"] = Ember.HTMLBars.template((function () {
     return {
       meta: {
@@ -3730,7 +2883,6 @@ define("play-together-client/exercises/edit/template", ["exports"], function (ex
           "problems": ["multiple-nodes"]
 =======
           "problems": ["wrong-type"]
->>>>>>> capstone-branch
         },
         "revision": "Ember@2.5.1",
         "loc": {
@@ -3752,7 +2904,6 @@ define("play-together-client/exercises/edit/template", ["exports"], function (ex
           }
         },
         "moduleName": "play-together-client/exercises/edit/template.hbs"
->>>>>>> capstone-branch
       },
       isEmpty: false,
       arity: 0,
@@ -3859,7 +3010,6 @@ define("play-together-client/exercises/edit/template", ["exports"], function (ex
         dom.appendChild(el1, el2);
 =======
         var el1 = dom.createComment("");
->>>>>>> capstone-branch
         dom.appendChild(el0, el1);
         var el1 = dom.createTextNode("\n");
         dom.appendChild(el0, el1);
@@ -3886,7 +3036,6 @@ define("play-together-client/exercises/edit/template", ["exports"], function (ex
         return morphs;
       },
       statements: [["inline", "exercise-edit", [], ["exercise", ["subexpr", "@mut", [["get", "model", ["loc", [null, [1, 25], [1, 30]]]]], [], []], "submitExercise", "submitExercise", "reset", "reset"], ["loc", [null, [1, 0], [3, 30]]]]],
->>>>>>> capstone-branch
       locals: [],
       templates: []
     };
@@ -3992,7 +3141,6 @@ define('play-together-client/exercises/new/route', ['exports', 'ember'], functio
 });
 define("play-together-client/exercises/new/template", ["exports"], function (exports) {
   exports["default"] = Ember.HTMLBars.template((function () {
->>>>>>> capstone-branch
     return {
       meta: {
         "fragmentReason": {
@@ -4001,7 +3149,6 @@ define("play-together-client/exercises/new/template", ["exports"], function (exp
           "problems": ["multiple-nodes"]
 =======
           "problems": ["wrong-type"]
->>>>>>> capstone-branch
         },
         "revision": "Ember@2.5.1",
         "loc": {
@@ -4023,7 +3170,6 @@ define("play-together-client/exercises/new/template", ["exports"], function (exp
           }
         },
         "moduleName": "play-together-client/exercises/new/template.hbs"
->>>>>>> capstone-branch
       },
       isEmpty: false,
       arity: 0,
@@ -4071,7 +3217,6 @@ define("play-together-client/exercises/new/template", ["exports"], function (exp
         dom.appendChild(el1, el2);
 =======
         var el1 = dom.createComment("");
->>>>>>> capstone-branch
         dom.appendChild(el0, el1);
         var el1 = dom.createTextNode("\n");
         dom.appendChild(el0, el1);
@@ -4146,7 +3291,6 @@ define('play-together-client/exercises/route', ['exports', 'ember', 'ember-local
         var exercise = this.get('store').createRecord('exercise', data);
         exercise.save();
         // this.transitionTo('exercises/new');
->>>>>>> capstone-branch
       }
     }
   });
@@ -4155,7 +3299,6 @@ define('play-together-client/exercises/route', ['exports', 'ember', 'ember-local
 define("play-together-client/components/sign-up-form/template", ["exports"], function (exports) {
 =======
 define("play-together-client/exercises/template", ["exports"], function (exports) {
->>>>>>> capstone-branch
   exports["default"] = Ember.HTMLBars.template((function () {
     var child0 = (function () {
       return {
@@ -4191,7 +3334,6 @@ define("play-together-client/exercises/template", ["exports"], function (exports
         },
         isEmpty: false,
         arity: 1,
->>>>>>> capstone-branch
         cachedFragment: null,
         hasRendered: false,
         buildFragment: function buildFragment(dom) {
@@ -4228,7 +3370,6 @@ define("play-together-client/exercises/template", ["exports"], function (exports
         },
         statements: [["inline", "exercises-display", [], ["exercise", ["subexpr", "@mut", [["get", "exercise", ["loc", [null, [4, 31], [4, 39]]]]], [], []], "display", "display"], ["loc", [null, [4, 2], [5, 41]]]]],
         locals: ["exercise"],
->>>>>>> capstone-branch
         templates: []
       };
     })();
@@ -4240,7 +3381,6 @@ define("play-together-client/exercises/template", ["exports"], function (exports
           "problems": ["multiple-nodes"]
 =======
           "problems": ["multiple-nodes", "wrong-type"]
->>>>>>> capstone-branch
         },
         "revision": "Ember@2.5.1",
         "loc": {
@@ -4262,7 +3402,6 @@ define("play-together-client/exercises/template", ["exports"], function (exports
           }
         },
         "moduleName": "play-together-client/exercises/template.hbs"
->>>>>>> capstone-branch
       },
       isEmpty: false,
       arity: 0,
@@ -4328,7 +3467,6 @@ define("play-together-client/exercises/template", ["exports"], function (exports
         var el1 = dom.createTextNode("\n");
         dom.appendChild(el0, el1);
         var el1 = dom.createComment("");
->>>>>>> capstone-branch
         dom.appendChild(el0, el1);
         var el1 = dom.createTextNode("\n");
         dom.appendChild(el0, el1);
@@ -4357,7 +3495,6 @@ define("play-together-client/exercises/template", ["exports"], function (exports
         return morphs;
       },
       statements: [["block", "each", [["get", "model", ["loc", [null, [3, 10], [3, 15]]]]], [], 0, null, ["loc", [null, [3, 2], [6, 11]]]], ["content", "outlet", ["loc", [null, [8, 0], [8, 10]]]]],
->>>>>>> capstone-branch
       locals: [],
       templates: [child0]
     };
@@ -4371,7 +3508,6 @@ define('play-together-client/controllers/object', ['exports', 'ember'], function
   exports['default'] = _ember['default'].Controller;
 });
 =======
->>>>>>> capstone-branch
 define('play-together-client/flash/object', ['exports', 'ember-cli-flash/flash/object'], function (exports, _emberCliFlashFlashObject) {
   Object.defineProperty(exports, 'default', {
     enumerable: true,
@@ -4579,7 +3715,7 @@ define('play-together-client/initializers/data-adapter', ['exports', 'ember'], f
   /*
     This initializer is here to keep backwards compatibility with code depending
     on the `data-adapter` initializer (before Ember Data was an addon).
-  
+
     Should be removed for Ember Data 3.x
   */
 
@@ -4592,31 +3728,31 @@ define('play-together-client/initializers/data-adapter', ['exports', 'ember'], f
 define('play-together-client/initializers/ember-data', ['exports', 'ember-data/setup-container', 'ember-data/-private/core'], function (exports, _emberDataSetupContainer, _emberDataPrivateCore) {
 
   /*
-  
+
     This code initializes Ember-Data onto an Ember application.
-  
+
     If an Ember.js developer defines a subclass of DS.Store on their application,
     as `App.StoreService` (or via a module system that resolves to `service:store`)
     this code will automatically instantiate it and make it available on the
     router.
-  
+
     Additionally, after an application's controllers have been injected, they will
     each have the store made available to them.
-  
+
     For example, imagine an Ember.js application with the following classes:
-  
+
     App.StoreService = DS.Store.extend({
       adapter: 'custom'
     });
-  
+
     App.PostsController = Ember.ArrayController.extend({
       // ...
     });
-  
+
     When the application is initialized, `App.ApplicationStore` will automatically be
     instantiated, and the instance of `App.PostsController` will have its `store`
     property set to that instance.
-  
+
     Note that this code will only be run if the `ember-application` package is
     loaded. If Ember Data is being used in an environment other than a
     typical application (e.g., node.js where only `ember-runtime` is available),
@@ -4717,7 +3853,7 @@ define('play-together-client/initializers/injectStore', ['exports', 'ember'], fu
   /*
     This initializer is here to keep backwards compatibility with code depending
     on the `injectStore` initializer (before Ember Data was an addon).
-  
+
     Should be removed for Ember Data 3.x
   */
 
@@ -4746,7 +3882,7 @@ define('play-together-client/initializers/store', ['exports', 'ember'], function
   /*
     This initializer is here to keep backwards compatibility with code depending
     on the `store` initializer (before Ember Data was an addon).
-  
+
     Should be removed for Ember Data 3.x
   */
 
@@ -4775,7 +3911,7 @@ define('play-together-client/initializers/transforms', ['exports', 'ember'], fun
   /*
     This initializer is here to keep backwards compatibility with code depending
     on the `transforms` initializer (before Ember Data was an addon).
-  
+
     Should be removed for Ember Data 3.x
   */
 
@@ -4854,7 +3990,6 @@ define('play-together-client/profile/model', ['exports', 'ember-data'], function
 =======
     username: _emberData['default'].attr('string'),
     exercises: _emberData['default'].hasMany('exercise')
->>>>>>> capstone-branch
   });
 });
 define('play-together-client/profile/route', ['exports', 'ember'], function (exports, _ember) {
@@ -4875,7 +4010,6 @@ define('play-together-client/profile/route', ['exports', 'ember'], function (exp
 
       changeAction: function changeAction(profile) {
         return profile.save();
->>>>>>> capstone-branch
       }
     }
   });
@@ -4902,7 +4036,6 @@ define("play-together-client/profile/template", ["exports"], function (exports) 
             },
             "end": {
               "line": 18,
->>>>>>> capstone-branch
               "column": 88
             }
           },
@@ -4968,7 +4101,6 @@ define("play-together-client/profile/template", ["exports"], function (exports) 
       };
     })();
 =======
->>>>>>> capstone-branch
     return {
       meta: {
         "fragmentReason": {
@@ -4986,7 +4118,6 @@ define("play-together-client/profile/template", ["exports"], function (exports) 
             "line": 17,
 =======
             "line": 20,
->>>>>>> capstone-branch
             "column": 0
           }
         },
@@ -5086,7 +4217,6 @@ define("play-together-client/profile/template", ["exports"], function (exports) 
         var el2 = dom.createComment("");
         dom.appendChild(el1, el2);
         var el2 = dom.createTextNode("\n\n\n");
->>>>>>> capstone-branch
         dom.appendChild(el1, el2);
         var el2 = dom.createElement("span");
         dom.setAttribute(el2, "class", "col-md-4 col-md-offset-4");
@@ -5125,7 +4255,6 @@ define("play-together-client/profile/template", ["exports"], function (exports) 
       statements: [["content", "model.username", ["loc", [null, [2, 10], [2, 28]]]], ["content", "model.location", ["loc", [null, [4, 0], [4, 18]]]], ["content", "model.motivation", ["loc", [null, [6, 0], [6, 20]]]], ["content", "model.favorite_exercise", ["loc", [null, [8, 0], [8, 27]]]], ["inline", "delete-profile", [], ["profile", ["subexpr", "@mut", [["get", "model", ["loc", [null, [12, 25], [12, 30]]]]], [], []], "delete", "deleteProfile", "changeAction", "changeAction"], ["loc", [null, [12, 0], [12, 83]]]], ["content", "outlet", ["loc", [null, [15, 0], [15, 10]]]], ["block", "link-to", ["change-password"], [], 0, null, ["loc", [null, [18, 39], [18, 100]]]]],
       locals: [],
       templates: [child0]
->>>>>>> capstone-branch
     };
   })());
 });
@@ -5142,7 +4271,6 @@ define('play-together-client/profiles/create/route', ['exports', 'ember'], funct
 <<<<<<< HEAD
 =======
 
->>>>>>> capstone-branch
       cancel: function cancel(profile) {
         var _this = this;
 
@@ -5200,7 +4328,6 @@ define("play-together-client/profiles/create/template", ["exports"], function (e
       statements: [["inline", "profile-create", [], ["profile", ["subexpr", "@mut", [["get", "model", ["loc", [null, [1, 25], [1, 30]]]]], [], []], "submitProfile", "submitProfile", "reset", "reset"], ["loc", [null, [1, 0], [1, 76]]]]],
 =======
       statements: [["inline", "profile-update", [], ["profile", ["subexpr", "@mut", [["get", "model", ["loc", [null, [1, 25], [1, 30]]]]], [], []], "submitProfile", "submitProfile", "reset", "reset"], ["loc", [null, [1, 0], [1, 76]]]]],
->>>>>>> capstone-branch
       locals: [],
       templates: []
     };
@@ -5216,7 +4343,6 @@ define('play-together-client/profiles/edit/route', ['exports', 'ember'], functio
 =======
         var _this = this;
 
->>>>>>> capstone-branch
         console.log('test');
         console.log(data);
         var profile = this.get('store').createRecord('profile', data);
@@ -5235,7 +4361,6 @@ define('play-together-client/profiles/edit/route', ['exports', 'ember'], functio
 
       cancel: function cancel(profile) {
         var _this2 = this;
->>>>>>> capstone-branch
 
         this.get('store').unloadAll('profile');
         this.get('store').findRecord('profile', profile.id).then(function (test) {
@@ -5244,7 +4369,6 @@ define('play-together-client/profiles/edit/route', ['exports', 'ember'], functio
           _this.transitionTo('profile', test);
 =======
           _this2.transitionTo('profile', test);
->>>>>>> capstone-branch
           console.log(test.id);
         });
       }
@@ -5314,7 +4438,6 @@ define('play-together-client/profiles/model', ['exports', 'ember-data'], functio
     exercises: _emberData['default'].hasMany('exercise')
   });
 });
->>>>>>> capstone-branch
 define('play-together-client/profiles/route', ['exports', 'ember'], function (exports, _ember) {
   exports['default'] = _ember['default'].Route.extend({
     auth: _ember['default'].inject.service(),
@@ -5328,7 +4451,6 @@ define('play-together-client/profiles/route', ['exports', 'ember'], function (ex
 
     deleteProfile: function deleteProfile(profile) {
       profile.destroyRecord();
->>>>>>> capstone-branch
     }
   });
 });
@@ -5447,7 +4569,6 @@ define('play-together-client/router', ['exports', 'ember', 'play-together-client
     this.route('exercise', { path: 'exercises/:id' });
     this.route('exercises');
     this.route('exercises/new');
->>>>>>> capstone-branch
   });
 
   exports['default'] = Router;
@@ -5568,7 +4689,6 @@ define('play-together-client/sign-up/route', ['exports', 'ember'], function (exp
         }).then(function () {
           return _this.transitionTo('profile');
         }).then(function () {
->>>>>>> capstone-branch
           _this.get('flashMessages').success('Successfully signed-up! You have also been signed-in.');
         })['catch'](function () {
           _this.get('flashMessages').danger('There was a problem. Please try again.');
@@ -5635,7 +4755,6 @@ define('play-together-client/user/model', ['exports', 'ember-data'], function (e
 =======
     email: _emberData['default'].attr('string'),
     profiles: _emberData['default'].hasMany('profile')
->>>>>>> capstone-branch
   });
 });
 define('play-together-client/users/route', ['exports', 'ember'], function (exports, _ember) {
@@ -5803,7 +4922,6 @@ if (!runningTests) {
   require("play-together-client/app")["default"].create({"name":"play-together-client","version":"0.0.0+1cb0adb3"});
 =======
   require("play-together-client/app")["default"].create({"name":"play-together-client","version":"0.0.0+5d1bdfcd"});
->>>>>>> capstone-branch
 }
 
 /* jshint ignore:end */
