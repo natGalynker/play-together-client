@@ -1119,6 +1119,46 @@ define("play-together-client/components/my-application/template", ["exports"], f
           templates: []
         };
       })();
+      var child1 = (function () {
+        return {
+          meta: {
+            "fragmentReason": false,
+            "revision": "Ember@2.5.1",
+            "loc": {
+              "source": null,
+              "start": {
+                "line": 18,
+                "column": 12
+              },
+              "end": {
+                "line": 18,
+                "column": 57
+              }
+            },
+            "moduleName": "play-together-client/components/my-application/template.hbs"
+          },
+          isEmpty: false,
+          arity: 0,
+          cachedFragment: null,
+          hasRendered: false,
+          buildFragment: function buildFragment(dom) {
+            var el0 = dom.createDocumentFragment();
+            var el1 = dom.createTextNode(" ");
+            dom.appendChild(el0, el1);
+            var el1 = dom.createElement("br");
+            dom.appendChild(el0, el1);
+            var el1 = dom.createTextNode("View All Profiles");
+            dom.appendChild(el0, el1);
+            return el0;
+          },
+          buildRenderNodes: function buildRenderNodes() {
+            return [];
+          },
+          statements: [],
+          locals: [],
+          templates: []
+        };
+      })();
       return {
         meta: {
           "fragmentReason": false,
@@ -1130,7 +1170,7 @@ define("play-together-client/components/my-application/template", ["exports"], f
               "column": 8
             },
             "end": {
-              "line": 21,
+              "line": 23,
               "column": 8
             }
           },
@@ -1194,6 +1234,15 @@ define("play-together-client/components/my-application/template", ["exports"], f
           var el2 = dom.createTextNode("\n          ");
           dom.appendChild(el1, el2);
           dom.appendChild(el0, el1);
+          var el1 = dom.createTextNode("\n          ");
+          dom.appendChild(el0, el1);
+          var el1 = dom.createElement("li");
+          dom.setAttribute(el1, "class", "application col-md-6 pull-center");
+          var el2 = dom.createTextNode("\n            ");
+          dom.appendChild(el1, el2);
+          var el2 = dom.createComment("");
+          dom.appendChild(el1, el2);
+          dom.appendChild(el0, el1);
           var el1 = dom.createTextNode("\n");
           dom.appendChild(el0, el1);
           return el0;
@@ -1202,15 +1251,16 @@ define("play-together-client/components/my-application/template", ["exports"], f
           var element0 = dom.childAt(fragment, [1]);
           var element1 = dom.childAt(element0, [1, 1]);
           var element2 = dom.childAt(element0, [3, 1]);
-          var morphs = new Array(3);
+          var morphs = new Array(4);
           morphs[0] = dom.createElementMorph(element1);
           morphs[1] = dom.createElementMorph(element2);
           morphs[2] = dom.createMorphAt(dom.childAt(element0, [5]), 1, 1);
+          morphs[3] = dom.createMorphAt(dom.childAt(fragment, [3]), 1, 1);
           return morphs;
         },
-        statements: [["element", "action", ["viewProfile"], [], ["loc", [null, [9, 28], [9, 52]]]], ["element", "action", ["signOut"], [], ["loc", [null, [12, 24], [12, 44]]]], ["block", "link-to", ["profiles/edit"], [], 0, null, ["loc", [null, [15, 12], [15, 71]]]]],
+        statements: [["element", "action", ["viewProfile"], [], ["loc", [null, [9, 28], [9, 52]]]], ["element", "action", ["signOut"], [], ["loc", [null, [12, 24], [12, 44]]]], ["block", "link-to", ["profiles/edit"], [], 0, null, ["loc", [null, [15, 12], [15, 71]]]], ["block", "link-to", ["profiles"], [], 1, null, ["loc", [null, [18, 12], [18, 69]]]]],
         locals: [],
-        templates: [child0]
+        templates: [child0, child1]
       };
     })();
     var child2 = (function () {
@@ -1222,11 +1272,11 @@ define("play-together-client/components/my-application/template", ["exports"], f
             "loc": {
               "source": null,
               "start": {
-                "line": 23,
+                "line": 25,
                 "column": 12
               },
               "end": {
-                "line": 23,
+                "line": 25,
                 "column": 41
               }
             },
@@ -1258,11 +1308,11 @@ define("play-together-client/components/my-application/template", ["exports"], f
             "loc": {
               "source": null,
               "start": {
-                "line": 26,
+                "line": 28,
                 "column": 12
               },
               "end": {
-                "line": 26,
+                "line": 28,
                 "column": 41
               }
             },
@@ -1293,11 +1343,11 @@ define("play-together-client/components/my-application/template", ["exports"], f
           "loc": {
             "source": null,
             "start": {
-              "line": 21,
+              "line": 23,
               "column": 8
             },
             "end": {
-              "line": 28,
+              "line": 30,
               "column": 8
             }
           },
@@ -1339,7 +1389,7 @@ define("play-together-client/components/my-application/template", ["exports"], f
           morphs[1] = dom.createMorphAt(dom.childAt(fragment, [3]), 1, 1);
           return morphs;
         },
-        statements: [["block", "link-to", ["sign-up"], [], 0, null, ["loc", [null, [23, 12], [23, 53]]]], ["block", "link-to", ["sign-in"], [], 1, null, ["loc", [null, [26, 12], [26, 53]]]]],
+        statements: [["block", "link-to", ["sign-up"], [], 0, null, ["loc", [null, [25, 12], [25, 53]]]], ["block", "link-to", ["sign-in"], [], 1, null, ["loc", [null, [28, 12], [28, 53]]]]],
         locals: [],
         templates: [child0, child1]
       };
@@ -1352,11 +1402,11 @@ define("play-together-client/components/my-application/template", ["exports"], f
           "loc": {
             "source": null,
             "start": {
-              "line": 33,
+              "line": 35,
               "column": 0
             },
             "end": {
-              "line": 42,
+              "line": 44,
               "column": 0
             }
           },
@@ -1408,7 +1458,7 @@ define("play-together-client/components/my-application/template", ["exports"], f
           morphs[0] = dom.createMorphAt(dom.childAt(fragment, [1, 1]), 3, 3);
           return morphs;
         },
-        statements: [["content", "outlet", ["loc", [null, [39, 6], [39, 16]]]]],
+        statements: [["content", "outlet", ["loc", [null, [41, 6], [41, 16]]]]],
         locals: [],
         templates: []
       };
@@ -1421,11 +1471,11 @@ define("play-together-client/components/my-application/template", ["exports"], f
           "loc": {
             "source": null,
             "start": {
-              "line": 42,
+              "line": 44,
               "column": 0
             },
             "end": {
-              "line": 51,
+              "line": 53,
               "column": 0
             }
           },
@@ -1476,7 +1526,7 @@ define("play-together-client/components/my-application/template", ["exports"], f
           morphs[0] = dom.createMorphAt(dom.childAt(fragment, [1, 1]), 5, 5);
           return morphs;
         },
-        statements: [["content", "outlet", ["loc", [null, [48, 51], [48, 61]]]]],
+        statements: [["content", "outlet", ["loc", [null, [50, 51], [50, 61]]]]],
         locals: [],
         templates: []
       };
@@ -1495,7 +1545,7 @@ define("play-together-client/components/my-application/template", ["exports"], f
             "column": 0
           },
           "end": {
-            "line": 52,
+            "line": 54,
             "column": 0
           }
         },
@@ -1557,7 +1607,7 @@ define("play-together-client/components/my-application/template", ["exports"], f
         dom.insertBoundary(fragment, null);
         return morphs;
       },
-      statements: [["block", "link-to", ["application"], ["class", "navbar-brand"], 0, null, ["loc", [null, [3, 4], [3, 72]]]], ["block", "if", [["get", "isAuthenticated", ["loc", [null, [6, 14], [6, 29]]]]], [], 1, 2, ["loc", [null, [6, 8], [28, 15]]]], ["block", "if", [["get", "isAuthenticated", ["loc", [null, [33, 6], [33, 21]]]]], [], 3, 4, ["loc", [null, [33, 0], [51, 7]]]]],
+      statements: [["block", "link-to", ["application"], ["class", "navbar-brand"], 0, null, ["loc", [null, [3, 4], [3, 72]]]], ["block", "if", [["get", "isAuthenticated", ["loc", [null, [6, 14], [6, 29]]]]], [], 1, 2, ["loc", [null, [6, 8], [30, 15]]]], ["block", "if", [["get", "isAuthenticated", ["loc", [null, [35, 6], [35, 21]]]]], [], 3, 4, ["loc", [null, [35, 0], [53, 7]]]]],
       locals: [],
       templates: [child0, child1, child2, child3, child4]
     };
@@ -4356,7 +4406,7 @@ catch(err) {
 /* jshint ignore:start */
 
 if (!runningTests) {
-  require("play-together-client/app")["default"].create({"name":"play-together-client","version":"0.0.0+5d1bdfcd"});
+  require("play-together-client/app")["default"].create({"name":"play-together-client","version":"0.0.0+c1473d79"});
 }
 
 /* jshint ignore:end */
