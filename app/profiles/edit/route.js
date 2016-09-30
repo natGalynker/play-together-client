@@ -8,7 +8,8 @@ export default Ember.Route.extend({
           console.log(data);
           let profile = this.get('store').createRecord('profile', data);
           console.log(data);
-           profile.save();
+           profile.save()
+           .then(() => this.transitionTo('profile'));
 
             },
 
