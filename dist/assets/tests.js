@@ -79,6 +79,18 @@ define('play-together-client/tests/components/change-password-form/component.jsh
     assert.ok(true, 'components/change-password-form/component.js should pass jshint.');
   });
 });
+<<<<<<< HEAD
+=======
+define('play-together-client/tests/components/delete-profile/component.jshint', ['exports'], function (exports) {
+  'use strict';
+
+  QUnit.module('JSHint - components/delete-profile/component.js');
+  QUnit.test('should pass jshint', function (assert) {
+    assert.expect(1);
+    assert.ok(true, 'components/delete-profile/component.js should pass jshint.');
+  });
+});
+>>>>>>> capstone-branch
 define('play-together-client/tests/components/email-input/component.jshint', ['exports'], function (exports) {
   'use strict';
 
@@ -88,6 +100,36 @@ define('play-together-client/tests/components/email-input/component.jshint', ['e
     assert.ok(true, 'components/email-input/component.js should pass jshint.');
   });
 });
+<<<<<<< HEAD
+=======
+define('play-together-client/tests/components/exercise-create/component.jshint', ['exports'], function (exports) {
+  'use strict';
+
+  QUnit.module('JSHint - components/exercise-create/component.js');
+  QUnit.test('should pass jshint', function (assert) {
+    assert.expect(1);
+    assert.ok(true, 'components/exercise-create/component.js should pass jshint.');
+  });
+});
+define('play-together-client/tests/components/exercise-display/component.jshint', ['exports'], function (exports) {
+  'use strict';
+
+  QUnit.module('JSHint - components/exercise-display/component.js');
+  QUnit.test('should pass jshint', function (assert) {
+    assert.expect(1);
+    assert.ok(true, 'components/exercise-display/component.js should pass jshint.');
+  });
+});
+define('play-together-client/tests/components/exercise-edit/component.jshint', ['exports'], function (exports) {
+  'use strict';
+
+  QUnit.module('JSHint - components/exercise-edit/component.js');
+  QUnit.test('should pass jshint', function (assert) {
+    assert.expect(1);
+    assert.ok(true, 'components/exercise-edit/component.js should pass jshint.');
+  });
+});
+>>>>>>> capstone-branch
 define('play-together-client/tests/components/hamburger-menu/component.jshint', ['exports'], function (exports) {
   'use strict';
 
@@ -133,6 +175,7 @@ define('play-together-client/tests/components/password-input/component.jshint', 
     assert.ok(true, 'components/password-input/component.js should pass jshint.');
   });
 });
+<<<<<<< HEAD
 define('play-together-client/tests/components/profile-create/component.jshint', ['exports'], function (exports) {
   'use strict';
 
@@ -142,6 +185,8 @@ define('play-together-client/tests/components/profile-create/component.jshint', 
     assert.ok(true, 'components/profile-create/component.js should pass jshint.');
   });
 });
+=======
+>>>>>>> capstone-branch
 define('play-together-client/tests/components/profile-update/component.jshint', ['exports'], function (exports) {
   'use strict';
 
@@ -169,6 +214,54 @@ define('play-together-client/tests/components/sign-up-form/component.jshint', ['
     assert.ok(true, 'components/sign-up-form/component.js should pass jshint.');
   });
 });
+<<<<<<< HEAD
+=======
+define('play-together-client/tests/exercise/model.jshint', ['exports'], function (exports) {
+  'use strict';
+
+  QUnit.module('JSHint - exercise/model.js');
+  QUnit.test('should pass jshint', function (assert) {
+    assert.expect(1);
+    assert.ok(true, 'exercise/model.js should pass jshint.');
+  });
+});
+define('play-together-client/tests/exercise/route.jshint', ['exports'], function (exports) {
+  'use strict';
+
+  QUnit.module('JSHint - exercise/route.js');
+  QUnit.test('should pass jshint', function (assert) {
+    assert.expect(1);
+    assert.ok(true, 'exercise/route.js should pass jshint.');
+  });
+});
+define('play-together-client/tests/exercises/edit/route.jshint', ['exports'], function (exports) {
+  'use strict';
+
+  QUnit.module('JSHint - exercises/edit/route.js');
+  QUnit.test('should pass jshint', function (assert) {
+    assert.expect(1);
+    assert.ok(true, 'exercises/edit/route.js should pass jshint.');
+  });
+});
+define('play-together-client/tests/exercises/new/route.jshint', ['exports'], function (exports) {
+  'use strict';
+
+  QUnit.module('JSHint - exercises/new/route.js');
+  QUnit.test('should pass jshint', function (assert) {
+    assert.expect(1);
+    assert.ok(true, 'exercises/new/route.js should pass jshint.');
+  });
+});
+define('play-together-client/tests/exercises/route.jshint', ['exports'], function (exports) {
+  'use strict';
+
+  QUnit.module('JSHint - exercises/route.js');
+  QUnit.test('should pass jshint', function (assert) {
+    assert.expect(1);
+    assert.ok(true, 'exercises/route.js should pass jshint.');
+  });
+});
+>>>>>>> capstone-branch
 define('play-together-client/tests/helpers/destroy-app', ['exports', 'ember'], function (exports, _ember) {
   exports['default'] = destroyApp;
 
@@ -1342,9 +1435,15 @@ define('play-together-client/tests/integration/components/create-username/compon
     assert.ok(true, 'integration/components/create-username/component-test.js should pass jshint.');
   });
 });
+<<<<<<< HEAD
 define('play-together-client/tests/integration/components/email-input/component-test', ['exports', 'ember-qunit'], function (exports, _emberQunit) {
 
   (0, _emberQunit.moduleForComponent)('email-input', 'Integration | Component | email input', {
+=======
+define('play-together-client/tests/integration/components/delete-profile/component-test', ['exports', 'ember-qunit'], function (exports, _emberQunit) {
+
+  (0, _emberQunit.moduleForComponent)('delete-profile', 'Integration | Component | delete profile', {
+>>>>>>> capstone-branch
     integration: true
   });
 
@@ -1368,7 +1467,11 @@ define('play-together-client/tests/integration/components/email-input/component-
             },
             'end': {
               'line': 1,
+<<<<<<< HEAD
               'column': 15
+=======
+              'column': 18
+>>>>>>> capstone-branch
             }
           }
         },
@@ -1389,7 +1492,11 @@ define('play-together-client/tests/integration/components/email-input/component-
           dom.insertBoundary(fragment, null);
           return morphs;
         },
+<<<<<<< HEAD
         statements: [['content', 'email-input', ['loc', [null, [1, 0], [1, 15]]]]],
+=======
+        statements: [['content', 'delete-profile', ['loc', [null, [1, 0], [1, 18]]]]],
+>>>>>>> capstone-branch
         locals: [],
         templates: []
       };
@@ -1473,7 +1580,11 @@ define('play-together-client/tests/integration/components/email-input/component-
           morphs[0] = dom.createMorphAt(fragment, 1, 1, contextualElement);
           return morphs;
         },
+<<<<<<< HEAD
         statements: [['block', 'email-input', [], [], 0, null, ['loc', [null, [2, 4], [4, 20]]]]],
+=======
+        statements: [['block', 'delete-profile', [], [], 0, null, ['loc', [null, [2, 4], [4, 23]]]]],
+>>>>>>> capstone-branch
         locals: [],
         templates: [child0]
       };
@@ -1482,6 +1593,7 @@ define('play-together-client/tests/integration/components/email-input/component-
     assert.equal(this.$().text().trim(), 'template block text');
   });
 });
+<<<<<<< HEAD
 define('play-together-client/tests/integration/components/email-input/component-test.jshint', ['exports'], function (exports) {
   'use strict';
 
@@ -1494,6 +1606,20 @@ define('play-together-client/tests/integration/components/email-input/component-
 define('play-together-client/tests/integration/components/hamburger-menu/component-test', ['exports', 'ember-qunit'], function (exports, _emberQunit) {
 
   (0, _emberQunit.moduleForComponent)('hamburger-menu', 'Integration | Component | hamburger menu', {
+=======
+define('play-together-client/tests/integration/components/delete-profile/component-test.jshint', ['exports'], function (exports) {
+  'use strict';
+
+  QUnit.module('JSHint - integration/components/delete-profile/component-test.js');
+  QUnit.test('should pass jshint', function (assert) {
+    assert.expect(1);
+    assert.ok(true, 'integration/components/delete-profile/component-test.js should pass jshint.');
+  });
+});
+define('play-together-client/tests/integration/components/email-input/component-test', ['exports', 'ember-qunit'], function (exports, _emberQunit) {
+
+  (0, _emberQunit.moduleForComponent)('email-input', 'Integration | Component | email input', {
+>>>>>>> capstone-branch
     integration: true
   });
 
@@ -1517,7 +1643,11 @@ define('play-together-client/tests/integration/components/hamburger-menu/compone
             },
             'end': {
               'line': 1,
+<<<<<<< HEAD
               'column': 18
+=======
+              'column': 15
+>>>>>>> capstone-branch
             }
           }
         },
@@ -1538,7 +1668,11 @@ define('play-together-client/tests/integration/components/hamburger-menu/compone
           dom.insertBoundary(fragment, null);
           return morphs;
         },
+<<<<<<< HEAD
         statements: [['content', 'hamburger-menu', ['loc', [null, [1, 0], [1, 18]]]]],
+=======
+        statements: [['content', 'email-input', ['loc', [null, [1, 0], [1, 15]]]]],
+>>>>>>> capstone-branch
         locals: [],
         templates: []
       };
@@ -1622,7 +1756,11 @@ define('play-together-client/tests/integration/components/hamburger-menu/compone
           morphs[0] = dom.createMorphAt(fragment, 1, 1, contextualElement);
           return morphs;
         },
+<<<<<<< HEAD
         statements: [['block', 'hamburger-menu', [], [], 0, null, ['loc', [null, [2, 4], [4, 23]]]]],
+=======
+        statements: [['block', 'email-input', [], [], 0, null, ['loc', [null, [2, 4], [4, 20]]]]],
+>>>>>>> capstone-branch
         locals: [],
         templates: [child0]
       };
@@ -1631,6 +1769,7 @@ define('play-together-client/tests/integration/components/hamburger-menu/compone
     assert.equal(this.$().text().trim(), 'template block text');
   });
 });
+<<<<<<< HEAD
 define('play-together-client/tests/integration/components/hamburger-menu/component-test.jshint', ['exports'], function (exports) {
   'use strict';
 
@@ -1643,6 +1782,20 @@ define('play-together-client/tests/integration/components/hamburger-menu/compone
 define('play-together-client/tests/integration/components/my-application/component-test', ['exports', 'ember-qunit'], function (exports, _emberQunit) {
 
   (0, _emberQunit.moduleForComponent)('my-application', 'Integration | Component | my application', {
+=======
+define('play-together-client/tests/integration/components/email-input/component-test.jshint', ['exports'], function (exports) {
+  'use strict';
+
+  QUnit.module('JSHint - integration/components/email-input/component-test.js');
+  QUnit.test('should pass jshint', function (assert) {
+    assert.expect(1);
+    assert.ok(true, 'integration/components/email-input/component-test.js should pass jshint.');
+  });
+});
+define('play-together-client/tests/integration/components/exercise-create/component-test', ['exports', 'ember-qunit'], function (exports, _emberQunit) {
+
+  (0, _emberQunit.moduleForComponent)('exercise-create', 'Integration | Component | exercise create', {
+>>>>>>> capstone-branch
     integration: true
   });
 
@@ -1666,7 +1819,11 @@ define('play-together-client/tests/integration/components/my-application/compone
             },
             'end': {
               'line': 1,
+<<<<<<< HEAD
               'column': 18
+=======
+              'column': 19
+>>>>>>> capstone-branch
             }
           }
         },
@@ -1687,7 +1844,11 @@ define('play-together-client/tests/integration/components/my-application/compone
           dom.insertBoundary(fragment, null);
           return morphs;
         },
+<<<<<<< HEAD
         statements: [['content', 'my-application', ['loc', [null, [1, 0], [1, 18]]]]],
+=======
+        statements: [['content', 'exercise-create', ['loc', [null, [1, 0], [1, 19]]]]],
+>>>>>>> capstone-branch
         locals: [],
         templates: []
       };
@@ -1771,7 +1932,11 @@ define('play-together-client/tests/integration/components/my-application/compone
           morphs[0] = dom.createMorphAt(fragment, 1, 1, contextualElement);
           return morphs;
         },
+<<<<<<< HEAD
         statements: [['block', 'my-application', [], [], 0, null, ['loc', [null, [2, 4], [4, 23]]]]],
+=======
+        statements: [['block', 'exercise-create', [], [], 0, null, ['loc', [null, [2, 4], [4, 24]]]]],
+>>>>>>> capstone-branch
         locals: [],
         templates: [child0]
       };
@@ -1780,6 +1945,7 @@ define('play-together-client/tests/integration/components/my-application/compone
     assert.equal(this.$().text().trim(), 'template block text');
   });
 });
+<<<<<<< HEAD
 define('play-together-client/tests/integration/components/my-application/component-test.jshint', ['exports'], function (exports) {
   'use strict';
 
@@ -1792,6 +1958,20 @@ define('play-together-client/tests/integration/components/my-application/compone
 define('play-together-client/tests/integration/components/navbar-header/component-test', ['exports', 'ember-qunit'], function (exports, _emberQunit) {
 
   (0, _emberQunit.moduleForComponent)('navbar-header', 'Integration | Component | navbar header', {
+=======
+define('play-together-client/tests/integration/components/exercise-create/component-test.jshint', ['exports'], function (exports) {
+  'use strict';
+
+  QUnit.module('JSHint - integration/components/exercise-create/component-test.js');
+  QUnit.test('should pass jshint', function (assert) {
+    assert.expect(1);
+    assert.ok(true, 'integration/components/exercise-create/component-test.js should pass jshint.');
+  });
+});
+define('play-together-client/tests/integration/components/exercise-display/component-test', ['exports', 'ember-qunit'], function (exports, _emberQunit) {
+
+  (0, _emberQunit.moduleForComponent)('exercise-display', 'Integration | Component | exercise display', {
+>>>>>>> capstone-branch
     integration: true
   });
 
@@ -1815,7 +1995,11 @@ define('play-together-client/tests/integration/components/navbar-header/componen
             },
             'end': {
               'line': 1,
+<<<<<<< HEAD
               'column': 17
+=======
+              'column': 20
+>>>>>>> capstone-branch
             }
           }
         },
@@ -1836,7 +2020,11 @@ define('play-together-client/tests/integration/components/navbar-header/componen
           dom.insertBoundary(fragment, null);
           return morphs;
         },
+<<<<<<< HEAD
         statements: [['content', 'navbar-header', ['loc', [null, [1, 0], [1, 17]]]]],
+=======
+        statements: [['content', 'exercise-display', ['loc', [null, [1, 0], [1, 20]]]]],
+>>>>>>> capstone-branch
         locals: [],
         templates: []
       };
@@ -1920,7 +2108,11 @@ define('play-together-client/tests/integration/components/navbar-header/componen
           morphs[0] = dom.createMorphAt(fragment, 1, 1, contextualElement);
           return morphs;
         },
+<<<<<<< HEAD
         statements: [['block', 'navbar-header', [], [], 0, null, ['loc', [null, [2, 4], [4, 22]]]]],
+=======
+        statements: [['block', 'exercise-display', [], [], 0, null, ['loc', [null, [2, 4], [4, 25]]]]],
+>>>>>>> capstone-branch
         locals: [],
         templates: [child0]
       };
@@ -1929,6 +2121,7 @@ define('play-together-client/tests/integration/components/navbar-header/componen
     assert.equal(this.$().text().trim(), 'template block text');
   });
 });
+<<<<<<< HEAD
 define('play-together-client/tests/integration/components/navbar-header/component-test.jshint', ['exports'], function (exports) {
   'use strict';
 
@@ -1941,6 +2134,20 @@ define('play-together-client/tests/integration/components/navbar-header/componen
 define('play-together-client/tests/integration/components/password-confirmation-input/component-test', ['exports', 'ember-qunit'], function (exports, _emberQunit) {
 
   (0, _emberQunit.moduleForComponent)('password-confirmation-input', 'Integration | Component | password confirmation input', {
+=======
+define('play-together-client/tests/integration/components/exercise-display/component-test.jshint', ['exports'], function (exports) {
+  'use strict';
+
+  QUnit.module('JSHint - integration/components/exercise-display/component-test.js');
+  QUnit.test('should pass jshint', function (assert) {
+    assert.expect(1);
+    assert.ok(true, 'integration/components/exercise-display/component-test.js should pass jshint.');
+  });
+});
+define('play-together-client/tests/integration/components/exercise-edit/component-test', ['exports', 'ember-qunit'], function (exports, _emberQunit) {
+
+  (0, _emberQunit.moduleForComponent)('exercise-edit', 'Integration | Component | exercise edit', {
+>>>>>>> capstone-branch
     integration: true
   });
 
@@ -1964,7 +2171,11 @@ define('play-together-client/tests/integration/components/password-confirmation-
             },
             'end': {
               'line': 1,
+<<<<<<< HEAD
               'column': 31
+=======
+              'column': 17
+>>>>>>> capstone-branch
             }
           }
         },
@@ -1985,7 +2196,11 @@ define('play-together-client/tests/integration/components/password-confirmation-
           dom.insertBoundary(fragment, null);
           return morphs;
         },
+<<<<<<< HEAD
         statements: [['content', 'password-confirmation-input', ['loc', [null, [1, 0], [1, 31]]]]],
+=======
+        statements: [['content', 'exercise-edit', ['loc', [null, [1, 0], [1, 17]]]]],
+>>>>>>> capstone-branch
         locals: [],
         templates: []
       };
@@ -2069,7 +2284,11 @@ define('play-together-client/tests/integration/components/password-confirmation-
           morphs[0] = dom.createMorphAt(fragment, 1, 1, contextualElement);
           return morphs;
         },
+<<<<<<< HEAD
         statements: [['block', 'password-confirmation-input', [], [], 0, null, ['loc', [null, [2, 4], [4, 36]]]]],
+=======
+        statements: [['block', 'exercise-edit', [], [], 0, null, ['loc', [null, [2, 4], [4, 22]]]]],
+>>>>>>> capstone-branch
         locals: [],
         templates: [child0]
       };
@@ -2078,6 +2297,7 @@ define('play-together-client/tests/integration/components/password-confirmation-
     assert.equal(this.$().text().trim(), 'template block text');
   });
 });
+<<<<<<< HEAD
 define('play-together-client/tests/integration/components/password-confirmation-input/component-test.jshint', ['exports'], function (exports) {
   'use strict';
 
@@ -2090,6 +2310,20 @@ define('play-together-client/tests/integration/components/password-confirmation-
 define('play-together-client/tests/integration/components/password-input/component-test', ['exports', 'ember-qunit'], function (exports, _emberQunit) {
 
   (0, _emberQunit.moduleForComponent)('password-input', 'Integration | Component | password input', {
+=======
+define('play-together-client/tests/integration/components/exercise-edit/component-test.jshint', ['exports'], function (exports) {
+  'use strict';
+
+  QUnit.module('JSHint - integration/components/exercise-edit/component-test.js');
+  QUnit.test('should pass jshint', function (assert) {
+    assert.expect(1);
+    assert.ok(true, 'integration/components/exercise-edit/component-test.js should pass jshint.');
+  });
+});
+define('play-together-client/tests/integration/components/hamburger-menu/component-test', ['exports', 'ember-qunit'], function (exports, _emberQunit) {
+
+  (0, _emberQunit.moduleForComponent)('hamburger-menu', 'Integration | Component | hamburger menu', {
+>>>>>>> capstone-branch
     integration: true
   });
 
@@ -2134,7 +2368,11 @@ define('play-together-client/tests/integration/components/password-input/compone
           dom.insertBoundary(fragment, null);
           return morphs;
         },
+<<<<<<< HEAD
         statements: [['content', 'password-input', ['loc', [null, [1, 0], [1, 18]]]]],
+=======
+        statements: [['content', 'hamburger-menu', ['loc', [null, [1, 0], [1, 18]]]]],
+>>>>>>> capstone-branch
         locals: [],
         templates: []
       };
@@ -2218,7 +2456,11 @@ define('play-together-client/tests/integration/components/password-input/compone
           morphs[0] = dom.createMorphAt(fragment, 1, 1, contextualElement);
           return morphs;
         },
+<<<<<<< HEAD
         statements: [['block', 'password-input', [], [], 0, null, ['loc', [null, [2, 4], [4, 23]]]]],
+=======
+        statements: [['block', 'hamburger-menu', [], [], 0, null, ['loc', [null, [2, 4], [4, 23]]]]],
+>>>>>>> capstone-branch
         locals: [],
         templates: [child0]
       };
@@ -2227,6 +2469,789 @@ define('play-together-client/tests/integration/components/password-input/compone
     assert.equal(this.$().text().trim(), 'template block text');
   });
 });
+<<<<<<< HEAD
+define('play-together-client/tests/integration/components/password-input/component-test.jshint', ['exports'], function (exports) {
+  'use strict';
+
+  QUnit.module('JSHint - integration/components/password-input/component-test.js');
+  QUnit.test('should pass jshint', function (assert) {
+    assert.expect(1);
+    assert.ok(true, 'integration/components/password-input/component-test.js should pass jshint.');
+  });
+});
+define('play-together-client/tests/integration/components/profile-edit/component-test', ['exports', 'ember-qunit'], function (exports, _emberQunit) {
+
+  (0, _emberQunit.moduleForComponent)('profile-edit', 'Integration | Component | profile edit', {
+=======
+define('play-together-client/tests/integration/components/hamburger-menu/component-test.jshint', ['exports'], function (exports) {
+  'use strict';
+
+  QUnit.module('JSHint - integration/components/hamburger-menu/component-test.js');
+  QUnit.test('should pass jshint', function (assert) {
+    assert.expect(1);
+    assert.ok(true, 'integration/components/hamburger-menu/component-test.js should pass jshint.');
+  });
+});
+define('play-together-client/tests/integration/components/my-application/component-test', ['exports', 'ember-qunit'], function (exports, _emberQunit) {
+
+  (0, _emberQunit.moduleForComponent)('my-application', 'Integration | Component | my application', {
+>>>>>>> capstone-branch
+    integration: true
+  });
+
+  (0, _emberQunit.test)('it renders', function (assert) {
+    // Set any properties with this.set('myProperty', 'value');
+    // Handle any actions with this.on('myAction', function(val) { ... });
+
+    this.render(Ember.HTMLBars.template((function () {
+      return {
+        meta: {
+          'fragmentReason': {
+            'name': 'missing-wrapper',
+            'problems': ['wrong-type']
+          },
+          'revision': 'Ember@2.5.1',
+          'loc': {
+            'source': null,
+            'start': {
+              'line': 1,
+              'column': 0
+            },
+            'end': {
+              'line': 1,
+<<<<<<< HEAD
+              'column': 16
+=======
+              'column': 18
+>>>>>>> capstone-branch
+            }
+          }
+        },
+        isEmpty: false,
+        arity: 0,
+        cachedFragment: null,
+        hasRendered: false,
+        buildFragment: function buildFragment(dom) {
+          var el0 = dom.createDocumentFragment();
+          var el1 = dom.createComment('');
+          dom.appendChild(el0, el1);
+          return el0;
+        },
+        buildRenderNodes: function buildRenderNodes(dom, fragment, contextualElement) {
+          var morphs = new Array(1);
+          morphs[0] = dom.createMorphAt(fragment, 0, 0, contextualElement);
+          dom.insertBoundary(fragment, 0);
+          dom.insertBoundary(fragment, null);
+          return morphs;
+        },
+<<<<<<< HEAD
+        statements: [['content', 'profile-edit', ['loc', [null, [1, 0], [1, 16]]]]],
+=======
+        statements: [['content', 'my-application', ['loc', [null, [1, 0], [1, 18]]]]],
+>>>>>>> capstone-branch
+        locals: [],
+        templates: []
+      };
+    })()));
+
+    assert.equal(this.$().text().trim(), '');
+
+    // Template block usage:
+    this.render(Ember.HTMLBars.template((function () {
+      var child0 = (function () {
+        return {
+          meta: {
+            'fragmentReason': false,
+            'revision': 'Ember@2.5.1',
+            'loc': {
+              'source': null,
+              'start': {
+                'line': 2,
+                'column': 4
+              },
+              'end': {
+                'line': 4,
+                'column': 4
+              }
+            }
+          },
+          isEmpty: false,
+          arity: 0,
+          cachedFragment: null,
+          hasRendered: false,
+          buildFragment: function buildFragment(dom) {
+            var el0 = dom.createDocumentFragment();
+            var el1 = dom.createTextNode('      template block text\n');
+            dom.appendChild(el0, el1);
+            return el0;
+          },
+          buildRenderNodes: function buildRenderNodes() {
+            return [];
+          },
+          statements: [],
+          locals: [],
+          templates: []
+        };
+      })();
+
+      return {
+        meta: {
+          'fragmentReason': {
+            'name': 'missing-wrapper',
+            'problems': ['wrong-type']
+          },
+          'revision': 'Ember@2.5.1',
+          'loc': {
+            'source': null,
+            'start': {
+              'line': 1,
+              'column': 0
+            },
+            'end': {
+              'line': 5,
+              'column': 2
+            }
+          }
+        },
+        isEmpty: false,
+        arity: 0,
+        cachedFragment: null,
+        hasRendered: false,
+        buildFragment: function buildFragment(dom) {
+          var el0 = dom.createDocumentFragment();
+          var el1 = dom.createTextNode('\n');
+          dom.appendChild(el0, el1);
+          var el1 = dom.createComment('');
+          dom.appendChild(el0, el1);
+          var el1 = dom.createTextNode('  ');
+          dom.appendChild(el0, el1);
+          return el0;
+        },
+        buildRenderNodes: function buildRenderNodes(dom, fragment, contextualElement) {
+          var morphs = new Array(1);
+          morphs[0] = dom.createMorphAt(fragment, 1, 1, contextualElement);
+          return morphs;
+        },
+<<<<<<< HEAD
+        statements: [['block', 'profile-edit', [], [], 0, null, ['loc', [null, [2, 4], [4, 21]]]]],
+=======
+        statements: [['block', 'my-application', [], [], 0, null, ['loc', [null, [2, 4], [4, 23]]]]],
+>>>>>>> capstone-branch
+        locals: [],
+        templates: [child0]
+      };
+    })()));
+
+    assert.equal(this.$().text().trim(), 'template block text');
+  });
+});
+<<<<<<< HEAD
+define('play-together-client/tests/integration/components/profile-edit/component-test.jshint', ['exports'], function (exports) {
+  'use strict';
+
+  QUnit.module('JSHint - integration/components/profile-edit/component-test.js');
+  QUnit.test('should pass jshint', function (assert) {
+    assert.expect(1);
+    assert.ok(true, 'integration/components/profile-edit/component-test.js should pass jshint.');
+  });
+});
+define('play-together-client/tests/integration/components/profile-update/component-test', ['exports', 'ember-qunit'], function (exports, _emberQunit) {
+
+  (0, _emberQunit.moduleForComponent)('profile-update', 'Integration | Component | profile update', {
+=======
+define('play-together-client/tests/integration/components/my-application/component-test.jshint', ['exports'], function (exports) {
+  'use strict';
+
+  QUnit.module('JSHint - integration/components/my-application/component-test.js');
+  QUnit.test('should pass jshint', function (assert) {
+    assert.expect(1);
+    assert.ok(true, 'integration/components/my-application/component-test.js should pass jshint.');
+  });
+});
+define('play-together-client/tests/integration/components/navbar-header/component-test', ['exports', 'ember-qunit'], function (exports, _emberQunit) {
+
+  (0, _emberQunit.moduleForComponent)('navbar-header', 'Integration | Component | navbar header', {
+>>>>>>> capstone-branch
+    integration: true
+  });
+
+  (0, _emberQunit.test)('it renders', function (assert) {
+    // Set any properties with this.set('myProperty', 'value');
+    // Handle any actions with this.on('myAction', function(val) { ... });
+
+    this.render(Ember.HTMLBars.template((function () {
+      return {
+        meta: {
+          'fragmentReason': {
+            'name': 'missing-wrapper',
+            'problems': ['wrong-type']
+          },
+          'revision': 'Ember@2.5.1',
+          'loc': {
+            'source': null,
+            'start': {
+              'line': 1,
+              'column': 0
+            },
+            'end': {
+              'line': 1,
+<<<<<<< HEAD
+              'column': 18
+=======
+              'column': 17
+>>>>>>> capstone-branch
+            }
+          }
+        },
+        isEmpty: false,
+        arity: 0,
+        cachedFragment: null,
+        hasRendered: false,
+        buildFragment: function buildFragment(dom) {
+          var el0 = dom.createDocumentFragment();
+          var el1 = dom.createComment('');
+          dom.appendChild(el0, el1);
+          return el0;
+        },
+        buildRenderNodes: function buildRenderNodes(dom, fragment, contextualElement) {
+          var morphs = new Array(1);
+          morphs[0] = dom.createMorphAt(fragment, 0, 0, contextualElement);
+          dom.insertBoundary(fragment, 0);
+          dom.insertBoundary(fragment, null);
+          return morphs;
+        },
+<<<<<<< HEAD
+        statements: [['content', 'profile-update', ['loc', [null, [1, 0], [1, 18]]]]],
+=======
+        statements: [['content', 'navbar-header', ['loc', [null, [1, 0], [1, 17]]]]],
+>>>>>>> capstone-branch
+        locals: [],
+        templates: []
+      };
+    })()));
+
+    assert.equal(this.$().text().trim(), '');
+
+    // Template block usage:
+    this.render(Ember.HTMLBars.template((function () {
+      var child0 = (function () {
+        return {
+          meta: {
+            'fragmentReason': false,
+            'revision': 'Ember@2.5.1',
+            'loc': {
+              'source': null,
+              'start': {
+                'line': 2,
+                'column': 4
+              },
+              'end': {
+                'line': 4,
+                'column': 4
+              }
+            }
+          },
+          isEmpty: false,
+          arity: 0,
+          cachedFragment: null,
+          hasRendered: false,
+          buildFragment: function buildFragment(dom) {
+            var el0 = dom.createDocumentFragment();
+            var el1 = dom.createTextNode('      template block text\n');
+            dom.appendChild(el0, el1);
+            return el0;
+          },
+          buildRenderNodes: function buildRenderNodes() {
+            return [];
+          },
+          statements: [],
+          locals: [],
+          templates: []
+        };
+      })();
+
+      return {
+        meta: {
+          'fragmentReason': {
+            'name': 'missing-wrapper',
+            'problems': ['wrong-type']
+          },
+          'revision': 'Ember@2.5.1',
+          'loc': {
+            'source': null,
+            'start': {
+              'line': 1,
+              'column': 0
+            },
+            'end': {
+              'line': 5,
+              'column': 2
+            }
+          }
+        },
+        isEmpty: false,
+        arity: 0,
+        cachedFragment: null,
+        hasRendered: false,
+        buildFragment: function buildFragment(dom) {
+          var el0 = dom.createDocumentFragment();
+          var el1 = dom.createTextNode('\n');
+          dom.appendChild(el0, el1);
+          var el1 = dom.createComment('');
+          dom.appendChild(el0, el1);
+          var el1 = dom.createTextNode('  ');
+          dom.appendChild(el0, el1);
+          return el0;
+        },
+        buildRenderNodes: function buildRenderNodes(dom, fragment, contextualElement) {
+          var morphs = new Array(1);
+          morphs[0] = dom.createMorphAt(fragment, 1, 1, contextualElement);
+          return morphs;
+        },
+<<<<<<< HEAD
+        statements: [['block', 'profile-update', [], [], 0, null, ['loc', [null, [2, 4], [4, 23]]]]],
+=======
+        statements: [['block', 'navbar-header', [], [], 0, null, ['loc', [null, [2, 4], [4, 22]]]]],
+>>>>>>> capstone-branch
+        locals: [],
+        templates: [child0]
+      };
+    })()));
+
+    assert.equal(this.$().text().trim(), 'template block text');
+  });
+});
+<<<<<<< HEAD
+define('play-together-client/tests/integration/components/profile-update/component-test.jshint', ['exports'], function (exports) {
+  'use strict';
+
+  QUnit.module('JSHint - integration/components/profile-update/component-test.js');
+  QUnit.test('should pass jshint', function (assert) {
+    assert.expect(1);
+    assert.ok(true, 'integration/components/profile-update/component-test.js should pass jshint.');
+  });
+});
+define('play-together-client/tests/integration/components/sign-in-form/component-test', ['exports', 'ember-qunit'], function (exports, _emberQunit) {
+
+  (0, _emberQunit.moduleForComponent)('sign-in-form', 'Integration | Component | sign in form', {
+=======
+define('play-together-client/tests/integration/components/navbar-header/component-test.jshint', ['exports'], function (exports) {
+  'use strict';
+
+  QUnit.module('JSHint - integration/components/navbar-header/component-test.js');
+  QUnit.test('should pass jshint', function (assert) {
+    assert.expect(1);
+    assert.ok(true, 'integration/components/navbar-header/component-test.js should pass jshint.');
+  });
+});
+define('play-together-client/tests/integration/components/password-confirmation-input/component-test', ['exports', 'ember-qunit'], function (exports, _emberQunit) {
+
+  (0, _emberQunit.moduleForComponent)('password-confirmation-input', 'Integration | Component | password confirmation input', {
+>>>>>>> capstone-branch
+    integration: true
+  });
+
+  (0, _emberQunit.test)('it renders', function (assert) {
+    // Set any properties with this.set('myProperty', 'value');
+    // Handle any actions with this.on('myAction', function(val) { ... });
+
+    this.render(Ember.HTMLBars.template((function () {
+      return {
+        meta: {
+          'fragmentReason': {
+            'name': 'missing-wrapper',
+            'problems': ['wrong-type']
+          },
+          'revision': 'Ember@2.5.1',
+          'loc': {
+            'source': null,
+            'start': {
+              'line': 1,
+              'column': 0
+            },
+            'end': {
+              'line': 1,
+<<<<<<< HEAD
+              'column': 16
+=======
+              'column': 31
+>>>>>>> capstone-branch
+            }
+          }
+        },
+        isEmpty: false,
+        arity: 0,
+        cachedFragment: null,
+        hasRendered: false,
+        buildFragment: function buildFragment(dom) {
+          var el0 = dom.createDocumentFragment();
+          var el1 = dom.createComment('');
+          dom.appendChild(el0, el1);
+          return el0;
+        },
+        buildRenderNodes: function buildRenderNodes(dom, fragment, contextualElement) {
+          var morphs = new Array(1);
+          morphs[0] = dom.createMorphAt(fragment, 0, 0, contextualElement);
+          dom.insertBoundary(fragment, 0);
+          dom.insertBoundary(fragment, null);
+          return morphs;
+        },
+<<<<<<< HEAD
+        statements: [['content', 'sign-in-form', ['loc', [null, [1, 0], [1, 16]]]]],
+=======
+        statements: [['content', 'password-confirmation-input', ['loc', [null, [1, 0], [1, 31]]]]],
+>>>>>>> capstone-branch
+        locals: [],
+        templates: []
+      };
+    })()));
+
+    assert.equal(this.$().text().trim(), '');
+
+    // Template block usage:
+    this.render(Ember.HTMLBars.template((function () {
+      var child0 = (function () {
+        return {
+          meta: {
+            'fragmentReason': false,
+            'revision': 'Ember@2.5.1',
+            'loc': {
+              'source': null,
+              'start': {
+                'line': 2,
+                'column': 4
+              },
+              'end': {
+                'line': 4,
+                'column': 4
+              }
+            }
+          },
+          isEmpty: false,
+          arity: 0,
+          cachedFragment: null,
+          hasRendered: false,
+          buildFragment: function buildFragment(dom) {
+            var el0 = dom.createDocumentFragment();
+            var el1 = dom.createTextNode('      template block text\n');
+            dom.appendChild(el0, el1);
+            return el0;
+          },
+          buildRenderNodes: function buildRenderNodes() {
+            return [];
+          },
+          statements: [],
+          locals: [],
+          templates: []
+        };
+      })();
+
+      return {
+        meta: {
+          'fragmentReason': {
+            'name': 'missing-wrapper',
+            'problems': ['wrong-type']
+          },
+          'revision': 'Ember@2.5.1',
+          'loc': {
+            'source': null,
+            'start': {
+              'line': 1,
+              'column': 0
+            },
+            'end': {
+              'line': 5,
+              'column': 2
+            }
+          }
+        },
+        isEmpty: false,
+        arity: 0,
+        cachedFragment: null,
+        hasRendered: false,
+        buildFragment: function buildFragment(dom) {
+          var el0 = dom.createDocumentFragment();
+          var el1 = dom.createTextNode('\n');
+          dom.appendChild(el0, el1);
+          var el1 = dom.createComment('');
+          dom.appendChild(el0, el1);
+          var el1 = dom.createTextNode('  ');
+          dom.appendChild(el0, el1);
+          return el0;
+        },
+        buildRenderNodes: function buildRenderNodes(dom, fragment, contextualElement) {
+          var morphs = new Array(1);
+          morphs[0] = dom.createMorphAt(fragment, 1, 1, contextualElement);
+          return morphs;
+        },
+<<<<<<< HEAD
+        statements: [['block', 'sign-in-form', [], [], 0, null, ['loc', [null, [2, 4], [4, 21]]]]],
+=======
+        statements: [['block', 'password-confirmation-input', [], [], 0, null, ['loc', [null, [2, 4], [4, 36]]]]],
+>>>>>>> capstone-branch
+        locals: [],
+        templates: [child0]
+      };
+    })()));
+
+    assert.equal(this.$().text().trim(), 'template block text');
+  });
+});
+<<<<<<< HEAD
+define('play-together-client/tests/integration/components/sign-in-form/component-test.jshint', ['exports'], function (exports) {
+  'use strict';
+
+  QUnit.module('JSHint - integration/components/sign-in-form/component-test.js');
+  QUnit.test('should pass jshint', function (assert) {
+    assert.expect(1);
+    assert.ok(true, 'integration/components/sign-in-form/component-test.js should pass jshint.');
+  });
+});
+define('play-together-client/tests/integration/components/sign-up-form/component-test', ['exports', 'ember-qunit'], function (exports, _emberQunit) {
+
+  (0, _emberQunit.moduleForComponent)('sign-up-form', 'Integration | Component | sign up form', {
+=======
+define('play-together-client/tests/integration/components/password-confirmation-input/component-test.jshint', ['exports'], function (exports) {
+  'use strict';
+
+  QUnit.module('JSHint - integration/components/password-confirmation-input/component-test.js');
+  QUnit.test('should pass jshint', function (assert) {
+    assert.expect(1);
+    assert.ok(true, 'integration/components/password-confirmation-input/component-test.js should pass jshint.');
+  });
+});
+define('play-together-client/tests/integration/components/password-input/component-test', ['exports', 'ember-qunit'], function (exports, _emberQunit) {
+
+  (0, _emberQunit.moduleForComponent)('password-input', 'Integration | Component | password input', {
+>>>>>>> capstone-branch
+    integration: true
+  });
+
+  (0, _emberQunit.test)('it renders', function (assert) {
+    // Set any properties with this.set('myProperty', 'value');
+    // Handle any actions with this.on('myAction', function(val) { ... });
+
+    this.render(Ember.HTMLBars.template((function () {
+      return {
+        meta: {
+          'fragmentReason': {
+            'name': 'missing-wrapper',
+            'problems': ['wrong-type']
+          },
+          'revision': 'Ember@2.5.1',
+          'loc': {
+            'source': null,
+            'start': {
+              'line': 1,
+              'column': 0
+            },
+            'end': {
+              'line': 1,
+<<<<<<< HEAD
+              'column': 16
+=======
+              'column': 18
+>>>>>>> capstone-branch
+            }
+          }
+        },
+        isEmpty: false,
+        arity: 0,
+        cachedFragment: null,
+        hasRendered: false,
+        buildFragment: function buildFragment(dom) {
+          var el0 = dom.createDocumentFragment();
+          var el1 = dom.createComment('');
+          dom.appendChild(el0, el1);
+          return el0;
+        },
+        buildRenderNodes: function buildRenderNodes(dom, fragment, contextualElement) {
+          var morphs = new Array(1);
+          morphs[0] = dom.createMorphAt(fragment, 0, 0, contextualElement);
+          dom.insertBoundary(fragment, 0);
+          dom.insertBoundary(fragment, null);
+          return morphs;
+        },
+<<<<<<< HEAD
+        statements: [['content', 'sign-up-form', ['loc', [null, [1, 0], [1, 16]]]]],
+=======
+        statements: [['content', 'password-input', ['loc', [null, [1, 0], [1, 18]]]]],
+>>>>>>> capstone-branch
+        locals: [],
+        templates: []
+      };
+    })()));
+
+    assert.equal(this.$().text().trim(), '');
+
+    // Template block usage:
+    this.render(Ember.HTMLBars.template((function () {
+      var child0 = (function () {
+        return {
+          meta: {
+            'fragmentReason': false,
+            'revision': 'Ember@2.5.1',
+            'loc': {
+              'source': null,
+              'start': {
+                'line': 2,
+                'column': 4
+              },
+              'end': {
+                'line': 4,
+                'column': 4
+              }
+            }
+          },
+          isEmpty: false,
+          arity: 0,
+          cachedFragment: null,
+          hasRendered: false,
+          buildFragment: function buildFragment(dom) {
+            var el0 = dom.createDocumentFragment();
+            var el1 = dom.createTextNode('      template block text\n');
+            dom.appendChild(el0, el1);
+            return el0;
+          },
+          buildRenderNodes: function buildRenderNodes() {
+            return [];
+          },
+          statements: [],
+          locals: [],
+          templates: []
+        };
+      })();
+
+      return {
+        meta: {
+          'fragmentReason': {
+            'name': 'missing-wrapper',
+            'problems': ['wrong-type']
+          },
+          'revision': 'Ember@2.5.1',
+          'loc': {
+            'source': null,
+            'start': {
+              'line': 1,
+              'column': 0
+            },
+            'end': {
+              'line': 5,
+              'column': 2
+            }
+          }
+        },
+        isEmpty: false,
+        arity: 0,
+        cachedFragment: null,
+        hasRendered: false,
+        buildFragment: function buildFragment(dom) {
+          var el0 = dom.createDocumentFragment();
+          var el1 = dom.createTextNode('\n');
+          dom.appendChild(el0, el1);
+          var el1 = dom.createComment('');
+          dom.appendChild(el0, el1);
+          var el1 = dom.createTextNode('  ');
+          dom.appendChild(el0, el1);
+          return el0;
+        },
+        buildRenderNodes: function buildRenderNodes(dom, fragment, contextualElement) {
+          var morphs = new Array(1);
+          morphs[0] = dom.createMorphAt(fragment, 1, 1, contextualElement);
+          return morphs;
+        },
+<<<<<<< HEAD
+        statements: [['block', 'sign-up-form', [], [], 0, null, ['loc', [null, [2, 4], [4, 21]]]]],
+=======
+        statements: [['block', 'password-input', [], [], 0, null, ['loc', [null, [2, 4], [4, 23]]]]],
+>>>>>>> capstone-branch
+        locals: [],
+        templates: [child0]
+      };
+    })()));
+
+    assert.equal(this.$().text().trim(), 'template block text');
+  });
+});
+<<<<<<< HEAD
+define('play-together-client/tests/integration/components/sign-up-form/component-test.jshint', ['exports'], function (exports) {
+  'use strict';
+
+  QUnit.module('JSHint - integration/components/sign-up-form/component-test.js');
+  QUnit.test('should pass jshint', function (assert) {
+    assert.expect(1);
+    assert.ok(true, 'integration/components/sign-up-form/component-test.js should pass jshint.');
+  });
+});
+define('play-together-client/tests/profile/create/route.jshint', ['exports'], function (exports) {
+  'use strict';
+
+  QUnit.module('JSHint - profile/create/route.js');
+  QUnit.test('should pass jshint', function (assert) {
+    assert.expect(1);
+    assert.ok(true, 'profile/create/route.js should pass jshint.');
+  });
+});
+define('play-together-client/tests/profile/model.jshint', ['exports'], function (exports) {
+  'use strict';
+
+  QUnit.module('JSHint - profile/model.js');
+  QUnit.test('should pass jshint', function (assert) {
+    assert.expect(1);
+    assert.ok(true, 'profile/model.js should pass jshint.');
+  });
+});
+define('play-together-client/tests/profile/route.jshint', ['exports'], function (exports) {
+  'use strict';
+
+  QUnit.module('JSHint - profile/route.js');
+  QUnit.test('should pass jshint', function (assert) {
+    assert.expect(1);
+    assert.ok(true, 'profile/route.js should pass jshint.');
+  });
+});
+define('play-together-client/tests/profiles/create/route.jshint', ['exports'], function (exports) {
+  'use strict';
+
+  QUnit.module('JSHint - profiles/create/route.js');
+  QUnit.test('should pass jshint', function (assert) {
+    assert.expect(1);
+    assert.ok(true, 'profiles/create/route.js should pass jshint.');
+  });
+});
+define('play-together-client/tests/profiles/edit/route.jshint', ['exports'], function (exports) {
+  'use strict';
+
+  QUnit.module('JSHint - profiles/edit/route.js');
+  QUnit.test('should pass jshint', function (assert) {
+    assert.expect(1);
+    assert.ok(true, 'profiles/edit/route.js should pass jshint.');
+  });
+});
+define('play-together-client/tests/profiles/model.jshint', ['exports'], function (exports) {
+  'use strict';
+
+  QUnit.module('JSHint - profiles/model.js');
+  QUnit.test('should pass jshint', function (assert) {
+    assert.expect(1);
+    assert.ok(true, 'profiles/model.js should pass jshint.');
+  });
+});
+define('play-together-client/tests/profiles/route.jshint', ['exports'], function (exports) {
+  'use strict';
+
+  QUnit.module('JSHint - profiles/route.js');
+  QUnit.test('should pass jshint', function (assert) {
+    assert.expect(1);
+    assert.ok(true, 'profiles/route.js should pass jshint.');
+  });
+});
+define('play-together-client/tests/resolver.jshint', ['exports'], function (exports) {
+  'use strict';
+
+  QUnit.module('JSHint - resolver.js');
+  QUnit.test('should pass jshint', function (assert) {
+=======
 define('play-together-client/tests/integration/components/password-input/component-test.jshint', ['exports'], function (exports) {
   'use strict';
 
@@ -2387,7 +3412,7 @@ define('play-together-client/tests/integration/components/profile-edit/component
 });
 define('play-together-client/tests/integration/components/profile-update/component-test', ['exports', 'ember-qunit'], function (exports, _emberQunit) {
 
-  (0, _emberQunit.moduleForComponent)('profile-update', 'Integration | Component | profile update', {
+  (0, _emberQunit.moduleForComponent)('profile-new', 'Integration | Component | profile update', {
     integration: true
   });
 
@@ -2411,7 +3436,7 @@ define('play-together-client/tests/integration/components/profile-update/compone
             },
             'end': {
               'line': 1,
-              'column': 18
+              'column': 15
             }
           }
         },
@@ -2432,7 +3457,7 @@ define('play-together-client/tests/integration/components/profile-update/compone
           dom.insertBoundary(fragment, null);
           return morphs;
         },
-        statements: [['content', 'profile-update', ['loc', [null, [1, 0], [1, 18]]]]],
+        statements: [['content', 'profile-new', ['loc', [null, [1, 0], [1, 15]]]]],
         locals: [],
         templates: []
       };
@@ -2516,7 +3541,7 @@ define('play-together-client/tests/integration/components/profile-update/compone
           morphs[0] = dom.createMorphAt(fragment, 1, 1, contextualElement);
           return morphs;
         },
-        statements: [['block', 'profile-update', [], [], 0, null, ['loc', [null, [2, 4], [4, 23]]]]],
+        statements: [['block', 'profile-new', [], [], 0, null, ['loc', [null, [2, 4], [4, 20]]]]],
         locals: [],
         templates: [child0]
       };
@@ -2900,6 +3925,7 @@ define('play-together-client/tests/resolver.jshint', ['exports'], function (expo
 
   QUnit.module('JSHint - resolver.js');
   QUnit.test('should pass jshint', function (assert) {
+>>>>>>> capstone-branch
     assert.expect(1);
     assert.ok(true, 'resolver.js should pass jshint.');
   });
@@ -3192,6 +4218,159 @@ define('play-together-client/tests/unit/change-password/route-test.jshint', ['ex
     assert.ok(true, 'unit/change-password/route-test.js should pass jshint.');
   });
 });
+<<<<<<< HEAD
+=======
+define('play-together-client/tests/unit/create-exercise/route-test', ['exports', 'ember-qunit'], function (exports, _emberQunit) {
+
+  (0, _emberQunit.moduleFor)('route:create-exercise', 'Unit | Route | create exercise', {
+    // Specify the other units that are required for this test.
+    // needs: ['controller:foo']
+  });
+
+  (0, _emberQunit.test)('it exists', function (assert) {
+    var route = this.subject();
+    assert.ok(route);
+  });
+});
+define('play-together-client/tests/unit/create-exercise/route-test.jshint', ['exports'], function (exports) {
+  'use strict';
+
+  QUnit.module('JSHint - unit/create-exercise/route-test.js');
+  QUnit.test('should pass jshint', function (assert) {
+    assert.expect(1);
+    assert.ok(true, 'unit/create-exercise/route-test.js should pass jshint.');
+  });
+});
+define('play-together-client/tests/unit/exercise-create/controller-test', ['exports', 'ember-qunit'], function (exports, _emberQunit) {
+
+  (0, _emberQunit.moduleFor)('controller:exercise-create', 'Unit | Controller | exercise create', {
+    // Specify the other units that are required for this test.
+    // needs: ['controller:foo']
+  });
+
+  // Replace this with your real tests.
+  (0, _emberQunit.test)('it exists', function (assert) {
+    var controller = this.subject();
+    assert.ok(controller);
+  });
+});
+define('play-together-client/tests/unit/exercise-create/controller-test.jshint', ['exports'], function (exports) {
+  'use strict';
+
+  QUnit.module('JSHint - unit/exercise-create/controller-test.js');
+  QUnit.test('should pass jshint', function (assert) {
+    assert.expect(1);
+    assert.ok(true, 'unit/exercise-create/controller-test.js should pass jshint.');
+  });
+});
+define('play-together-client/tests/unit/exercise/controller-test', ['exports', 'ember-qunit'], function (exports, _emberQunit) {
+
+  (0, _emberQunit.moduleFor)('controller:exercise', 'Unit | Controller | exercise', {
+    // Specify the other units that are required for this test.
+    // needs: ['controller:foo']
+  });
+
+  // Replace this with your real tests.
+  (0, _emberQunit.test)('it exists', function (assert) {
+    var controller = this.subject();
+    assert.ok(controller);
+  });
+});
+define('play-together-client/tests/unit/exercise/controller-test.jshint', ['exports'], function (exports) {
+  'use strict';
+
+  QUnit.module('JSHint - unit/exercise/controller-test.js');
+  QUnit.test('should pass jshint', function (assert) {
+    assert.expect(1);
+    assert.ok(true, 'unit/exercise/controller-test.js should pass jshint.');
+  });
+});
+define('play-together-client/tests/unit/exercise/model-test', ['exports', 'ember-qunit'], function (exports, _emberQunit) {
+
+  (0, _emberQunit.moduleForModel)('exercise', 'Unit | Model | exercise', {
+    // Specify the other units that are required for this test.
+    needs: []
+  });
+
+  (0, _emberQunit.test)('it exists', function (assert) {
+    var model = this.subject();
+    // let store = this.store();
+    assert.ok(!!model);
+  });
+});
+define('play-together-client/tests/unit/exercise/model-test.jshint', ['exports'], function (exports) {
+  'use strict';
+
+  QUnit.module('JSHint - unit/exercise/model-test.js');
+  QUnit.test('should pass jshint', function (assert) {
+    assert.expect(1);
+    assert.ok(true, 'unit/exercise/model-test.js should pass jshint.');
+  });
+});
+define('play-together-client/tests/unit/exercise/route-test', ['exports', 'ember-qunit'], function (exports, _emberQunit) {
+
+  (0, _emberQunit.moduleFor)('route:exercise', 'Unit | Route | exercise', {
+    // Specify the other units that are required for this test.
+    // needs: ['controller:foo']
+  });
+
+  (0, _emberQunit.test)('it exists', function (assert) {
+    var route = this.subject();
+    assert.ok(route);
+  });
+});
+define('play-together-client/tests/unit/exercise/route-test.jshint', ['exports'], function (exports) {
+  'use strict';
+
+  QUnit.module('JSHint - unit/exercise/route-test.js');
+  QUnit.test('should pass jshint', function (assert) {
+    assert.expect(1);
+    assert.ok(true, 'unit/exercise/route-test.js should pass jshint.');
+  });
+});
+define('play-together-client/tests/unit/exercises/new/route-test', ['exports', 'ember-qunit'], function (exports, _emberQunit) {
+
+  (0, _emberQunit.moduleFor)('route:exercises/new', 'Unit | Route | exercises/new', {
+    // Specify the other units that are required for this test.
+    // needs: ['controller:foo']
+  });
+
+  (0, _emberQunit.test)('it exists', function (assert) {
+    var route = this.subject();
+    assert.ok(route);
+  });
+});
+define('play-together-client/tests/unit/exercises/new/route-test.jshint', ['exports'], function (exports) {
+  'use strict';
+
+  QUnit.module('JSHint - unit/exercises/new/route-test.js');
+  QUnit.test('should pass jshint', function (assert) {
+    assert.expect(1);
+    assert.ok(true, 'unit/exercises/new/route-test.js should pass jshint.');
+  });
+});
+define('play-together-client/tests/unit/exercises/route-test', ['exports', 'ember-qunit'], function (exports, _emberQunit) {
+
+  (0, _emberQunit.moduleFor)('route:exercises', 'Unit | Route | exercises', {
+    // Specify the other units that are required for this test.
+    // needs: ['controller:foo']
+  });
+
+  (0, _emberQunit.test)('it exists', function (assert) {
+    var route = this.subject();
+    assert.ok(route);
+  });
+});
+define('play-together-client/tests/unit/exercises/route-test.jshint', ['exports'], function (exports) {
+  'use strict';
+
+  QUnit.module('JSHint - unit/exercises/route-test.js');
+  QUnit.test('should pass jshint', function (assert) {
+    assert.expect(1);
+    assert.ok(true, 'unit/exercises/route-test.js should pass jshint.');
+  });
+});
+>>>>>>> capstone-branch
 define('play-together-client/tests/unit/initializers/text-field-test', ['exports', 'ember', 'play-together-client/initializers/text-field', 'qunit'], function (exports, _ember, _playTogetherClientInitializersTextField, _qunit) {
 
   var application = undefined;
@@ -3222,6 +4401,30 @@ define('play-together-client/tests/unit/initializers/text-field-test.jshint', ['
     assert.ok(true, 'unit/initializers/text-field-test.js should pass jshint.');
   });
 });
+<<<<<<< HEAD
+=======
+define('play-together-client/tests/unit/my-exercises/route-test', ['exports', 'ember-qunit'], function (exports, _emberQunit) {
+
+  (0, _emberQunit.moduleFor)('route:my-exercises', 'Unit | Route | my exercises', {
+    // Specify the other units that are required for this test.
+    // needs: ['controller:foo']
+  });
+
+  (0, _emberQunit.test)('it exists', function (assert) {
+    var route = this.subject();
+    assert.ok(route);
+  });
+});
+define('play-together-client/tests/unit/my-exercises/route-test.jshint', ['exports'], function (exports) {
+  'use strict';
+
+  QUnit.module('JSHint - unit/my-exercises/route-test.js');
+  QUnit.test('should pass jshint', function (assert) {
+    assert.expect(1);
+    assert.ok(true, 'unit/my-exercises/route-test.js should pass jshint.');
+  });
+});
+>>>>>>> capstone-branch
 define('play-together-client/tests/unit/profile/edit/route-test', ['exports', 'ember-qunit'], function (exports, _emberQunit) {
 
   (0, _emberQunit.moduleFor)('route:profile/edit', 'Unit | Route | profile/edit', {

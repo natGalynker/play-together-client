@@ -7,5 +7,14 @@ export default Ember.Route.extend({
     editAction () {
       this.transitionTo('profiles/edit');
     },
-  }
+    deleteProfile(profile) {
+      console.log('this is a test');
+      console.log(profile);
+    return profile.destroyRecord();
+  },
+
+    changeAction(profile){
+      return profile.save();
+    },
+},
 });

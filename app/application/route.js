@@ -9,7 +9,6 @@ export default Ember.Route.extend({
     viewProfile (params) {
       this.transitionTo('profile', params);
     },
-
     signOut () {
       this.get('auth').signOut()
       .then(() => this.transitionTo('sign-in'))
