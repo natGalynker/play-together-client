@@ -1,4 +1,4 @@
-<div class="profile-new">
+<div class="profile-update">
 <span><h1>{{model.username}}'s Profile </h1></span>
 <label for="location">Location:</label>
 {{model.location}} <br>
@@ -6,10 +6,14 @@
 {{model.motivation}} <br>
 <label for="favorite_exercise">Favorite Exercise Method:</label>
 {{model.favorite}} <br>
-{{delete-profile model=profile delete='delete'}}
+
+<hr>
+
+{{delete-profile profile=model delete='deleteProfile' changeAction='changeAction'}}
+
 
 {{outlet}}
-<hr>
+
 <span class="col-md-4 col-md-offset-4">{{#link-to "exercise"}}<br>Update Broke{{/link-to}}</span>
 <span class="col-md-4 col-md-offset-4">{{#link-to "change-password"}}<br>Change Password{{/link-to}}</span>
 <span class="col-md-4 col-md-offset-4">{{#link-to "profile"}}<br>Change Password{{/link-to}}</span>
