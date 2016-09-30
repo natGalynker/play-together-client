@@ -444,6 +444,9 @@ define('play-together-client/components/delete-profile/component', ['exports', '
       'delete': function _delete() {
         console.log(this.get('profile'));
         this.sendAction('delete', this.get('profile'));
+      },
+      changeAction: function changeAction() {
+        this.sendAction('changeAction', this.get('profile'));
       }
     }
   });
@@ -453,8 +456,7 @@ define("play-together-client/components/delete-profile/template", ["exports"], f
     return {
       meta: {
         "fragmentReason": {
-          "name": "modifiers",
-          "modifiers": ["action"]
+          "name": "triple-curlies"
         },
         "revision": "Ember@2.5.1",
         "loc": {
@@ -464,7 +466,7 @@ define("play-together-client/components/delete-profile/template", ["exports"], f
             "column": 0
           },
           "end": {
-            "line": 2,
+            "line": 8,
             "column": 0
           }
         },
@@ -476,8 +478,29 @@ define("play-together-client/components/delete-profile/template", ["exports"], f
       hasRendered: false,
       buildFragment: function buildFragment(dom) {
         var el0 = dom.createDocumentFragment();
-        var el1 = dom.createElement("button");
-        var el2 = dom.createTextNode("delete");
+        var el1 = dom.createElement("div");
+        dom.setAttribute(el1, "class", "change-actions");
+        var el2 = dom.createTextNode("\n");
+        dom.appendChild(el1, el2);
+        var el2 = dom.createElement("form");
+        var el3 = dom.createTextNode("\n  ");
+        dom.appendChild(el2, el3);
+        var el3 = dom.createComment("");
+        dom.appendChild(el2, el3);
+        var el3 = dom.createTextNode("\n");
+        dom.appendChild(el2, el3);
+        dom.appendChild(el1, el2);
+        var el2 = dom.createTextNode("\n");
+        dom.appendChild(el1, el2);
+        var el2 = dom.createElement("hr");
+        dom.appendChild(el1, el2);
+        var el2 = dom.createTextNode("\n");
+        dom.appendChild(el1, el2);
+        var el2 = dom.createElement("button");
+        var el3 = dom.createTextNode("delete");
+        dom.appendChild(el2, el3);
+        dom.appendChild(el1, el2);
+        var el2 = dom.createTextNode("\n");
         dom.appendChild(el1, el2);
         dom.appendChild(el0, el1);
         var el1 = dom.createTextNode("\n");
@@ -486,11 +509,15 @@ define("play-together-client/components/delete-profile/template", ["exports"], f
       },
       buildRenderNodes: function buildRenderNodes(dom, fragment, contextualElement) {
         var element0 = dom.childAt(fragment, [0]);
-        var morphs = new Array(1);
-        morphs[0] = dom.createElementMorph(element0);
+        var element1 = dom.childAt(element0, [1]);
+        var element2 = dom.childAt(element0, [5]);
+        var morphs = new Array(3);
+        morphs[0] = dom.createElementMorph(element1);
+        morphs[1] = dom.createMorphAt(element1, 1, 1);
+        morphs[2] = dom.createElementMorph(element2);
         return morphs;
       },
-      statements: [["element", "action", ["delete"], [], ["loc", [null, [1, 8], [1, 27]]]]],
+      statements: [["element", "action", ["changeAction"], ["on", "submit"], ["loc", [null, [2, 6], [2, 43]]]], ["inline", "input", [], ["value", ["subexpr", "@mut", [["get", "profile.location", ["loc", [null, [3, 16], [3, 32]]]]], [], []], "placeholder", "Update Where you reside", "type", "text", "cols", 25, "rows", 10], ["loc", [null, [3, 2], [3, 100]]]], ["element", "action", ["delete"], [], ["loc", [null, [6, 8], [6, 27]]]]],
       locals: [],
       templates: []
     };
@@ -1145,7 +1172,7 @@ define("play-together-client/components/my-application/template", ["exports"], f
               },
               "end": {
                 "line": 20,
-                "column": 59
+                "column": 56
               }
             },
             "moduleName": "play-together-client/components/my-application/template.hbs"
@@ -1158,45 +1185,7 @@ define("play-together-client/components/my-application/template", ["exports"], f
             var el0 = dom.createDocumentFragment();
             var el1 = dom.createElement("br");
             dom.appendChild(el0, el1);
-            var el1 = dom.createTextNode(" New Exercise");
-            dom.appendChild(el0, el1);
-            return el0;
-          },
-          buildRenderNodes: function buildRenderNodes() {
-            return [];
-          },
-          statements: [],
-          locals: [],
-          templates: []
-        };
-      })();
-      var child3 = (function () {
-        return {
-          meta: {
-            "fragmentReason": false,
-            "revision": "Ember@2.5.1",
-            "loc": {
-              "source": null,
-              "start": {
-                "line": 22,
-                "column": 14
-              },
-              "end": {
-                "line": 22,
-                "column": 53
-              }
-            },
-            "moduleName": "play-together-client/components/my-application/template.hbs"
-          },
-          isEmpty: false,
-          arity: 0,
-          cachedFragment: null,
-          hasRendered: false,
-          buildFragment: function buildFragment(dom) {
-            var el0 = dom.createDocumentFragment();
-            var el1 = dom.createElement("br");
-            dom.appendChild(el0, el1);
-            var el1 = dom.createTextNode("All Profiles");
+            var el1 = dom.createTextNode(" View All ");
             dom.appendChild(el0, el1);
             return el0;
           },
@@ -1219,7 +1208,7 @@ define("play-together-client/components/my-application/template", ["exports"], f
               "column": 8
             },
             "end": {
-              "line": 23,
+              "line": 21,
               "column": 8
             }
           },
@@ -1294,15 +1283,6 @@ define("play-together-client/components/my-application/template", ["exports"], f
           var el2 = dom.createComment("");
           dom.appendChild(el1, el2);
           dom.appendChild(el0, el1);
-          var el1 = dom.createTextNode("\n              ");
-          dom.appendChild(el0, el1);
-          var el1 = dom.createElement("li");
-          dom.setAttribute(el1, "class", "home col-md-3 col-md-offset-3");
-          var el2 = dom.createTextNode("\n              ");
-          dom.appendChild(el1, el2);
-          var el2 = dom.createComment("");
-          dom.appendChild(el1, el2);
-          dom.appendChild(el0, el1);
           var el1 = dom.createTextNode("\n");
           dom.appendChild(el0, el1);
           return el0;
@@ -1310,18 +1290,17 @@ define("play-together-client/components/my-application/template", ["exports"], f
         buildRenderNodes: function buildRenderNodes(dom, fragment, contextualElement) {
           var element0 = dom.childAt(fragment, [1, 1]);
           var element1 = dom.childAt(fragment, [3, 1]);
-          var morphs = new Array(6);
+          var morphs = new Array(5);
           morphs[0] = dom.createElementMorph(element0);
           morphs[1] = dom.createElementMorph(element1);
           morphs[2] = dom.createMorphAt(dom.childAt(fragment, [5]), 1, 1);
           morphs[3] = dom.createMorphAt(dom.childAt(fragment, [7]), 1, 1);
           morphs[4] = dom.createMorphAt(dom.childAt(fragment, [9]), 1, 1);
-          morphs[5] = dom.createMorphAt(dom.childAt(fragment, [11]), 1, 1);
           return morphs;
         },
-        statements: [["element", "action", ["viewProfile"], [], ["loc", [null, [9, 30], [9, 54]]]], ["element", "action", ["signOut"], [], ["loc", [null, [13, 24], [13, 44]]]], ["block", "link-to", ["profiles/edit"], [], 0, null, ["loc", [null, [16, 12], [16, 71]]]], ["block", "link-to", ["exercises"], [], 1, null, ["loc", [null, [18, 12], [18, 69]]]], ["block", "link-to", ["exercises/new"], [], 2, null, ["loc", [null, [20, 14], [20, 71]]]], ["block", "link-to", ["profiles"], [], 3, null, ["loc", [null, [22, 14], [22, 65]]]]],
+        statements: [["element", "action", ["viewProfile"], [], ["loc", [null, [9, 31], [9, 55]]]], ["element", "action", ["signOut"], [], ["loc", [null, [13, 24], [13, 44]]]], ["block", "link-to", ["profiles/edit"], [], 0, null, ["loc", [null, [16, 12], [16, 71]]]], ["block", "link-to", ["exercises"], [], 1, null, ["loc", [null, [18, 12], [18, 69]]]], ["block", "link-to", ["exercises/new"], [], 2, null, ["loc", [null, [20, 14], [20, 68]]]]],
         locals: [],
-        templates: [child0, child1, child2, child3]
+        templates: [child0, child1, child2]
       };
     })();
     var child2 = (function () {
@@ -1333,11 +1312,11 @@ define("play-together-client/components/my-application/template", ["exports"], f
             "loc": {
               "source": null,
               "start": {
-                "line": 25,
+                "line": 23,
                 "column": 12
               },
               "end": {
-                "line": 25,
+                "line": 23,
                 "column": 41
               }
             },
@@ -1369,11 +1348,11 @@ define("play-together-client/components/my-application/template", ["exports"], f
             "loc": {
               "source": null,
               "start": {
-                "line": 28,
+                "line": 26,
                 "column": 12
               },
               "end": {
-                "line": 28,
+                "line": 26,
                 "column": 41
               }
             },
@@ -1404,11 +1383,11 @@ define("play-together-client/components/my-application/template", ["exports"], f
           "loc": {
             "source": null,
             "start": {
-              "line": 23,
+              "line": 21,
               "column": 8
             },
             "end": {
-              "line": 30,
+              "line": 28,
               "column": 8
             }
           },
@@ -1450,7 +1429,7 @@ define("play-together-client/components/my-application/template", ["exports"], f
           morphs[1] = dom.createMorphAt(dom.childAt(fragment, [3]), 1, 1);
           return morphs;
         },
-        statements: [["block", "link-to", ["sign-up"], [], 0, null, ["loc", [null, [25, 12], [25, 53]]]], ["block", "link-to", ["sign-in"], [], 1, null, ["loc", [null, [28, 12], [28, 53]]]]],
+        statements: [["block", "link-to", ["sign-up"], [], 0, null, ["loc", [null, [23, 12], [23, 53]]]], ["block", "link-to", ["sign-in"], [], 1, null, ["loc", [null, [26, 12], [26, 53]]]]],
         locals: [],
         templates: [child0, child1]
       };
@@ -1463,11 +1442,11 @@ define("play-together-client/components/my-application/template", ["exports"], f
           "loc": {
             "source": null,
             "start": {
-              "line": 35,
+              "line": 33,
               "column": 0
             },
             "end": {
-              "line": 44,
+              "line": 42,
               "column": 0
             }
           },
@@ -1519,7 +1498,7 @@ define("play-together-client/components/my-application/template", ["exports"], f
           morphs[0] = dom.createMorphAt(dom.childAt(fragment, [1, 1]), 3, 3);
           return morphs;
         },
-        statements: [["content", "outlet", ["loc", [null, [41, 6], [41, 16]]]]],
+        statements: [["content", "outlet", ["loc", [null, [39, 6], [39, 16]]]]],
         locals: [],
         templates: []
       };
@@ -1532,11 +1511,11 @@ define("play-together-client/components/my-application/template", ["exports"], f
           "loc": {
             "source": null,
             "start": {
-              "line": 44,
+              "line": 42,
               "column": 0
             },
             "end": {
-              "line": 52,
+              "line": 50,
               "column": 0
             }
           },
@@ -1587,7 +1566,7 @@ define("play-together-client/components/my-application/template", ["exports"], f
           morphs[0] = dom.createMorphAt(dom.childAt(fragment, [1, 1]), 5, 5);
           return morphs;
         },
-        statements: [["content", "outlet", ["loc", [null, [49, 37], [49, 47]]]]],
+        statements: [["content", "outlet", ["loc", [null, [47, 37], [47, 47]]]]],
         locals: [],
         templates: []
       };
@@ -1606,7 +1585,7 @@ define("play-together-client/components/my-application/template", ["exports"], f
             "column": 0
           },
           "end": {
-            "line": 53,
+            "line": 51,
             "column": 0
           }
         },
@@ -1673,7 +1652,7 @@ define("play-together-client/components/my-application/template", ["exports"], f
         dom.insertBoundary(fragment, null);
         return morphs;
       },
-      statements: [["content", "navbar-header", ["loc", [null, [3, 4], [3, 21]]]], ["block", "link-to", ["application"], ["class", "navbar-brand"], 0, null, ["loc", [null, [4, 4], [4, 73]]]], ["block", "if", [["get", "isAuthenticated", ["loc", [null, [7, 14], [7, 29]]]]], [], 1, 2, ["loc", [null, [7, 8], [30, 15]]]], ["block", "if", [["get", "isAuthenticated", ["loc", [null, [35, 6], [35, 21]]]]], [], 3, 4, ["loc", [null, [35, 0], [52, 7]]]]],
+      statements: [["content", "navbar-header", ["loc", [null, [3, 4], [3, 21]]]], ["block", "link-to", ["application"], ["class", "navbar-brand"], 0, null, ["loc", [null, [4, 4], [4, 73]]]], ["block", "if", [["get", "isAuthenticated", ["loc", [null, [7, 14], [7, 29]]]]], [], 1, 2, ["loc", [null, [7, 8], [28, 15]]]], ["block", "if", [["get", "isAuthenticated", ["loc", [null, [33, 6], [33, 21]]]]], [], 3, 4, ["loc", [null, [33, 0], [50, 7]]]]],
       locals: [],
       templates: [child0, child1, child2, child3, child4]
     };
@@ -1944,57 +1923,13 @@ define('play-together-client/components/power-select/trigger', ['exports', 'embe
     }
   });
 });
-define('play-together-client/components/profile-create/component', ['exports', 'ember'], function (exports, _ember) {
-  exports['default'] = _ember['default'].Component.extend({
-    tagName: 'form',
-    classNames: ['form-group'],
-
-    profile: {
-      location: 'enter location',
-      motivation: 'getting strong',
-      favorite: 'yoga all day every day',
-      username: 'thisExample'
-    },
-
-    // createItem () {
-    //     let data = this.get('newItem');
-    //     data.list = this.get('list');
-    //     this.sendAction('createItem', data);
-    //     this.set('newItem.content', null);
-    //   },
-    actions: {
-      cancel: function cancel() {
-        var profile = this.get('profile');
-        this.sendAction('reset', profile);
-      },
-      submitProfile: function submitProfile() {
-        console.log('form sbmitted');
-        // console.log(profile);
-        // this.sendAction('profile', params);
-        this.sendAction('submitProfile', this.get('profile'));
-      }
-    }
-  });
-});
-// submitProfile () {
-// let data = this.get('profile');
-// data.profile = this.get('profile');
-// this.sendAction('submitProfile', data);
-// this.sendAction('submitProfile', this.get('newProfile'));
-// this.sendAction('submitProfile', data);
-// this.get('profile', location);
-// this.set('profile', motivation);
-// this.set('profile', favorite);
-// this.set('profile');
-// this.set('profile');
-// },
 define("play-together-client/components/profile-create/template", ["exports"], function (exports) {
   exports["default"] = Ember.HTMLBars.template((function () {
     return {
       meta: {
         "fragmentReason": {
           "name": "missing-wrapper",
-          "problems": ["multiple-nodes"]
+          "problems": ["empty-body"]
         },
         "revision": "Ember@2.5.1",
         "loc": {
@@ -2004,7 +1939,7 @@ define("play-together-client/components/profile-create/template", ["exports"], f
             "column": 0
           },
           "end": {
-            "line": 39,
+            "line": 2,
             "column": 0
           }
         },
@@ -2016,100 +1951,14 @@ define("play-together-client/components/profile-create/template", ["exports"], f
       hasRendered: false,
       buildFragment: function buildFragment(dom) {
         var el0 = dom.createDocumentFragment();
-        var el1 = dom.createElement("h1");
-        var el2 = dom.createTextNode("Tweak Your Profile");
-        dom.appendChild(el1, el2);
-        dom.appendChild(el0, el1);
-        var el1 = dom.createTextNode("\n\n");
-        dom.appendChild(el0, el1);
-        var el1 = dom.createElement("h4");
-        var el2 = dom.createTextNode("Tell us About what brought you here");
-        dom.appendChild(el1, el2);
-        dom.appendChild(el0, el1);
-        var el1 = dom.createTextNode("\n\n");
-        dom.appendChild(el0, el1);
-        var el1 = dom.createTextNode("\n");
-        dom.appendChild(el0, el1);
-        var el1 = dom.createElement("form");
-        var el2 = dom.createTextNode("\n  ");
-        dom.appendChild(el1, el2);
-        var el2 = dom.createElement("label");
-        dom.setAttribute(el2, "for", "username");
-        var el3 = dom.createTextNode("Name You Go By");
-        dom.appendChild(el2, el3);
-        dom.appendChild(el1, el2);
-        var el2 = dom.createTextNode("\n  ");
-        dom.appendChild(el1, el2);
-        var el2 = dom.createComment("");
-        dom.appendChild(el1, el2);
-        var el2 = dom.createTextNode("\n  ");
-        dom.appendChild(el1, el2);
-        var el2 = dom.createElement("label");
-        dom.setAttribute(el2, "for", "location");
-        var el3 = dom.createTextNode("Location");
-        dom.appendChild(el2, el3);
-        dom.appendChild(el1, el2);
-        var el2 = dom.createTextNode("\n  ");
-        dom.appendChild(el1, el2);
-        var el2 = dom.createComment("");
-        dom.appendChild(el1, el2);
-        var el2 = dom.createTextNode("\n  ");
-        dom.appendChild(el1, el2);
-        var el2 = dom.createElement("label");
-        dom.setAttribute(el2, "for", "motivation");
-        var el3 = dom.createTextNode("Motivation");
-        dom.appendChild(el2, el3);
-        dom.appendChild(el1, el2);
-        var el2 = dom.createTextNode("\n  ");
-        dom.appendChild(el1, el2);
-        var el2 = dom.createComment("");
-        dom.appendChild(el1, el2);
-        var el2 = dom.createTextNode("\n  ");
-        dom.appendChild(el1, el2);
-        var el2 = dom.createElement("label");
-        dom.setAttribute(el2, "for", "favorite");
-        var el3 = dom.createTextNode("Favorite Exercise Method");
-        dom.appendChild(el2, el3);
-        dom.appendChild(el1, el2);
-        var el2 = dom.createTextNode("\n  ");
-        dom.appendChild(el1, el2);
-        var el2 = dom.createComment("");
-        dom.appendChild(el1, el2);
-        var el2 = dom.createTextNode("\n");
-        dom.appendChild(el1, el2);
-        var el2 = dom.createElement("button");
-        dom.setAttribute(el2, "type", "button");
-        dom.setAttribute(el2, "class", "btn btn-primary");
-        var el3 = dom.createTextNode("\nUpdate Profile\n");
-        dom.appendChild(el2, el3);
-        dom.appendChild(el1, el2);
-        var el2 = dom.createTextNode("\n\n");
-        dom.appendChild(el1, el2);
-        var el2 = dom.createElement("button");
-        dom.setAttribute(el2, "class", "btn btn-default");
-        var el3 = dom.createTextNode("\n  Cancel\n");
-        dom.appendChild(el2, el3);
-        dom.appendChild(el1, el2);
-        var el2 = dom.createTextNode("\n");
-        dom.appendChild(el1, el2);
-        dom.appendChild(el0, el1);
         var el1 = dom.createTextNode("\n");
         dom.appendChild(el0, el1);
         return el0;
       },
-      buildRenderNodes: function buildRenderNodes(dom, fragment, contextualElement) {
-        var element0 = dom.childAt(fragment, [5]);
-        var element1 = dom.childAt(element0, [19]);
-        var morphs = new Array(6);
-        morphs[0] = dom.createElementMorph(element0);
-        morphs[1] = dom.createMorphAt(element0, 3, 3);
-        morphs[2] = dom.createMorphAt(element0, 7, 7);
-        morphs[3] = dom.createMorphAt(element0, 11, 11);
-        morphs[4] = dom.createMorphAt(element0, 15, 15);
-        morphs[5] = dom.createElementMorph(element1);
-        return morphs;
+      buildRenderNodes: function buildRenderNodes() {
+        return [];
       },
-      statements: [["element", "action", ["submitProfile"], ["on", "submit"], ["loc", [null, [10, 6], [10, 44]]]], ["inline", "input", [], ["placeholder", "Put the name you prefer to be called", "type", "text", "id", "username", "value", ["subexpr", "@mut", [["get", "profile.username", ["loc", [null, [15, 16], [15, 32]]]]], [], []]], ["loc", [null, [12, 2], [15, 34]]]], ["inline", "input", [], ["placeholder", "Boston, MA etc", "type", "text", "id", "location", "value", ["subexpr", "@mut", [["get", "profile.location", ["loc", [null, [20, 16], [20, 32]]]]], [], []]], ["loc", [null, [17, 2], [20, 34]]]], ["inline", "input", [], ["placeholder", "Tell us about what drives you", "type", "text", "id", "motivation", "value", ["subexpr", "@mut", [["get", "profile.motivation", ["loc", [null, [25, 16], [25, 34]]]]], [], []]], ["loc", [null, [22, 2], [25, 36]]]], ["inline", "input", [], ["placeholder", "Tell us what is your go-to Exercise", "type", "text", "id", "favorite", "value", ["subexpr", "@mut", [["get", "profile.favorite", ["loc", [null, [30, 16], [30, 32]]]]], [], []]], ["loc", [null, [27, 2], [30, 34]]]], ["element", "action", ["reset"], [], ["loc", [null, [35, 32], [35, 50]]]]],
+      statements: [],
       locals: [],
       templates: []
     };
@@ -2123,8 +1972,7 @@ define('play-together-client/components/profile-update/component', ['exports', '
     profile: {},
     actions: {
       reset: function reset() {
-        var profile = this.get('profile');
-        this.sendAction('reset', profile);
+        this.set('profile', {});
       },
       submitProfile: function submitProfile() {
         console.log('form submitted', this.get('profile'));
@@ -3796,9 +3644,14 @@ define('play-together-client/profile/route', ['exports', 'ember'], function (exp
       editAction: function editAction() {
         this.transitionTo('profiles/edit');
       },
-      'delete': function _delete(profile) {
+      deleteProfile: function deleteProfile(profile) {
+        console.log('this is a test');
         console.log(profile);
-        profile.destroyRecord();
+        return profile.destroyRecord();
+      },
+
+      changeAction: function changeAction(profile) {
+        return profile.save();
       }
     }
   });
@@ -3813,11 +3666,11 @@ define("play-together-client/profile/template", ["exports"], function (exports) 
           "loc": {
             "source": null,
             "start": {
-              "line": 13,
+              "line": 17,
               "column": 39
             },
             "end": {
-              "line": 13,
+              "line": 17,
               "column": 78
             }
           },
@@ -3851,11 +3704,11 @@ define("play-together-client/profile/template", ["exports"], function (exports) 
           "loc": {
             "source": null,
             "start": {
-              "line": 14,
+              "line": 18,
               "column": 39
             },
             "end": {
-              "line": 14,
+              "line": 18,
               "column": 88
             }
           },
@@ -3889,11 +3742,11 @@ define("play-together-client/profile/template", ["exports"], function (exports) 
           "loc": {
             "source": null,
             "start": {
-              "line": 15,
+              "line": 19,
               "column": 39
             },
             "end": {
-              "line": 15,
+              "line": 19,
               "column": 80
             }
           },
@@ -3932,7 +3785,7 @@ define("play-together-client/profile/template", ["exports"], function (exports) 
             "column": 0
           },
           "end": {
-            "line": 18,
+            "line": 22,
             "column": 0
           }
         },
@@ -3945,7 +3798,7 @@ define("play-together-client/profile/template", ["exports"], function (exports) 
       buildFragment: function buildFragment(dom) {
         var el0 = dom.createDocumentFragment();
         var el1 = dom.createElement("div");
-        dom.setAttribute(el1, "class", "profile-new");
+        dom.setAttribute(el1, "class", "profile-update");
         var el2 = dom.createTextNode("\n");
         dom.appendChild(el1, el2);
         var el2 = dom.createElement("span");
@@ -4001,19 +3854,19 @@ define("play-together-client/profile/template", ["exports"], function (exports) 
         dom.appendChild(el1, el2);
         var el2 = dom.createElement("br");
         dom.appendChild(el1, el2);
-        var el2 = dom.createTextNode("\n");
+        var el2 = dom.createTextNode("\n\n");
         dom.appendChild(el1, el2);
-        var el2 = dom.createComment("");
+        var el2 = dom.createElement("hr");
         dom.appendChild(el1, el2);
         var el2 = dom.createTextNode("\n\n");
         dom.appendChild(el1, el2);
         var el2 = dom.createComment("");
         dom.appendChild(el1, el2);
-        var el2 = dom.createTextNode("\n");
+        var el2 = dom.createTextNode("\n\n\n");
         dom.appendChild(el1, el2);
-        var el2 = dom.createElement("hr");
+        var el2 = dom.createComment("");
         dom.appendChild(el1, el2);
-        var el2 = dom.createTextNode("\n");
+        var el2 = dom.createTextNode("\n\n");
         dom.appendChild(el1, el2);
         var el2 = dom.createElement("span");
         dom.setAttribute(el2, "class", "col-md-4 col-md-offset-4");
@@ -4048,14 +3901,14 @@ define("play-together-client/profile/template", ["exports"], function (exports) 
         morphs[1] = dom.createMorphAt(element0, 5, 5);
         morphs[2] = dom.createMorphAt(element0, 11, 11);
         morphs[3] = dom.createMorphAt(element0, 17, 17);
-        morphs[4] = dom.createMorphAt(element0, 21, 21);
-        morphs[5] = dom.createMorphAt(element0, 23, 23);
+        morphs[4] = dom.createMorphAt(element0, 23, 23);
+        morphs[5] = dom.createMorphAt(element0, 25, 25);
         morphs[6] = dom.createMorphAt(dom.childAt(element0, [27]), 0, 0);
         morphs[7] = dom.createMorphAt(dom.childAt(element0, [29]), 0, 0);
         morphs[8] = dom.createMorphAt(dom.childAt(element0, [31]), 0, 0);
         return morphs;
       },
-      statements: [["content", "model.username", ["loc", [null, [2, 10], [2, 28]]]], ["content", "model.location", ["loc", [null, [4, 0], [4, 18]]]], ["content", "model.motivation", ["loc", [null, [6, 0], [6, 20]]]], ["content", "model.favorite", ["loc", [null, [8, 0], [8, 18]]]], ["inline", "delete-profile", [], ["model", ["subexpr", "@mut", [["get", "profile", ["loc", [null, [9, 23], [9, 30]]]]], [], []], "delete", "delete"], ["loc", [null, [9, 0], [9, 48]]]], ["content", "outlet", ["loc", [null, [11, 0], [11, 10]]]], ["block", "link-to", ["exercise"], [], 0, null, ["loc", [null, [13, 39], [13, 90]]]], ["block", "link-to", ["change-password"], [], 1, null, ["loc", [null, [14, 39], [14, 100]]]], ["block", "link-to", ["profile"], [], 2, null, ["loc", [null, [15, 39], [15, 92]]]]],
+      statements: [["content", "model.username", ["loc", [null, [2, 10], [2, 28]]]], ["content", "model.location", ["loc", [null, [4, 0], [4, 18]]]], ["content", "model.motivation", ["loc", [null, [6, 0], [6, 20]]]], ["content", "model.favorite", ["loc", [null, [8, 0], [8, 18]]]], ["inline", "delete-profile", [], ["profile", ["subexpr", "@mut", [["get", "model", ["loc", [null, [12, 25], [12, 30]]]]], [], []], "delete", "deleteProfile", "changeAction", "changeAction"], ["loc", [null, [12, 0], [12, 83]]]], ["content", "outlet", ["loc", [null, [15, 0], [15, 10]]]], ["block", "link-to", ["exercise"], [], 0, null, ["loc", [null, [17, 39], [17, 90]]]], ["block", "link-to", ["change-password"], [], 1, null, ["loc", [null, [18, 39], [18, 100]]]], ["block", "link-to", ["profile"], [], 2, null, ["loc", [null, [19, 39], [19, 92]]]]],
       locals: [],
       templates: [child0, child1, child2]
     };
@@ -4071,6 +3924,7 @@ define('play-together-client/profiles/create/route', ['exports', 'ember'], funct
         console.log(data);
         return profile.save();
       },
+
       cancel: function cancel(profile) {
         var _this = this;
 
@@ -4124,7 +3978,7 @@ define("play-together-client/profiles/create/template", ["exports"], function (e
         dom.insertBoundary(fragment, 0);
         return morphs;
       },
-      statements: [["inline", "profile-update", [], ["submitProfile", "submitProfile", "reset", "reset"], ["loc", [null, [1, 0], [1, 62]]]]],
+      statements: [["inline", "profile-update", [], ["profile", ["subexpr", "@mut", [["get", "model", ["loc", [null, [1, 25], [1, 30]]]]], [], []], "submitProfile", "submitProfile", "reset", "reset"], ["loc", [null, [1, 0], [1, 76]]]]],
       locals: [],
       templates: []
     };
@@ -4337,7 +4191,6 @@ define('play-together-client/router', ['exports', 'ember', 'play-together-client
     this.route('profile', { path: 'profiles/:profile_id' });
     this.route('profiles');
     this.route('profiles/edit');
-    this.route('profiles/:profile_id/edit');
     this.route('exercise', { path: 'exercises/:id' });
     this.route('exercises');
     this.route('exercises/new');

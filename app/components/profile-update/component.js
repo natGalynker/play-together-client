@@ -5,11 +5,10 @@ import Ember from 'ember';
     classNames: ['form-group'],
 
     profile: {},
-  actions: {
-    reset () {
-      let profile = this.get('profile');
-      this.sendAction('reset', profile);
-    },
+      actions: {
+        reset () {
+          this.set('profile',  {});
+          },
       submitProfile () {
         console.log('form submitted', this.get('profile'));
         this.sendAction('submitProfile', this.get('profile'));

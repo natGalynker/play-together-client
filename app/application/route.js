@@ -14,6 +14,8 @@ export default Ember.Route.extend({
       this.transitionTo('exercises', params);
     },
 
+    
+
     signOut () {
       this.get('auth').signOut()
       .then(() => this.transitionTo('sign-in'))

@@ -169,15 +169,6 @@ define('play-together-client/tests/components/password-input/component.jshint', 
     assert.ok(true, 'components/password-input/component.js should pass jshint.');
   });
 });
-define('play-together-client/tests/components/profile-create/component.jshint', ['exports'], function (exports) {
-  'use strict';
-
-  QUnit.module('JSHint - components/profile-create/component.js');
-  QUnit.test('should pass jshint', function (assert) {
-    assert.expect(1);
-    assert.ok(true, 'components/profile-create/component.js should pass jshint.');
-  });
-});
 define('play-together-client/tests/components/profile-update/component.jshint', ['exports'], function (exports) {
   'use strict';
 

@@ -7,8 +7,8 @@ export default Ember.Route.extend({
           let profile = this.get('store').createRecord('profile', data);
           console.log(data);
            return profile.save();
+          },
 
-            },
         cancel(profile) {
           this.get('store').unloadAll('profile');
           this.get('store').findRecord('profile', profile.id)
