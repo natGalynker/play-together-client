@@ -10,7 +10,7 @@ import Ember from 'ember';
           this.set('profile',  {});
           },
       submitProfile () {
-        console.log('form submitted', this.get('profile'));
+        // console.log('form submitted', this.get('profile'));
         this.sendAction('submitProfile', this.get('profile'));
         this.set('profile.username', null);
  this.set('profile.location', null);

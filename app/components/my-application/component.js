@@ -11,14 +11,5 @@ export default Ember.Component.extend({
     signOut () {
       this.sendAction('signOut');
     },
-
-    viewProfile () {
-      let params = this.get('id');
-      this.sendAction('viewProfile', params);
-    },
-    viewMyExercises() {
-      let params = this.get('id');
-      this.sendAction('viewMyExercises', params);
-    },
   },
 });

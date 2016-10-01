@@ -6,15 +6,20 @@ export default Ember.Route.extend({
 
   actions: {
 
-    viewProfile (params) {
-      this.transitionTo('profile', params);
-    },
+  //   viewProfile (params) {
+  //     this.get('store').findRecord('user', params)
+  //     .then((user) => {
+  //       .then(() => this.transitionTo('profile');
+  //     console.log(params);
+  //     this.transitionTo('profile', params);
+  //   },
+  // },
 
-    viewMyExercises(params){
-      this.transitionTo('exercises', params);
-    },
+    // viewMyExercises(params){
+    //   this.transitionTo('exercises', params);
+    // },
 
-    
+
 
     signOut () {
       this.get('auth').signOut()

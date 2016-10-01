@@ -64,13 +64,18 @@ define('play-together-client/application/route', ['exports', 'ember'], function 
 
     actions: {
 
-      viewProfile: function viewProfile(params) {
-        this.transitionTo('profile', params);
-      },
+      //   viewProfile (params) {
+      //     this.get('store').findRecord('user', params)
+      //     .then((user) => {
+      //       .then(() => this.transitionTo('profile');
+      //     console.log(params);
+      //     this.transitionTo('profile', params);
+      //   },
+      // },
 
-      viewMyExercises: function viewMyExercises(params) {
-        this.transitionTo('exercises', params);
-      },
+      // viewMyExercises(params){
+      //   this.transitionTo('exercises', params);
+      // },
 
       signOut: function signOut() {
         var _this = this;
@@ -442,7 +447,7 @@ define('play-together-client/components/delete-profile/component', ['exports', '
   exports['default'] = _ember['default'].Component.extend({
     actions: {
       'delete': function _delete() {
-        console.log(this.get('profile'));
+        // console.log(this.get('profile'));
         this.sendAction('delete', this.get('profile'));
       },
       changeAction: function changeAction() {
@@ -589,352 +594,6 @@ define('play-together-client/components/ember-wormhole', ['exports', 'ember-worm
     }
   });
 });
-define('play-together-client/components/exercise-create/component', ['exports', 'ember'], function (exports, _ember) {
-  exports['default'] = _ember['default'].Component.extend({
-    tagName: 'form',
-    classNames: ['form-group'],
-
-    exercise: {
-      category: 'routine',
-      name: 'lyra performance',
-      duration: '30 minutes',
-      description: 'Song: seven nations army, 20 sequences'
-
-    },
-    category: ['Routine', 'Cardio', 'Class', 'Strength, Cool-down', 'Warm-up'],
-
-    actions: {
-      chooseCategory: function chooseCategory() {
-        var exercise = this.get('exercise');
-        this.set('category', exercise);
-      },
-
-      cancel: function cancel() {
-        var exercise = this.get('exercise');
-        this.sendAction('reset', exercise);
-      },
-
-      submitExercise: function submitExercise() {
-        console.log('exercise submitted');
-        this.sendAction('submitExercise', this.get('exercise'));
-      }
-    }
-  });
-
-  //
-  // createItem (data) {
-  //     let item = this.get('store').createRecord('item', data);
-  //     item.save();
-  //   },
-  //
-  //   saveList(list) {
-  //     list.save()
-  //       .then(()=>this.transitionTo('lists'));
-  //   },
-});
-define("play-together-client/components/exercise-create/template", ["exports"], function (exports) {
-  exports["default"] = Ember.HTMLBars.template((function () {
-    var child0 = (function () {
-      return {
-        meta: {
-          "fragmentReason": false,
-          "revision": "Ember@2.5.1",
-          "loc": {
-            "source": null,
-            "start": {
-              "line": 7,
-              "column": 2
-            },
-            "end": {
-              "line": 14,
-              "column": 4
-            }
-          },
-          "moduleName": "play-together-client/components/exercise-create/template.hbs"
-        },
-        isEmpty: false,
-        arity: 1,
-        cachedFragment: null,
-        hasRendered: false,
-        buildFragment: function buildFragment(dom) {
-          var el0 = dom.createDocumentFragment();
-          var el1 = dom.createTextNode("      ");
-          dom.appendChild(el0, el1);
-          var el1 = dom.createComment("");
-          dom.appendChild(el0, el1);
-          var el1 = dom.createTextNode("\n");
-          dom.appendChild(el0, el1);
-          return el0;
-        },
-        buildRenderNodes: function buildRenderNodes(dom, fragment, contextualElement) {
-          var morphs = new Array(1);
-          morphs[0] = dom.createMorphAt(fragment, 1, 1, contextualElement);
-          return morphs;
-        },
-        statements: [["content", "name", ["loc", [null, [13, 6], [13, 14]]]]],
-        locals: ["name"],
-        templates: []
-      };
-    })();
-    return {
-      meta: {
-        "fragmentReason": {
-          "name": "missing-wrapper",
-          "problems": ["multiple-nodes"]
-        },
-        "revision": "Ember@2.5.1",
-        "loc": {
-          "source": null,
-          "start": {
-            "line": 1,
-            "column": 0
-          },
-          "end": {
-            "line": 46,
-            "column": 0
-          }
-        },
-        "moduleName": "play-together-client/components/exercise-create/template.hbs"
-      },
-      isEmpty: false,
-      arity: 0,
-      cachedFragment: null,
-      hasRendered: false,
-      buildFragment: function buildFragment(dom) {
-        var el0 = dom.createDocumentFragment();
-        var el1 = dom.createElement("h1");
-        var el2 = dom.createTextNode("Your Workouts, Your Way!");
-        dom.appendChild(el1, el2);
-        dom.appendChild(el0, el1);
-        var el1 = dom.createTextNode("\n\n");
-        dom.appendChild(el0, el1);
-        var el1 = dom.createElement("h4");
-        var el2 = dom.createTextNode("How Do You like to Keep active?");
-        dom.appendChild(el1, el2);
-        dom.appendChild(el0, el1);
-        var el1 = dom.createTextNode("\n\n");
-        dom.appendChild(el0, el1);
-        var el1 = dom.createElement("div");
-        dom.setAttribute(el1, "class", "form-group");
-        var el2 = dom.createTextNode("\n  ");
-        dom.appendChild(el1, el2);
-        var el2 = dom.createElement("label");
-        dom.setAttribute(el2, "for", "category");
-        var el3 = dom.createTextNode("Type of Workouts");
-        dom.appendChild(el2, el3);
-        dom.appendChild(el1, el2);
-        var el2 = dom.createTextNode("\n");
-        dom.appendChild(el1, el2);
-        var el2 = dom.createComment("");
-        dom.appendChild(el1, el2);
-        dom.appendChild(el0, el1);
-        var el1 = dom.createTextNode("\n\n");
-        dom.appendChild(el0, el1);
-        var el1 = dom.createElement("div");
-        dom.setAttribute(el1, "class", "form-group");
-        var el2 = dom.createTextNode("\n  ");
-        dom.appendChild(el1, el2);
-        var el2 = dom.createElement("label");
-        dom.setAttribute(el2, "for", "name");
-        var el3 = dom.createTextNode("Workout Name");
-        dom.appendChild(el2, el3);
-        dom.appendChild(el1, el2);
-        var el2 = dom.createTextNode("\n  ");
-        dom.appendChild(el1, el2);
-        var el2 = dom.createComment("");
-        dom.appendChild(el1, el2);
-        var el2 = dom.createTextNode("\n");
-        dom.appendChild(el1, el2);
-        dom.appendChild(el0, el1);
-        var el1 = dom.createTextNode("\n\n");
-        dom.appendChild(el0, el1);
-        var el1 = dom.createElement("div");
-        dom.setAttribute(el1, "class", "form-group");
-        var el2 = dom.createTextNode("\n  ");
-        dom.appendChild(el1, el2);
-        var el2 = dom.createElement("label");
-        dom.setAttribute(el2, "for", "description");
-        var el3 = dom.createTextNode("Description");
-        dom.appendChild(el2, el3);
-        dom.appendChild(el1, el2);
-        var el2 = dom.createTextNode("\n  ");
-        dom.appendChild(el1, el2);
-        var el2 = dom.createComment("");
-        dom.appendChild(el1, el2);
-        var el2 = dom.createTextNode("\n");
-        dom.appendChild(el1, el2);
-        dom.appendChild(el0, el1);
-        var el1 = dom.createTextNode("\n");
-        dom.appendChild(el0, el1);
-        var el1 = dom.createElement("div");
-        dom.setAttribute(el1, "class", "form-group");
-        var el2 = dom.createTextNode("\n  ");
-        dom.appendChild(el1, el2);
-        var el2 = dom.createElement("label");
-        dom.setAttribute(el2, "for", "duration");
-        var el3 = dom.createTextNode("Length of workout");
-        dom.appendChild(el2, el3);
-        dom.appendChild(el1, el2);
-        var el2 = dom.createTextNode("\n  ");
-        dom.appendChild(el1, el2);
-        var el2 = dom.createComment("");
-        dom.appendChild(el1, el2);
-        var el2 = dom.createTextNode("\n");
-        dom.appendChild(el1, el2);
-        dom.appendChild(el0, el1);
-        var el1 = dom.createTextNode("\n");
-        dom.appendChild(el0, el1);
-        var el1 = dom.createElement("button");
-        dom.setAttribute(el1, "type", "submit");
-        dom.setAttribute(el1, "class", "btn btn-primary");
-        var el2 = dom.createTextNode("\nExercise Created\n");
-        dom.appendChild(el1, el2);
-        dom.appendChild(el0, el1);
-        var el1 = dom.createTextNode("\n\n");
-        dom.appendChild(el0, el1);
-        var el1 = dom.createElement("button");
-        dom.setAttribute(el1, "class", "btn btn-default");
-        var el2 = dom.createTextNode("\n  Cancel\n");
-        dom.appendChild(el1, el2);
-        dom.appendChild(el0, el1);
-        var el1 = dom.createTextNode("\n");
-        dom.appendChild(el0, el1);
-        return el0;
-      },
-      buildRenderNodes: function buildRenderNodes(dom, fragment, contextualElement) {
-        var element0 = dom.childAt(fragment, [12]);
-        var element1 = dom.childAt(fragment, [14]);
-        var morphs = new Array(6);
-        morphs[0] = dom.createMorphAt(dom.childAt(fragment, [4]), 3, 3);
-        morphs[1] = dom.createMorphAt(dom.childAt(fragment, [6]), 3, 3);
-        morphs[2] = dom.createMorphAt(dom.childAt(fragment, [8]), 3, 3);
-        morphs[3] = dom.createMorphAt(dom.childAt(fragment, [10]), 3, 3);
-        morphs[4] = dom.createElementMorph(element0);
-        morphs[5] = dom.createElementMorph(element1);
-        return morphs;
-      },
-      statements: [["block", "power-select", [], ["selected", ["subexpr", "@mut", [["get", "exercise", ["loc", [null, [8, 15], [8, 23]]]]], [], []], "options", ["subexpr", "@mut", [["get", "category", ["loc", [null, [9, 14], [9, 22]]]]], [], []], "onchange", ["subexpr", "action", ["chooseCategory"], [], ["loc", [null, [10, 15], [10, 40]]]]], 0, null, ["loc", [null, [7, 2], [14, 21]]]], ["inline", "input", [], ["placeholder", "yoga am sequence, lyra routine, leg circuit etc", "type", "text", "id", "name", "value", ["subexpr", "@mut", [["get", "exercise.name", ["loc", [null, [22, 16], [22, 29]]]]], [], []]], ["loc", [null, [19, 2], [22, 31]]]], ["inline", "input", [], ["placeholder", " eg 20 crunches, 3 mile run, a list of sequencial movements etc", "type", "text", "id", "description", "value", ["subexpr", "@mut", [["get", "exercise.description", ["loc", [null, [30, 16], [30, 36]]]]], [], []]], ["loc", [null, [27, 2], [30, 38]]]], ["inline", "input", [], ["placeholder", "Amount of time or distance a workout takes", "type", "text", "id", "duration", "value", ["subexpr", "@mut", [["get", "exercise.duration", ["loc", [null, [37, 16], [37, 33]]]]], [], []]], ["loc", [null, [34, 2], [37, 35]]]], ["element", "action", ["submitExercise"], [], ["loc", [null, [39, 46], [39, 73]]]], ["element", "action", ["cancel"], [], ["loc", [null, [43, 32], [43, 51]]]]],
-      locals: [],
-      templates: [child0]
-    };
-  })());
-});
-define('play-together-client/components/exercise-display/component', ['exports', 'ember'], function (exports, _ember) {
-  exports['default'] = _ember['default'].Component.extend({});
-});
-define("play-together-client/components/exercise-display/template", ["exports"], function (exports) {
-  exports["default"] = Ember.HTMLBars.template((function () {
-    return {
-      meta: {
-        "fragmentReason": {
-          "name": "missing-wrapper",
-          "problems": ["wrong-type"]
-        },
-        "revision": "Ember@2.5.1",
-        "loc": {
-          "source": null,
-          "start": {
-            "line": 1,
-            "column": 0
-          },
-          "end": {
-            "line": 2,
-            "column": 0
-          }
-        },
-        "moduleName": "play-together-client/components/exercise-display/template.hbs"
-      },
-      isEmpty: false,
-      arity: 0,
-      cachedFragment: null,
-      hasRendered: false,
-      buildFragment: function buildFragment(dom) {
-        var el0 = dom.createDocumentFragment();
-        var el1 = dom.createComment("");
-        dom.appendChild(el0, el1);
-        var el1 = dom.createTextNode("\n");
-        dom.appendChild(el0, el1);
-        return el0;
-      },
-      buildRenderNodes: function buildRenderNodes(dom, fragment, contextualElement) {
-        var morphs = new Array(1);
-        morphs[0] = dom.createMorphAt(fragment, 0, 0, contextualElement);
-        dom.insertBoundary(fragment, 0);
-        return morphs;
-      },
-      statements: [["content", "yield", ["loc", [null, [1, 0], [1, 9]]]]],
-      locals: [],
-      templates: []
-    };
-  })());
-});
-define('play-together-client/components/exercise-edit/component', ['exports', 'ember'], function (exports, _ember) {
-  exports['default'] = _ember['default'].Component.extend({
-    actions: {
-
-      togglePublic: function togglePublic() {
-        var project = this.get('project');
-        project.toggleProperty('public');
-        return this.get('project');
-      },
-      reset: function reset() {
-        var exercise = this.get('exercise');
-        this.sendAction('reset', exercise);
-      },
-
-      submitExercise: function submitExercise() {
-        console.log('exercise submitted');
-        this.sendAction('submitExercise', this.get('exercise'));
-      }
-    }
-  });
-});
-define("play-together-client/components/exercise-edit/template", ["exports"], function (exports) {
-  exports["default"] = Ember.HTMLBars.template((function () {
-    return {
-      meta: {
-        "fragmentReason": {
-          "name": "missing-wrapper",
-          "problems": ["wrong-type"]
-        },
-        "revision": "Ember@2.5.1",
-        "loc": {
-          "source": null,
-          "start": {
-            "line": 1,
-            "column": 0
-          },
-          "end": {
-            "line": 2,
-            "column": 0
-          }
-        },
-        "moduleName": "play-together-client/components/exercise-edit/template.hbs"
-      },
-      isEmpty: false,
-      arity: 0,
-      cachedFragment: null,
-      hasRendered: false,
-      buildFragment: function buildFragment(dom) {
-        var el0 = dom.createDocumentFragment();
-        var el1 = dom.createComment("");
-        dom.appendChild(el0, el1);
-        var el1 = dom.createTextNode("\n");
-        dom.appendChild(el0, el1);
-        return el0;
-      },
-      buildRenderNodes: function buildRenderNodes(dom, fragment, contextualElement) {
-        var morphs = new Array(1);
-        morphs[0] = dom.createMorphAt(fragment, 0, 0, contextualElement);
-        dom.insertBoundary(fragment, 0);
-        return morphs;
-      },
-      statements: [["content", "yield", ["loc", [null, [1, 0], [1, 9]]]]],
-      locals: [],
-      templates: []
-    };
-  })());
-});
 define('play-together-client/components/flash-message', ['exports', 'ember-cli-flash/components/flash-message'], function (exports, _emberCliFlashComponentsFlashMessage) {
   Object.defineProperty(exports, 'default', {
     enumerable: true,
@@ -1027,15 +686,6 @@ define('play-together-client/components/my-application/component', ['exports', '
     actions: {
       signOut: function signOut() {
         this.sendAction('signOut');
-      },
-
-      viewProfile: function viewProfile() {
-        var params = this.get('id');
-        this.sendAction('viewProfile', params);
-      },
-      viewMyExercises: function viewMyExercises() {
-        var params = this.get('id');
-        this.sendAction('viewMyExercises', params);
       }
     }
   });
@@ -1930,7 +1580,7 @@ define('play-together-client/components/profile-update/component', ['exports', '
         this.set('profile', {});
       },
       submitProfile: function submitProfile() {
-        console.log('form submitted', this.get('profile'));
+        // console.log('form submitted', this.get('profile'));
         this.sendAction('submitProfile', this.get('profile'));
         this.set('profile.username', null);
         this.set('profile.location', null);
@@ -3604,8 +3254,8 @@ define('play-together-client/profile/route', ['exports', 'ember'], function (exp
         this.transitionTo('profiles/edit');
       },
       deleteProfile: function deleteProfile(profile) {
-        console.log('this is a test');
-        console.log(profile);
+        // console.log('this is a test');
+        // console.log(profile);
         return profile.destroyRecord();
       },
 
@@ -3725,7 +3375,7 @@ define("play-together-client/profile/template", ["exports"], function (exports) 
         var el2 = dom.createTextNode("\n");
         dom.appendChild(el1, el2);
         var el2 = dom.createElement("label");
-        dom.setAttribute(el2, "for", "favorite");
+        dom.setAttribute(el2, "for", "favorite_exercise");
         var el3 = dom.createTextNode("Favorite Exercise Method:");
         dom.appendChild(el2, el3);
         dom.appendChild(el1, el2);
@@ -3775,7 +3425,7 @@ define("play-together-client/profile/template", ["exports"], function (exports) 
         morphs[6] = dom.createMorphAt(dom.childAt(element0, [27]), 0, 0);
         return morphs;
       },
-      statements: [["content", "model.username", ["loc", [null, [2, 10], [2, 28]]]], ["content", "model.location", ["loc", [null, [4, 0], [4, 18]]]], ["content", "model.motivation", ["loc", [null, [6, 0], [6, 20]]]], ["content", "model.favorite_exercise", ["loc", [null, [8, 0], [8, 27]]]], ["inline", "delete-profile", [], ["profile", ["subexpr", "@mut", [["get", "model", ["loc", [null, [12, 25], [12, 30]]]]], [], []], "delete", "deleteProfile", "changeAction", "changeAction"], ["loc", [null, [12, 0], [12, 83]]]], ["content", "outlet", ["loc", [null, [15, 0], [15, 10]]]], ["block", "link-to", ["change-password"], [], 0, null, ["loc", [null, [18, 39], [18, 100]]]]],
+      statements: [["content", "model.username", ["loc", [null, [2, 10], [2, 28]]]], ["content", "model.location", ["loc", [null, [4, 0], [4, 18]]]], ["content", "model.motivation", ["loc", [null, [6, 0], [6, 20]]]], ["content", "model.favorite", ["loc", [null, [8, 0], [8, 18]]]], ["inline", "delete-profile", [], ["profile", ["subexpr", "@mut", [["get", "model", ["loc", [null, [12, 25], [12, 30]]]]], [], []], "delete", "deleteProfile", "changeAction", "changeAction"], ["loc", [null, [12, 0], [12, 83]]]], ["content", "outlet", ["loc", [null, [15, 0], [15, 10]]]], ["block", "link-to", ["change-password"], [], 0, null, ["loc", [null, [18, 39], [18, 100]]]]],
       locals: [],
       templates: [child0]
     };
@@ -4062,9 +3712,6 @@ define('play-together-client/router', ['exports', 'ember', 'play-together-client
     this.route('profile', { path: 'profiles/:profile_id' });
     this.route('profiles');
     this.route('profiles/edit');
-    this.route('exercise', { path: 'exercises/:id' });
-    this.route('exercises');
-    this.route('exercises/new');
   });
 
   exports['default'] = Router;
@@ -4406,7 +4053,7 @@ catch(err) {
 /* jshint ignore:start */
 
 if (!runningTests) {
-  require("play-together-client/app")["default"].create({"name":"play-together-client","version":"0.0.0+c1473d79"});
+  require("play-together-client/app")["default"].create({"name":"play-together-client","version":"0.0.0+e48eb23b"});
 }
 
 /* jshint ignore:end */
