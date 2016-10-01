@@ -4053,7 +4053,7 @@ catch(err) {
 /* jshint ignore:start */
 
 if (!runningTests) {
-  require("play-together-client/app")["default"].create({"name":"play-together-client","version":"0.0.0+e48eb23b"});
+  require("play-together-client/app")["default"].create({"name":"play-together-client","version":"0.0.0+d10e1e91"});
 }
 
 /* jshint ignore:end */
